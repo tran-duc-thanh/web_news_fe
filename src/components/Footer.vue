@@ -1,16 +1,26 @@
-<template></template>
+<template>
+    <footer class="footer--section">
+        <FooterWidgets />
+        <FooterCopyright />
+    </footer>
+</template>
   
 <script>
+
+import FooterWidgets from './footer/FooterWidgets.vue'
+import FooterCopyright from './footer/FooterCopyright.vue'
+
 export default {
-    name: 'HelloWorld',
-    props: {
-        msg: String
+    name: 'FooterPage',
+    components: {
+        FooterWidgets,
+        FooterCopyright,
     }
 }
 </script>
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<!-- <style scoped>
 h3 {
     margin: 40px 0 0;
 }
@@ -29,4 +39,4 @@ a {
     color: #42b983;
 }
 </style>
-  
+   -->

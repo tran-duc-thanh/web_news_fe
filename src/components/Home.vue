@@ -1,22 +1,34 @@
 <template>
-<!-- Preloader Start -->
-<div id="preloader">
+    <div id="preloader">
         <div class="preloader bg--color-1--b" data-preloader="1">
             <div class="preloader--inner"></div>
         </div>
     </div>
-    <!-- Preloader End -->
-    <HeaderSection />
+    <div class="wrapper">
+        <HeaderPage />
+        <PostsFilterBar />
+        <NewsTicker />
+        <ContainerPage />
+        <FooterPage />
+    </div>
 </template>
   
 <script>
 
-import HeaderSection from './Headers.vue'
+import HeaderPage from './Headers.vue'
+import FooterPage from './Footer.vue'
+import PostsFilterBar from './body/PostsFilterBar'
+import NewsTicker from './body/NewsTicker'
+import ContainerPage from './Container.vue'
 
 export default {
     name: 'HomePage',
     components: {
-        HeaderSection
+        HeaderPage,
+        FooterPage,
+        PostsFilterBar,
+        NewsTicker,
+        ContainerPage,
     }
 }
 </script>
