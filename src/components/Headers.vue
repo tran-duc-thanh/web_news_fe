@@ -1,15 +1,18 @@
 <template>
-    
+    <HeaderTopbar/>
 </template>
   
-<!-- <script>
+<script>
+
+import HeaderTopbar from './header/HeaderTopbar.vue'
+
 export default {
-    name: 'HelloWorld',
-    props: {
-        msg: String
+    name: 'HeaderSection',
+    components: {
+        HeaderTopbar
     }
 }
-</script> -->
+</script>
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
 <!-- <style scoped>
