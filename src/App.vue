@@ -1,15 +1,10 @@
 <template>
-    <HomePage />
+    <RouterView></RouterView>
 </template>
 
 <script>
-import HomePage from './components/Home.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HomePage,
-  }
+  name: 'App'
 }
 </script>
 

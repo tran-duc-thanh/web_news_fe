@@ -17,7 +17,7 @@
                 <div class="float--right float--xs-none text-xs-center">
                     <!-- Header Topbar Action Start -->
                     <ul class="header--topbar-action nav">
-                        <li><router-link to="/login"><i class="fa fm fa-user-o"></i>Login/Register</router-link></li>
+                        <li><a href="/login"><i class="fa fm fa-user-o"></i>Login/Register</a></li>
                     </ul>
                     <!-- Header Topbar Action End -->
 
