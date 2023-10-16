@@ -26,7 +26,7 @@
                             </ul>
 
                             <div class="title">
-                                <h2 class="h4"><a href="news-single.html" class="btn-link">Siriyan civil war getting
+                                <h2 class="h4"><a href="#" @click="handleClick" class="btn-link">Siriyan civil war getting
                                         righteous indignation and dislike men who are so beguiled and demoralized by the
                                         sure.</a></h2>
                             </div>
@@ -123,10 +123,18 @@
             </div>
         </div>
     </div>
-    <!-- Post Items End --></template>
+    <!-- Post Items End -->
+</template>
 
 <script>
 export default {
-    name: 'PostLayoutStyle1'
+    name: 'PostLayoutStyle1',
+    methods: {
+        handleClick(event) {
+            event.preventDefault();
+            this.$emit("detail-news-clicked");
+            console.log("click detail")
+        },
+    },
 }
 </script>

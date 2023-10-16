@@ -8,7 +8,8 @@
         <HeaderPage />
         <PostsFilterBar />
         <NewsTicker />
-        <ContainerPage />
+        <component :is="currentComponent" @detail-news-clicked="loadComponent"></component>
+        <!-- <ContainerPage /> -->
         <FooterPage />
     </div>
 </template>
@@ -20,15 +21,29 @@ import FooterPage from './Footer.vue'
 import PostsFilterBar from './body/PostsFilterBar'
 import NewsTicker from './body/NewsTicker'
 import ContainerPage from './Container.vue'
+import NewsSinglePage from './NewsSingle.vue';
 
 export default {
     name: 'HomePage',
+    data() {
+        return {
+            currentComponent: 'ContainerPage',
+        };
+    },
+    methods: {
+        loadComponent() {
+            this.currentComponent = 'NewsSinglePage';
+            console.log('NewsSinglePage')
+            // location.reload();
+        },
+    },
     components: {
         HeaderPage,
         FooterPage,
         PostsFilterBar,
         NewsTicker,
         ContainerPage,
+        NewsSinglePage,
     }
 }
 </script>
