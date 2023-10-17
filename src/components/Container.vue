@@ -4,7 +4,7 @@
         <div class="container">
             <!-- Main Content Start -->
             <div class="main--content">
-                <PostLayoutStyle1 @detail-news-clicked="handleClick" />
+                <PostLayoutStyle1 />
             </div>
             <!-- Main Content End -->
             <div class="row">
@@ -188,11 +188,6 @@ import EditorsChoiceWidget from './body/content/EditorsChoiceWidget.vue'
 
 export default {
     name: 'ContainerPage',
-    methods: {
-        handleClick() {
-            this.$emit("detail-news-clicked");
-        },
-    },
     components: {
         PostLayoutStyle1,
         PostLayoutStyle3,

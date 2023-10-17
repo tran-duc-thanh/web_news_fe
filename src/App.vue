@@ -1,20 +1,17 @@
 <template>
-    <RouterView></RouterView>
+  <RouterView name="preloader"></RouterView>
+  <div class="wrapper">
+    <RouterView name="login"></RouterView>
+    <RouterView name="header"></RouterView>
+    <RouterView name="postsFilterBar"></RouterView>
+    <RouterView name="newsTicker"></RouterView>
+    <RouterView name="container"></RouterView>
+    <RouterView name="footer"></RouterView>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
 }
 </script>
-
-<!-- <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style> -->
