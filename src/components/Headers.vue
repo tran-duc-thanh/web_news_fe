@@ -265,7 +265,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="national.html">National</a></li>
+                        <li><router-link to="/category">National</router-link></li>
                         <li><a href="financial.html">Financial</a></li>
                         <li><a href="entertainment.html">Entertainment</a></li>
                         <li><a href="lifestyle.html">Lifestyle</a></li>
