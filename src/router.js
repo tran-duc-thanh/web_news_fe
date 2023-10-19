@@ -30,6 +30,17 @@ const routes = [
     }
   },
   {
+    path: '/home',
+    components: {
+      preloader: PreloaderPage,
+      container: ContainerPage,
+      header: HeaderPage,
+      postsFilterBar: PostsFilterBar,
+      newsTicker: NewsTicker,
+      footer: FooterPage
+    }
+  },
+  {
     path: '/login',
     components: {
       preloader: PreloaderPage,

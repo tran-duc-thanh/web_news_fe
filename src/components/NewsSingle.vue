@@ -3,7 +3,7 @@
     <div class="main--breadcrumb">
         <div class="container">
             <ul class="breadcrumb">
-                <li><a href="home-1.html" class="btn-link"><i class="fa fm fa-home"></i>Home</a></li>
+                <li><router-link to="/home" class="btn-link"><i class="fa fm fa-home"></i>Home</router-link></li>
                 <li><a href="travel.html" class="btn-link">Travel</a></li>
                 <li class="active"><span>It is a long established fact that a reader will be distracted by</span></li>
             </ul>
