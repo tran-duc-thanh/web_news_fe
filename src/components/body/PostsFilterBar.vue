@@ -3,34 +3,34 @@
     <div class="posts--filter-bar style--1 hidden-xs">
         <ul class="nav">
             <li>
-                <a href="#">
+                <router-link to="/categorys">
                     <i class="fa fa-star-o"></i>
                     <span>Featured News</span>
-                </a>
+                </router-link>
             </li>
             <li>
-                <a href="#">
+                <router-link to="/categorys">
                     <i class="fa fa-heart-o"></i>
                     <span>Most Popular</span>
-                </a>
+                </router-link>
             </li>
             <li>
-                <a href="#">
+                <router-link to="/categorys">
                     <i class="fa fa-fire"></i>
                     <span>Hot News</span>
-                </a>
+                </router-link>
             </li>
             <li>
-                <a href="#">
+                <router-link to="/categorys">
                     <i class="fa fa-flash"></i>
                     <span>Trending News</span>
-                </a>
+                </router-link>
             </li>
             <li>
-                <a href="#">
+                <router-link to="/categorys">
                     <i class="fa fa-eye"></i>
                     <span>Most Watched</span>
-                </a>
+                </router-link>
             </li>
         </ul>
     </div>

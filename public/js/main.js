@@ -769,7 +769,7 @@ Author URI  : https://themeforest.net/user/themelooks
          * PRELOADER
          * ------------------------------------------------------------------------- */
         var $bodyPreloader = $('#preloader');
-
+        console.log($bodyPreloader.length)
         if ( $bodyPreloader.length ) {
             $bodyPreloader.fadeOut('slow');
         }

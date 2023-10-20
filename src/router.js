@@ -16,6 +16,9 @@ import PreloaderPage from './components/Preloader.vue'
 import CategoryPage from './components/Category.vue'
 import NotFoundPage from './components/exception/NotFoundPage.vue'
 import ErrorPage from './components/exception/ErrorPage.vue'
+import SearchPage from './components/SearchPage.vue'
+import TagPage from './components/TagPage.vue'
+import CategorysPage from './components/Categorys.vue'
 
 const routes = [
   {
@@ -59,10 +62,43 @@ const routes = [
     }
   },
   {
+    path: '/categorys',
+    components: {
+      preloader: PreloaderPage,
+      container: CategorysPage,
+      header: HeaderPage,
+      postsFilterBar: PostsFilterBar,
+      newsTicker: NewsTicker,
+      footer: FooterPage
+    }
+  },
+  {
     path: '/detail',
     components: {
       preloader: PreloaderPage,
       container: NewsSinglePage,
+      header: HeaderPage,
+      postsFilterBar: PostsFilterBar,
+      newsTicker: NewsTicker,
+      footer: FooterPage
+    }
+  },
+  {
+    path: '/search',
+    components: {
+      preloader: PreloaderPage,
+      container: SearchPage,
+      header: HeaderPage,
+      postsFilterBar: PostsFilterBar,
+      newsTicker: NewsTicker,
+      footer: FooterPage
+    }
+  },
+  {
+    path: '/tag',
+    components: {
+      preloader: PreloaderPage,
+      container: TagPage,
       header: HeaderPage,
       postsFilterBar: PostsFilterBar,
       newsTicker: NewsTicker,

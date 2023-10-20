@@ -56,10 +56,10 @@
                 <!-- Header Logo Start -->
                 <div class="header--logo float--left float--sm-none text-sm-center">
                     <h1 class="h1">
-                        <a href="home-1.html" class="btn-link">
+                        <router-link to="/home" class="btn-link">
                             <img src="img/logo.png" alt="USNews Logo">
                             <span class="hidden">USNews Logo</span>
-                        </a>
+                        </router-link>
                     </h1>
                 </div>
                 <!-- Header Logo End -->
@@ -92,8 +92,8 @@
                     <!-- Header Menu Links Start -->
                     <ul class="header--menu-links nav navbar-nav" data-trigger="hoverIntent">
                         <li class="dropdown active">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home<i
-                                    class="fa flm fa-angle-down"></i></a>
+                            <router-link to="/home" class="dropdown-toggle" data-toggle="dropdown">Home<i
+                                    class="fa flm fa-angle-down"></i></router-link>
 
                             <ul class="dropdown-menu">
                                 <li class="active"><a href="home-1.html">Home Default</a></li>
