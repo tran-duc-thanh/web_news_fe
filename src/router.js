@@ -11,7 +11,7 @@ import PostsFilterBar from './components/body/PostsFilterBar'
 import NewsTicker from './components/body/NewsTicker'
 import LoginPage from './components/Login.vue';
 import NewsSinglePage from './components/NewsSingle.vue'
-import ContainerPage from './components/Container.vue'
+// import ContainerPage from './components/Container.vue'
 import PreloaderPage from './components/Preloader.vue'
 import CategoryPage from './components/Category.vue'
 import NotFoundPage from './components/exception/NotFoundPage.vue'
@@ -19,13 +19,14 @@ import ErrorPage from './components/exception/ErrorPage.vue'
 import SearchPage from './components/SearchPage.vue'
 import TagPage from './components/TagPage.vue'
 import CategorysPage from './components/Categorys.vue'
+import HomePage from './components/Home.vue'
 
 const routes = [
   {
     path: '/',
     components: {
       preloader: PreloaderPage,
-      container: ContainerPage,
+      container: HomePage,
       header: HeaderPage,
       postsFilterBar: PostsFilterBar,
       newsTicker: NewsTicker,
@@ -36,7 +37,7 @@ const routes = [
     path: '/home',
     components: {
       preloader: PreloaderPage,
-      container: ContainerPage,
+      container: HomePage,
       header: HeaderPage,
       postsFilterBar: PostsFilterBar,
       newsTicker: NewsTicker,

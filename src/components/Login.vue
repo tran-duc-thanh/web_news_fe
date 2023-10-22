@@ -19,18 +19,18 @@
                         <p>Login into account by fillup the below form</p>
                     </div>
 
-                    <form action="#" data-form="validate">
+                    <form onsubmit="return false;" action="#" data-form="validate">
                         <div class="form-group">
                             <label>
                                 <span>Username or Email Address</span>
-                                <input type="email" name="email" class="form-control" required>
+                                <input type="email" name="email" class="form-control" v-model="username" required>
                             </label>
                         </div>
 
                         <div class="form-group">
                             <label>
                                 <span>Password</span>
-                                <input type="password" name="password" class="form-control" required>
+                                <input type="password" name="password" class="form-control" v-model="password" required>
                             </label>
                         </div>
 
@@ -41,7 +41,7 @@
                             </label>
                         </div>
 
-                        <button type="submit" class="btn btn-lg btn-block btn-primary">Log in</button>
+                        <button @click="login" class="btn btn-lg btn-block btn-primary">Log in</button>
 
                         <p class="help-block clearfix">
                             <a href="#" class="btn-link pull-left">Forgot Username or Password?</a>
@@ -58,7 +58,38 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
-    name: 'LoginPage'
-}
+    name: 'LoginPage',
+    data() {
+        return {
+            username: '',
+            password: '',
+            token: null,
+        };
+    },
+    methods: {
+        login() {
+
+            const loginData = {
+                username: this.username,
+                password: this.password,
+            };
+
+            axios.post(`http://localhost:8082/api/login`, loginData, {
+                withCredentials: false
+            })
+                .then(response => {
+                    this.token = response.data.token;
+                    localStorage.setItem('token', this.token);
+                    console.log(response)
+                    this.$router.push('/home')
+                })
+                .catch(error => {
+                    console.error('Đăng nhập thất bại:', error);
+                });
+        },
+    },
+};
 </script>
