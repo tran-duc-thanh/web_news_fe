@@ -32,9 +32,9 @@
                                         </ul>
 
                                         <div class="title">
-                                            <h2 class="h4"><a href="news-single-v1.html" class="btn-link">Siriyan civil war
+                                            <h2 class="h4"><router-link to="/detail" class="btn-link">Siriyan civil war
                                                     getting righteous indignation and dislike men who are so beguiled and
-                                                    demoralized by the sure.</a></h2>
+                                                    demoralized by the sure.</router-link></h2>
                                         </div>
                                     </div>
                                 </div>

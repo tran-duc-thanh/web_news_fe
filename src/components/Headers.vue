@@ -91,185 +91,13 @@
                 <div id="headerNav" class="navbar-collapse collapse float--left">
                     <!-- Header Menu Links Start -->
                     <ul class="header--menu-links nav navbar-nav" data-trigger="hoverIntent">
-                        <li class="dropdown active">
-                            <router-link to="/home" class="dropdown-toggle" data-toggle="dropdown">Home<i
-                                    class="fa flm fa-angle-down"></i></router-link>
-
-                            <ul class="dropdown-menu">
-                                <li class="active"><a href="home-1.html">Home Default</a></li>
-                                <li><a href="home-1-boxed.html">Home Boxed</a></li>
-                                <li><a href="home-1-rtl.html">Home RTL</a></li>
-                                <li><a href="home-1-rtl-boxed.html">Home RTL Boxed</a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home Versions<i
-                                            class="fa flm fa-angle-right"></i></a>
-
-                                    <ul class="dropdown-menu">
-                                        <li><a href="home-1.html">Home Version 01</a></li>
-                                        <li><a href="home-2.html">Home Version 02</a></li>
-                                        <li><a href="home-3.html">Home Version 03</a></li>
-                                        <li><a href="home-4.html">Home Version 04</a></li>
-                                        <li><a href="home-5.html">Home Version 05</a></li>
-                                        <li><a href="home-6.html">Home Version 06</a></li>
-                                        <li><a href="home-7.html">Home Version 07</a></li>
-                                        <li><a href="home-8.html">Home Version 08</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu Versions<i
-                                            class="fa flm fa-angle-right"></i></a>
-
-                                    <ul class="dropdown-menu">
-                                        <li><a href="home-1.html">Home Menu V1</a></li>
-                                        <li><a href="home-menu-v2.html">Home Menu V2</a></li>
-                                        <li><a href="home-menu-v3.html">Home Menu V3</a></li>
-                                        <li><a href="home-menu-v4.html">Home Menu V4</a></li>
-                                        <li><a href="home-menu-v5.html">Home Menu V5</a></li>
-                                        <li><a href="home-menu-v6.html">Home Menu V6</a></li>
-                                        <li><a href="home-menu-v7.html">Home Menu V7</a></li>
-                                        <li><a href="home-menu-v8.html">Home Menu V8</a></li>
-                                        <li><a href="home-menu-v9.html">Home Menu V9</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown megamenu filter">
-                            <a href="world-news.html" class="dropdown-toggle" data-toggle="dropdown">Worlds News<i
-                                    class="fa flm fa-angle-down"></i></a>
-
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <div class="row">
-                                        <div class="col-md-2">
-                                            <!-- Megamenu Filter Start -->
-                                            <div class="megamenu--filter">
-                                                <ul class="nav">
-                                                    <li class="active">
-                                                        <a href="#" data-action="load_cat_posts" data-cat="all">All<i
-                                                                class="fa fa-angle-right"></i></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" data-action="load_cat_posts"
-                                                            data-cat="latin-america">Latitn America<i
-                                                                class="fa fa-angle-right"></i></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" data-action="load_cat_posts" data-cat="africa">Africa<i
-                                                                class="fa fa-angle-right"></i></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" data-action="load_cat_posts"
-                                                            data-cat="middle-east">Middle East<i
-                                                                class="fa fa-angle-right"></i></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" data-action="load_cat_posts" data-cat="europe">Europe<i
-                                                                class="fa fa-angle-right"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <!-- Megamenu Filter End -->
-                                        </div>
-
-                                        <div class="col-md-10">
-                                            <!-- Megamenu Posts Start -->
-                                            <div class="megamenu--posts" data-ajax-content="outer">
-                                                <ul class="row" data-ajax-content="inner">
-                                                    <li class="col-md-3">
-                                                        <div class="img">
-                                                            <a href="news-single-v1.html" class="thumb">
-                                                                <img src="img/megamenu-img/post-01.jpg" alt="">
-                                                            </a>
-
-                                                            <a href="#" class="cat">Beach</a>
-
-                                                            <a href="#" class="icon"><i class="fa fa-eye"></i></a>
-                                                        </div>
-
-                                                        <a href="news-single-v1.html" class="title">It is a long established
-                                                            fact that a reader will be distracted by</a>
-                                                    </li>
-
-                                                    <li class="col-md-3">
-                                                        <div class="img">
-                                                            <a href="news-single-v1.html" class="thumb">
-                                                                <img src="img/megamenu-img/post-02.jpg" alt="">
-                                                            </a>
-
-                                                            <a href="#" class="cat">News</a>
-
-                                                            <a href="#" class="icon"><i class="fa fa-star-o"></i></a>
-                                                        </div>
-
-                                                        <a href="news-single-v1.html" class="title">It is a long established
-                                                            fact that a reader will be distracted by</a>
-                                                    </li>
-
-                                                    <li class="col-md-3">
-                                                        <div class="img">
-                                                            <a href="news-single-v1.html" class="thumb">
-                                                                <img src="img/megamenu-img/post-03.jpg" alt="">
-                                                            </a>
-
-                                                            <a href="#" class="cat">Ice Hiking</a>
-
-                                                            <a href="#" class="icon"><i class="fa fa-flash"></i></a>
-                                                        </div>
-
-                                                        <a href="news-single-v1.html" class="title">It is a long established
-                                                            fact that a reader will be distracted by</a>
-                                                    </li>
-
-                                                    <li class="col-md-3">
-                                                        <div class="img">
-                                                            <a href="news-single-v1.html" class="thumb">
-                                                                <img src="img/megamenu-img/post-04.jpg" alt="">
-                                                            </a>
-
-                                                            <a href="#" class="cat">Mountain</a>
-
-                                                            <a href="#" class="icon"><i class="fa fa-heart-o"></i></a>
-                                                        </div>
-
-                                                        <a href="news-single-v1.html" class="title">It is a long established
-                                                            fact that a reader will be distracted by</a>
-                                                    </li>
-                                                </ul>
-
-                                                <!-- Preloader Start -->
-                                                <div class="preloader bg--color-0--b" data-preloader="1">
-                                                    <div class="preloader--inner"></div>
-                                                </div>
-                                                <!-- Preloader End -->
-                                            </div>
-                                            <!-- Megamenu Posts End -->
-
-                                            <!-- Megamenu Pagination Start -->
-                                            <div class="megamenu--pagination" data-ajax="tab">
-                                                <a href="#" class="prev" data-ajax-action="load_prev_posts">
-                                                    <i class="fa fa-long-arrow-left"></i>
-                                                </a>
-
-                                                <a href="world-news.html" class="all" title="View All"
-                                                    data-toggle="tooltip">
-                                                    <i class="fa fa-th-large"></i>
-                                                </a>
-
-                                                <a href="#" class="next" data-ajax-action="load_next_posts">
-                                                    <i class="fa fa-long-arrow-right"></i>
-                                                </a>
-                                            </div>
-                                            <!-- Megamenu Pagination End -->
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
+                        <li><router-link to="/home">Home</router-link></li>
                         <li><router-link to="/category">National</router-link></li>
-                        <li><a href="financial.html">Financial</a></li>
-                        <li><a href="entertainment.html">Entertainment</a></li>
-                        <li><a href="lifestyle.html">Lifestyle</a></li>
-                        <li><a href="technology.html">Technology</a></li>
+                        <li><router-link to="/category">National</router-link></li>
+                        <li><router-link to="/category">Financial</router-link></li>
+                        <li><router-link to="/category">Entertainment</router-link></li>
+                        <li><router-link to="/category">Lifestyle</router-link></li>
+                        <li><router-link to="/category">Technology</router-link></li>
                         <li class="dropdown megamenu posts">
                             <a href="travel.html" class="dropdown-toggle" data-toggle="dropdown">Travel<i
                                     class="fa flm fa-angle-down"></i></a>
@@ -480,8 +308,8 @@
 
                             <ul class="dropdown-menu">
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog<i
-                                            class="fa flm fa-angle-right"></i></a>
+                                    <router-link to="/manager/news" class="dropdown-toggle" data-toggle="dropdown">News<i
+                                            class="fa flm fa-angle-right"></i></router-link>
 
                                     <ul class="dropdown-menu">
                                         <li><a href="blog-v1.html">Blog 1</a></li>

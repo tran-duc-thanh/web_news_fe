@@ -20,6 +20,7 @@ import SearchPage from './components/SearchPage.vue'
 import TagPage from './components/TagPage.vue'
 import CategorysPage from './components/Categorys.vue'
 import HomePage from './components/Home.vue'
+import ManagerNewsPage from './components/ManagerNewsPage.vue'
 
 const routes = [
   {
@@ -38,6 +39,17 @@ const routes = [
     components: {
       preloader: PreloaderPage,
       container: HomePage,
+      header: HeaderPage,
+      postsFilterBar: PostsFilterBar,
+      newsTicker: NewsTicker,
+      footer: FooterPage
+    }
+  },
+  {
+    path: '/manager/news',
+    components: {
+      preloader: PreloaderPage,
+      container: ManagerNewsPage,
       header: HeaderPage,
       postsFilterBar: PostsFilterBar,
       newsTicker: NewsTicker,
