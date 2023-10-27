@@ -32,6 +32,9 @@
                 <div style="margin-top: 5px">
                     <ckeditor :editor="editor" v-model="editorData" :config="editorConfig"></ckeditor>
                 </div>
+                <div style="margin-top: 20px">
+                    <button @click="submit" class="btn btn-lg btn-block btn-primary">Submit</button>
+                </div>
             </div>
         </div>
     </div>
