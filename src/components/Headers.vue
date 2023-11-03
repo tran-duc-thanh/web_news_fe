@@ -92,12 +92,7 @@
                     <!-- Header Menu Links Start -->
                     <ul class="header--menu-links nav navbar-nav" data-trigger="hoverIntent">
                         <li><router-link to="/home">Home</router-link></li>
-                        <li><router-link to="/category">National</router-link></li>
-                        <li><router-link to="/category">National</router-link></li>
-                        <li><router-link to="/category">Financial</router-link></li>
-                        <li><router-link to="/category">Entertainment</router-link></li>
-                        <li><router-link to="/category">Lifestyle</router-link></li>
-                        <li><router-link to="/category">Technology</router-link></li>
+                        <li v-for="category in categories" :key="category.code"><router-link to="/category">{{ category.name }}</router-link></li>
                         <li class="dropdown megamenu posts">
                             <a href="travel.html" class="dropdown-toggle" data-toggle="dropdown">Travel<i
                                     class="fa flm fa-angle-down"></i></a>
@@ -411,29 +406,27 @@
 </template>
   
 <script>
+import axios from 'axios';
+
 export default {
-    name: 'HeaderPage'
+    name: 'HeaderPage',
+    data() {
+        return {
+            categories: null,
+            error: null,
+        };
+    },
+    mounted() {
+        // Gọi API khi thành phần được nạp
+        axios.get(`http://localhost:8082/api/category/`)
+            .then(response => {
+                // Gán dữ liệu từ API vào biến data
+                this.categories = response.data;
+            })
+            .catch(error => {
+                // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                this.error = 'Lỗi: ' + error.message;
+            });
+    },
 }
 </script>
-  
-  <!-- Add "scoped" attribute to limit CSS to this component only -->
-<!-- <style scoped>
-h3 {
-    margin: 40px 0 0;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-a {
-    color: #42b983;
-}
-</style> -->
-  
