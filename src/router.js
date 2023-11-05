@@ -86,7 +86,7 @@ const routes = [
     }
   },
   {
-    path: '/detail',
+    path: '/article/:id',
     components: {
       preloader: PreloaderPage,
       container: NewsSinglePage,

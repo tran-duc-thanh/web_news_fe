@@ -32,7 +32,7 @@
                                         </ul>
 
                                         <div class="title">
-                                            <h2 class="h4"><router-link to="/detail" class="btn-link">Siriyan civil war
+                                            <h2 class="h4"><router-link to="/article/1" class="btn-link">Siriyan civil war
                                                     getting righteous indignation and dislike men who are so beguiled and
                                                     demoralized by the sure.</router-link></h2>
                                         </div>
@@ -2356,8 +2356,27 @@
 <!-- Main Content Section End --></template>
   
 <script>
+import axios from 'axios';
 
 export default {
     name: 'HomePage',
+    data() {
+        return {
+            categories: null,
+            error: null,
+        };
+    },
+    mounted() {
+        // Gọi API khi thành phần được nạp
+        axios.get(`http://localhost:8082/api/category/`)
+            .then(response => {
+                // Gán dữ liệu từ API vào biến data
+                this.categories = response.data;
+            })
+            .catch(error => {
+                // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                this.error = 'Lỗi: ' + error.message;
+            });
+    },
 }
 </script>

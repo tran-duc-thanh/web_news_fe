@@ -1190,5 +1190,23 @@
 <script>
 export default {
     name: 'NewsSinglePage',
+    data() {
+        return {
+            categories: null,
+            error: null,
+        };
+    },
+    mounted() {
+        // Gọi API khi thành phần được nạp
+        axios.get(`http://localhost:8082/api/category/`)
+            .then(response => {
+                // Gán dữ liệu từ API vào biến data
+                this.categories = response.data;
+            })
+            .catch(error => {
+                // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                this.error = 'Lỗi: ' + error.message;
+            });
+    },
 }
 </script>
