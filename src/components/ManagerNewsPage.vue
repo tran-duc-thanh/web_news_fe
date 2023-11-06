@@ -15,25 +15,29 @@
         <div class="container">
             <div class="main--content">
                 <div style="margin-top: 20px">Tiêu đề</div>
-                <input style="width: 100%; height: 50px; margin-top: 5px;" v-model="message" placeholder="News title." />
-                <div style="margin-top: 20px">Thể loại: {{ selected }}</div>
-                <select style="width: 100%; margin-top: 5px;" v-model="selected" multiple>
-                    <option v-for="option in options" :key="option.value" :value="option.value">
-                        {{ option.text }}
+                <input style="width: 100%; height: 50px; margin-top: 5px;" v-model="title" placeholder="News title." />
+
+                <div style="margin-top: 20px">Thể loại:</div>
+                <select style="width: 100%; margin-top: 5px;" v-model="inCategory">
+                    <option v-for="category in categories" :key="category.code" :value="category.categoryID">
+                        {{ category.name }}
                     </option>
                 </select>
-                <div style="margin-top: 20px">Thẻ: {{ selected }}</div>
-                <select style="width: 100%; margin-top: 5px;" v-model="selected" multiple>
-                    <option v-for="option in options" :key="option.value" :value="option.value">
-                        {{ option.text }}
+
+                <div style="margin-top: 20px">Thẻ:</div>
+                <select style="width: 100%; margin-top: 5px;" v-model="inTags" multiple>
+                    <option v-for="tag in tags" :key="tag.code" :value="tag.tagID">
+                        {{ tag.name }}
                     </option>
                 </select>
+
                 <div style="margin-top: 20px">Nội dung</div>
                 <div style="margin-top: 5px">
-                    <ckeditor :editor="editor" v-model="editorData" :config="editorConfig"></ckeditor>
+                    <ckeditor :editor="editor" v-model="inContent" :config="editorConfig"></ckeditor>
                 </div>
+
                 <div style="margin-top: 20px">
-                    <button @click="submit" class="btn btn-lg btn-block btn-primary">Submit</button>
+                    <button @click="save" class="btn btn-lg btn-block btn-primary">Submit</button>
                 </div>
             </div>
         </div>
@@ -42,6 +46,7 @@
 
 <script>
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import axios from 'axios';
 
 export default {
     name: 'ManagerNewsPage',
@@ -52,16 +57,73 @@ export default {
             editorConfig: {
                 // The configuration of the editor.
             },
-            selected: [],
-            options: [
-                { text: 'Văn hóa', value: 'VAN_HOA' },
-                { text: 'Chính trị', value: 'CHINH_TRI' },
-                { text: 'Khoa học', value: 'KHOA_HOC' },
-                { text: 'Thể thao', value: 'THE_THAO' },
-                { text: 'Thế giới', value: 'THE_GIOI' },
-                { text: 'Xã hội', value: 'XA_HOI' }
-            ]
+            categories: null,
+            tags: null,
+            article: null,
         };
-    }
+    },
+    methods: {
+        save() {
+
+            const today = new Date();
+
+            const year = today.getFullYear();
+            const month = (today.getMonth() + 1).toString().padStart(2, '0'); // +1 vì tháng bắt đầu từ 0
+            const day = today.getDate().toString().padStart(2, '0');
+
+            // Định dạng ngày theo dạng "YYYY-MM-DD"
+            const formattedDate = `${year}-${month}-${day}`;
+
+            const articles = {
+                title: this.title,
+                content: this.inContent,
+                authorID: 1,
+                categoryID: this.inCategory,
+                publicationDate: formattedDate
+            };
+
+            axios.post(`http://localhost:8082/api/articles/`, articles)
+                .then(response => {
+                    // Gán dữ liệu từ API vào biến data
+                    this.article = response.data;
+                    const mapTagsArticle = [];
+                    for (let i = 0; i < this.inTags.length; i++) {
+                        const item = {
+                            articleID: response.data.articleID,
+                            tagID: this.inTags[i]
+                        }
+                        mapTagsArticle.push(item)
+                    }
+                    axios.post(`http://localhost:8082/api/tag/save/tagsArticle`, mapTagsArticle);
+                })
+                .catch(error => {
+                    // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                    this.error = 'Lỗi: ' + error.message;
+                });
+
+        }
+    },
+    mounted() {
+        // Gọi API khi thành phần được nạp
+        axios.get(`http://localhost:8082/api/category/`)
+            .then(response => {
+                // Gán dữ liệu từ API vào biến data
+                this.categories = response.data;
+            })
+            .catch(error => {
+                // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                this.error = 'Lỗi: ' + error.message;
+            });
+
+        axios.get(`http://localhost:8082/api/tag/`)
+            .then(response => {
+                // Gán dữ liệu từ API vào biến data
+                this.tags = response.data;
+            })
+            .catch(error => {
+                // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                this.error = 'Lỗi: ' + error.message;
+            });
+    },
 }
 </script>
