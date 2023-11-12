@@ -18,6 +18,9 @@
                 <input style="width: 100%; height: 50px; margin-top: 5px;" v-model="title" placeholder="News title." />
 
                 <div style="margin-top: 20px">Thể loại:</div>
+                <button @click="showPopupCategory" type="button" class="btn btn-success">Thêm</button>
+                <PopupAddCategory :is-visible="isPopupVisibleCategory" :popup-content="popupTextC"
+                    @close="closePopupCategory" />
                 <select style="width: 100%; margin-top: 5px;" v-model="inCategory">
                     <option v-for="category in categories" :key="category.code" :value="category.categoryID">
                         {{ category.name }}
@@ -25,6 +28,8 @@
                 </select>
 
                 <div style="margin-top: 20px">Thẻ:</div>
+                <button @click="showPopupTag" type="button" class="btn btn-success">Thêm</button>
+                <PopupAddTag :is-visible="isPopupVisibleTag" :popup-content="popupTextT" @close="closePopupTag" />
                 <select style="width: 100%; margin-top: 5px;" v-model="inTags" multiple>
                     <option v-for="tag in tags" :key="tag.code" :value="tag.tagID">
                         {{ tag.name }}
@@ -46,10 +51,16 @@
 
 <script>
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import PopupAddCategory from './popup/PopAddCategory.vue';
+import PopupAddTag from './popup/PopAddTag.vue';
 import axios from 'axios';
 
 export default {
     name: 'ManagerNewsPage',
+    components: {
+        PopupAddCategory,
+        PopupAddTag,
+    },
     data() {
         return {
             editor: ClassicEditor,
@@ -60,6 +71,10 @@ export default {
             categories: null,
             tags: null,
             article: null,
+            isPopupVisibleCategory: false,
+            isPopupVisibleTag: false,
+            popupTextC: "Thêm mới thể loại",
+            popupTextT: "Thêm mới thẻ",
         };
     },
     methods: {
@@ -101,7 +116,19 @@ export default {
                     this.error = 'Lỗi: ' + error.message;
                 });
 
-        }
+        },
+        showPopupCategory() {
+            this.isPopupVisibleCategory = true;
+        },
+        closePopupCategory() {
+            this.isPopupVisibleCategory = false;
+        },
+        showPopupTag() {
+            this.isPopupVisibleTag = true;
+        },
+        closePopupTag() {
+            this.isPopupVisibleTag = false;
+        },
     },
     mounted() {
         // Gọi API khi thành phần được nạp

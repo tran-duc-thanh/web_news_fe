@@ -17,7 +17,8 @@
                 <div class="float--right float--xs-none text-xs-center">
                     <!-- Header Topbar Action Start -->
                     <ul class="header--topbar-action nav">
-                        <li><router-link to="/login"><i class="fa fm fa-user-o"></i>Login/Register</router-link></li>
+                        <li v-if="username === null"><router-link to="/login"><i class="fa fm fa-user-o"></i>Login/Register</router-link></li>
+                        <li v-else><i class="fa fm fa-user-o"></i>{{ username }}</li>
                     </ul>
                     <!-- Header Topbar Action End -->
 
@@ -57,7 +58,6 @@
                 <div class="header--logo float--left float--sm-none text-sm-center">
                     <h1 class="h1">
                         <router-link to="/home" class="btn-link">
-                            <img src="img/logo.png" alt="USNews Logo">
                             <span class="hidden">USNews Logo</span>
                         </router-link>
                     </h1>
@@ -91,106 +91,11 @@
                 <div id="headerNav" class="navbar-collapse collapse float--left">
                     <!-- Header Menu Links Start -->
                     <ul class="header--menu-links nav navbar-nav" data-trigger="hoverIntent">
-                        <li><router-link to="/home">Home</router-link></li>
-                        <li v-for="category in categories" :key="category.code"><router-link to="/category">{{ category.name }}</router-link></li>
-                        <li class="dropdown megamenu posts">
-                            <a href="travel.html" class="dropdown-toggle" data-toggle="dropdown">Travel<i
-                                    class="fa flm fa-angle-down"></i></a>
-
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <!-- Megamenu Posts Start -->
-                                    <div class="megamenu--posts" data-ajax-content="outer">
-                                        <ul class="row" data-ajax-content="inner">
-                                            <li class="col-md-3">
-                                                <div class="img">
-                                                    <a href="news-single-v1.html" class="thumb">
-                                                        <img src="img/megamenu-img/post-01.jpg" alt="">
-                                                    </a>
-
-                                                    <a href="#" class="cat">Beach</a>
-
-                                                    <a href="#" class="icon"><i class="fa fa-eye"></i></a>
-                                                </div>
-
-                                                <a href="news-single-v1.html" class="title">It is a long established fact
-                                                    that a reader will be distracted by</a>
-                                            </li>
-
-                                            <li class="col-md-3">
-                                                <div class="img">
-                                                    <a href="news-single-v1.html" class="thumb">
-                                                        <img src="img/megamenu-img/post-02.jpg" alt="">
-                                                    </a>
-
-                                                    <a href="#" class="cat">News</a>
-
-                                                    <a href="#" class="icon"><i class="fa fa-star-o"></i></a>
-                                                </div>
-
-                                                <a href="news-single-v1.html" class="title">It is a long established fact
-                                                    that a reader will be distracted by</a>
-                                            </li>
-
-                                            <li class="col-md-3">
-                                                <div class="img">
-                                                    <a href="news-single-v1.html" class="thumb">
-                                                        <img src="img/megamenu-img/post-03.jpg" alt="">
-                                                    </a>
-
-                                                    <a href="#" class="cat">Ice Hiking</a>
-
-                                                    <a href="#" class="icon"><i class="fa fa-flash"></i></a>
-                                                </div>
-
-                                                <a href="news-single-v1.html" class="title">It is a long established fact
-                                                    that a reader will be distracted by</a>
-                                            </li>
-
-                                            <li class="col-md-3">
-                                                <div class="img">
-                                                    <a href="news-single-v1.html" class="thumb">
-                                                        <img src="img/megamenu-img/post-04.jpg" alt="">
-                                                    </a>
-
-                                                    <a href="#" class="cat">Mountain</a>
-
-                                                    <a href="#" class="icon"><i class="fa fa-heart-o"></i></a>
-                                                </div>
-
-                                                <a href="news-single-v1.html" class="title">It is a long established fact
-                                                    that a reader will be distracted by</a>
-                                            </li>
-                                        </ul>
-
-                                        <!-- Preloader Start -->
-                                        <div class="preloader bg--color-0--b" data-preloader="1">
-                                            <div class="preloader--inner"></div>
-                                        </div>
-                                        <!-- Preloader End -->
-                                    </div>
-                                    <!-- Megamenu Posts End -->
-
-                                    <!-- Megamenu Pagination Start -->
-                                    <div class="megamenu--pagination" data-ajax="tab">
-                                        <a href="#" class="prev" data-ajax-action="load_prev_posts">
-                                            <i class="fa fa-long-arrow-left"></i>
-                                        </a>
-
-                                        <a href="travel.html" class="all" title="View All" data-toggle="tooltip">
-                                            <i class="fa fa-th-large"></i>
-                                        </a>
-                                        <a href="#" class="next" data-ajax-action="load_next_posts">
-                                            <i class="fa fa-long-arrow-right"></i>
-                                        </a>
-                                    </div>
-                                    <!-- Megamenu Pagination End -->
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="sports.html">Sports</a></li>
+                        <li><router-link to="/home">Trang chủ</router-link></li>
+                        <li v-for="category in categories" :key="category.code"><router-link @click="reloadComponent(category.categoryID)" :to="{ name: 'category', params: {id: category.categoryID} }">{{ category.name
+                        }}</router-link></li>
                         <li class="dropdown megamenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Catagory<i
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Thể loại<i
                                     class="fa flm fa-angle-down"></i></a>
 
                             <ul class="dropdown-menu">
@@ -298,91 +203,14 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages<i
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quản lý<i
                                     class="fa flm fa-angle-down"></i></a>
 
                             <ul class="dropdown-menu">
                                 <li class="dropdown">
-                                    <router-link to="/manager/news" class="dropdown-toggle" data-toggle="dropdown">News<i
-                                            class="fa flm fa-angle-right"></i></router-link>
-
-                                    <ul class="dropdown-menu">
-                                        <li><a href="blog-v1.html">Blog 1</a></li>
-                                        <li><a href="blog-v2.html">Blog 2</a></li>
-                                        <li><a href="blog-v3.html">Blog 3</a></li>
-                                        <li><a href="archives-v1.html">Archives 1</a></li>
-                                        <li><a href="archives-v2.html">Archives 2</a></li>
-                                        <li><a href="archives-v3.html">Archives 3</a></li>
-                                        <li><a href="tag.html">Tag</a></li>
-                                        <li><a href="search.html">Search</a></li>
-                                        <li><a href="author.html">Author</a></li>
-                                    </ul>
+                                    <router-link to="/manager/news" class="dropdown-toggle" data-toggle="dropdown">Bài
+                                        viết</router-link>
                                 </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">News Single<i
-                                            class="fa flm fa-angle-right"></i></a>
-
-                                    <ul class="dropdown-menu">
-                                        <li><a href="news-single-v1.html">News Single 1</a></li>
-                                        <li><a href="news-single-v2.html">News Single 2</a></li>
-                                        <li><a href="news-single-v3.html">News Single 3</a></li>
-                                        <li><a href="news-single-v4.html">News Single 4</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about.html">About</a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Widgets<i
-                                            class="fa flm fa-angle-right"></i></a>
-
-                                    <ul class="dropdown-menu">
-                                        <li><a href="ad-widgets.html">Ad Widgets</a></li>
-                                        <li><a href="social-widgets.html">Social Widgets</a></li>
-                                        <li><a href="subscribe-widgets.html">Subscirbe Widgets</a></li>
-                                        <li><a href="post-widgets.html">Post Widgets</a></li>
-                                        <li><a href="poll-widgets.html">Poll Widgets</a></li>
-                                        <li><a href="search-widgets.html">Search Widgets</a></li>
-                                        <li><a href="links-widgets.html">Links Widgets</a></li>
-                                        <li><a href="tag-widgets.html">Tag Widgets</a></li>
-                                        <li><a href="profile-widgets.html">Profile Widgets</a></li>
-                                        <li><a href="cart-widgets.html">Cart Widgets</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contributors<i
-                                            class="fa flm fa-angle-right"></i></a>
-
-                                    <ul class="dropdown-menu">
-                                        <li><a href="contributors.html">Contributors 1</a></li>
-                                        <li><a href="contributors-2.html">Contributors 2</a></li>
-                                        <li><a href="contributors-3.html">Contributors 3</a></li>
-                                        <li><a href="contributors-4.html">Contributors 4</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="pricing.html">Pricing</a></li>
-                                <li><a href="login.html">Login</a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop<i
-                                            class="fa flm fa-angle-right"></i></a>
-
-                                    <ul class="dropdown-menu">
-                                        <li><a href="shop-1.html">Shop 1</a></li>
-                                        <li><a href="shop-2.html">Shop 2</a></li>
-                                        <li><a href="shop-details.html">Shop Details</a></li>
-                                        <li><a href="cart.html">Cart</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact<i
-                                            class="fa flm fa-angle-right"></i></a>
-
-                                    <ul class="dropdown-menu">
-                                        <li><a href="contact.html">Contact 1</a></li>
-                                        <li><a href="contact-2.html">Contact 2</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="coming-soon.html">Coming Soon</a></li>
-                                <li><a href="404.html">404</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -414,7 +242,16 @@ export default {
         return {
             categories: null,
             error: null,
+            username: null,
         };
+    },
+    methods: {
+        reloadComponent(id) {
+            // Gọi navigation guard để điều hướng lại cùng một route
+            this.$router.push({ path: `/category/${id}` }).catch(() => { });
+            this.$forceUpdate;
+            console.log(`/category/${id}`)
+        }
     },
     mounted() {
         // Gọi API khi thành phần được nạp
@@ -427,6 +264,7 @@ export default {
                 // Xử lý lỗi nếu có lỗi trong quá trình gọi API
                 this.error = 'Lỗi: ' + error.message;
             });
+        this.username = localStorage.getItem('username');
     },
 }
 </script>

@@ -4,7 +4,8 @@
         <div class="container">
             <ul class="breadcrumb">
                 <li><router-link to="/home" class="btn-link"><i class="fa fm fa-home"></i>Home</router-link></li>
-                <li class="active"><span>Blog</span></li>
+                <li v-if="category === null" class="active"><span>Thể loại</span></li>
+                <li v-else class="active"><span>{{ category.name }}</span></li>
             </ul>
         </div>
     </div>
@@ -20,7 +21,7 @@
                         <!-- Post Items Start -->
                         <div class="post--items post--items-5 pd--30-0">
                             <ul class="nav">
-                                <li>
+                                <li v-for="article in articles" :key="article.articleID">
                                     <!-- Post Item Start -->
                                     <div class="post--item post--title-larger">
                                         <div class="row">
@@ -36,451 +37,12 @@
                                                 <div class="post--info">
                                                     <ul class="nav meta">
                                                         <li><a href="#">Bushyasta</a></li>
-                                                        <li><a href="#">16 April 2016</a></li>
+                                                        <li><a href="#">{{ article.publicationDate }}</a></li>
                                                     </ul>
 
                                                     <div class="title">
-                                                        <h3 class="h4"><a href="news-single-v1.html"
-                                                                class="btn-link">Credibly pontificate highly efficient
-                                                                manufactured products and enabled data.</a></h3>
-                                                    </div>
-                                                </div>
-
-                                                <div class="post--content">
-                                                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                                        tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-                                                        quo minus id quod maxime placeat facere possimus.</p>
-                                                </div>
-
-                                                <div class="post--action">
-                                                    <a href="news-single-v1.html">Continue Reading...</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Post Item End -->
-                                </li>
-
-                                <li>
-                                    <!-- Post Item Start -->
-                                    <div class="post--item post--title-larger">
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-12 col-xs-4 col-xxs-12">
-                                                <div class="post--img">
-                                                    <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/blog-img/post-02.jpg" alt=""></a>
-                                                    <a href="#" class="cat">War</a>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-8 col-sm-12 col-xs-8 col-xxs-12">
-                                                <div class="post--info">
-                                                    <ul class="nav meta">
-                                                        <li><a href="#">Chemosh</a></li>
-                                                        <li><a href="#">05 March 2016</a></li>
-                                                    </ul>
-
-                                                    <div class="title">
-                                                        <h3 class="h4"><a href="news-single-v1.html"
-                                                                class="btn-link">Credibly pontificate highly efficient
-                                                                manufactured products and enabled data.</a></h3>
-                                                    </div>
-                                                </div>
-
-                                                <div class="post--content">
-                                                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                                        tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-                                                        quo minus id quod maxime placeat facere possimus.</p>
-                                                </div>
-
-                                                <div class="post--action">
-                                                    <a href="news-single-v1.html">Continue Reading...</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Post Item End -->
-                                </li>
-
-                                <li>
-                                    <!-- Post Item Start -->
-                                    <div class="post--item post--title-larger">
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-12 col-xs-4 col-xxs-12">
-                                                <div class="post--img">
-                                                    <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/blog-img/post-03.jpg" alt=""></a>
-                                                    <a href="#" class="cat">Fashion</a>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-8 col-sm-12 col-xs-8 col-xxs-12">
-                                                <div class="post--info">
-                                                    <ul class="nav meta">
-                                                        <li><a href="#">Focalor</a></li>
-                                                        <li><a href="#">19 January 2016</a></li>
-                                                    </ul>
-
-                                                    <div class="title">
-                                                        <h3 class="h4"><a href="news-single-v1.html"
-                                                                class="btn-link">Credibly pontificate highly efficient
-                                                                manufactured products and enabled data.</a></h3>
-                                                    </div>
-                                                </div>
-
-                                                <div class="post--content">
-                                                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                                        tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-                                                        quo minus id quod maxime placeat facere possimus.</p>
-                                                </div>
-
-                                                <div class="post--action">
-                                                    <a href="news-single-v1.html">Continue Reading...</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Post Item End -->
-                                </li>
-
-                                <li>
-                                    <!-- Post Item Start -->
-                                    <div class="post--item post--title-larger">
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-12 col-xs-4 col-xxs-12">
-                                                <div class="post--img">
-                                                    <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/blog-img/post-04.jpg" alt=""></a>
-                                                    <a href="#" class="cat">Foods</a>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-8 col-sm-12 col-xs-8 col-xxs-12">
-                                                <div class="post--info">
-                                                    <ul class="nav meta">
-                                                        <li><a href="#">Bune</a></li>
-                                                        <li><a href="#">16 April 2016</a></li>
-                                                    </ul>
-
-                                                    <div class="title">
-                                                        <h3 class="h4"><a href="news-single-v1.html"
-                                                                class="btn-link">Credibly pontificate highly efficient
-                                                                manufactured products and enabled data.</a></h3>
-                                                    </div>
-                                                </div>
-
-                                                <div class="post--content">
-                                                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                                        tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-                                                        quo minus id quod maxime placeat facere possimus.</p>
-                                                </div>
-
-                                                <div class="post--action">
-                                                    <a href="news-single-v1.html">Continue Reading...</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Post Item End -->
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- Post Items End -->
-
-                        <!-- Advertisement Start -->
-                        <div class="ad--space">
-                            <a href="#">
-                                <img src="img/ads-img/ad-728x90-02.jpg" alt="" class="center-block">
-                            </a>
-                        </div>
-                        <!-- Advertisement End -->
-
-                        <!-- Post Items Start -->
-                        <div class="post--items post--items-5 pd--30-0">
-                            <ul class="nav">
-                                <li>
-                                    <!-- Post Item Start -->
-                                    <div class="post--item post--title-larger">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="post--img">
-                                                    <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/blog-img/post-05.jpg" alt=""></a>
-                                                    <a href="#" class="cat">Old City</a>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-8">
-                                                <div class="post--info">
-                                                    <ul class="nav meta">
-                                                        <li><a href="#">Bune</a></li>
-                                                        <li><a href="#">16 April 2016</a></li>
-                                                    </ul>
-
-                                                    <div class="title">
-                                                        <h3 class="h4"><a href="news-single-v1.html"
-                                                                class="btn-link">Credibly pontificate highly efficient
-                                                                manufactured products and enabled data.</a></h3>
-                                                    </div>
-                                                </div>
-
-                                                <div class="post--content">
-                                                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                                        tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-                                                        quo minus id quod maxime placeat facere possimus.</p>
-                                                </div>
-
-                                                <div class="post--action">
-                                                    <a href="news-single-v1.html">Continue Reading...</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Post Item End -->
-                                </li>
-
-                                <li>
-                                    <!-- Post Item Start -->
-                                    <div class="post--item post--title-larger">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="post--img">
-                                                    <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/blog-img/post-06.jpg" alt=""></a>
-                                                    <a href="#" class="cat">Travel</a>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-8">
-                                                <div class="post--info">
-                                                    <ul class="nav meta">
-                                                        <li><a href="#">Krampus</a></li>
-                                                        <li><a href="#">10 September 2016</a></li>
-                                                    </ul>
-
-                                                    <div class="title">
-                                                        <h3 class="h4"><a href="news-single-v1.html"
-                                                                class="btn-link">Credibly pontificate highly efficient
-                                                                manufactured products and enabled data.</a></h3>
-                                                    </div>
-                                                </div>
-
-                                                <div class="post--content">
-                                                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                                        tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-                                                        quo minus id quod maxime placeat facere possimus.</p>
-                                                </div>
-
-                                                <div class="post--action">
-                                                    <a href="news-single-v1.html">Continue Reading...</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Post Item End -->
-                                </li>
-
-                                <li>
-                                    <!-- Post Item Start -->
-                                    <div class="post--item post--title-larger">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="post--img">
-                                                    <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/blog-img/post-07.jpg" alt=""></a>
-                                                    <a href="#" class="cat">Human</a>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-8">
-                                                <div class="post--info">
-                                                    <ul class="nav meta">
-                                                        <li><a href="#">Bune</a></li>
-                                                        <li><a href="#">16 April 2016</a></li>
-                                                    </ul>
-
-                                                    <div class="title">
-                                                        <h3 class="h4"><a href="news-single-v1.html" class="btn-link">What
-                                                                are they doing highly efficient manufactured products and
-                                                                enabled data.</a></h3>
-                                                    </div>
-                                                </div>
-
-                                                <div class="post--content">
-                                                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                                        tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-                                                        quo minus id quod maxime placeat facere possimus.</p>
-                                                </div>
-
-                                                <div class="post--action">
-                                                    <a href="news-single-v1.html">Continue Reading...</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Post Item End -->
-                                </li>
-
-                                <li>
-                                    <!-- Post Item Start -->
-                                    <div class="post--item post--title-larger">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="post--img">
-                                                    <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/blog-img/post-08.jpg" alt=""></a>
-                                                    <a href="#" class="cat">Politics</a>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-8">
-                                                <div class="post--info">
-                                                    <ul class="nav meta">
-                                                        <li><a href="#">Mara</a></li>
-                                                        <li><a href="#">27 August 2016</a></li>
-                                                    </ul>
-
-                                                    <div class="title">
-                                                        <h3 class="h4"><a href="news-single-v1.html" class="btn-link">What
-                                                                are they doing highly efficient manufactured products and
-                                                                enabled data.</a></h3>
-                                                    </div>
-                                                </div>
-
-                                                <div class="post--content">
-                                                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                                        tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-                                                        quo minus id quod maxime placeat facere possimus.</p>
-                                                </div>
-
-                                                <div class="post--action">
-                                                    <a href="news-single-v1.html">Continue Reading...</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Post Item End -->
-                                </li>
-
-                                <li>
-                                    <!-- Post Item Start -->
-                                    <div class="post--item post--title-larger">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="post--img">
-                                                    <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/blog-img/post-09.jpg" alt=""></a>
-                                                    <a href="#" class="cat">Gadgets</a>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-8">
-                                                <div class="post--info">
-                                                    <ul class="nav meta">
-                                                        <li><a href="#">Bune</a></li>
-                                                        <li><a href="#">16 April 2016</a></li>
-                                                    </ul>
-
-                                                    <div class="title">
-                                                        <h3 class="h4"><a href="news-single-v1.html" class="btn-link">What
-                                                                are they doing highly efficient manufactured products and
-                                                                enabled data.</a></h3>
-                                                    </div>
-                                                </div>
-
-                                                <div class="post--content">
-                                                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                                        tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-                                                        quo minus id quod maxime placeat facere possimus.</p>
-                                                </div>
-
-                                                <div class="post--action">
-                                                    <a href="news-single-v1.html">Continue Reading...</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Post Item End -->
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- Post Items End -->
-
-                        <!-- Advertisement Start -->
-                        <div class="ad--space">
-                            <a href="#">
-                                <img src="img/ads-img/ad-728x90-03.jpg" alt="" class="center-block">
-                            </a>
-                        </div>
-                        <!-- Advertisement End -->
-
-                        <!-- Post Items Start -->
-                        <div class="post--items post--items-5 pd--30-0">
-                            <ul class="nav">
-                                <li>
-                                    <!-- Post Item Start -->
-                                    <div class="post--item post--title-larger">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="post--img">
-                                                    <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/blog-img/post-10.jpg" alt=""></a>
-                                                    <a href="#" class="cat">World News</a>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-8">
-                                                <div class="post--info">
-                                                    <ul class="nav meta">
-                                                        <li><a href="#">Onoskelis</a></li>
-                                                        <li><a href="#">22 May 2016</a></li>
-                                                    </ul>
-
-                                                    <div class="title">
-                                                        <h3 class="h4"><a href="news-single-v1.html" class="btn-link">What
-                                                                are they doing highly efficient manufactured products and
-                                                                enabled data.</a></h3>
-                                                    </div>
-                                                </div>
-
-                                                <div class="post--content">
-                                                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                                        tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-                                                        quo minus id quod maxime placeat facere possimus.</p>
-                                                </div>
-
-                                                <div class="post--action">
-                                                    <a href="news-single-v1.html">Continue Reading...</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Post Item End -->
-                                </li>
-
-                                <li>
-                                    <!-- Post Item Start -->
-                                    <div class="post--item post--title-larger">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="post--img">
-                                                    <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/blog-img/post-11.jpg" alt=""></a>
-                                                    <a href="#" class="cat">Sports</a>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-8">
-                                                <div class="post--info">
-                                                    <ul class="nav meta">
-                                                        <li><a href="#">Bune</a></li>
-                                                        <li><a href="#">16 April 2016</a></li>
-                                                    </ul>
-
-                                                    <div class="title">
-                                                        <h3 class="h4"><a href="news-single-v1.html" class="btn-link">What
-                                                                are they doing highly efficient manufactured products and
-                                                                enabled data.</a></h3>
+                                                        <h3 class="h4"><a href="news-single-v1.html" class="btn-link">{{
+                                                            article.title }}</a></h3>
                                                     </div>
                                                 </div>
 
@@ -906,74 +468,127 @@
                                             <!-- Post Item End -->
                                         </li>
                                         <li>
-                                        <!-- Post Item Start -->
-                                        <div class="post--item post--layout-3">
-                                            <div class="post--img">
-                                                <span class="thumb">
-                                                    <img src="img/widgets-img/readers-opinion-02.png" alt="">
-                                                </span>
+                                            <!-- Post Item Start -->
+                                            <div class="post--item post--layout-3">
+                                                <div class="post--img">
+                                                    <span class="thumb">
+                                                        <img src="img/widgets-img/readers-opinion-02.png" alt="">
+                                                    </span>
 
-                                                <div class="post--info">
-                                                    <div class="title">
-                                                        <h3 class="h4">Long established fact that a reader will be
-                                                            distracted</h3>
+                                                    <div class="post--info">
+                                                        <div class="title">
+                                                            <h3 class="h4">Long established fact that a reader will be
+                                                                distracted</h3>
+                                                        </div>
+
+                                                        <ul class="nav meta">
+                                                            <li><span>by Ninurta</span></li>
+                                                            <li><span>16 April 2017</span></li>
+                                                        </ul>
                                                     </div>
-
-                                                    <ul class="nav meta">
-                                                        <li><span>by Ninurta</span></li>
-                                                        <li><span>16 April 2017</span></li>
-                                                    </ul>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- Post Item End -->
-                                    </li>
-                                    <li>
-                                        <!-- Post Item Start -->
-                                        <div class="post--item post--layout-3">
-                                            <div class="post--img">
-                                                <span class="thumb">
-                                                    <img src="img/widgets-img/readers-opinion-03.png" alt="">
-                                                </span>
+                                            <!-- Post Item End -->
+                                        </li>
+                                        <li>
+                                            <!-- Post Item Start -->
+                                            <div class="post--item post--layout-3">
+                                                <div class="post--img">
+                                                    <span class="thumb">
+                                                        <img src="img/widgets-img/readers-opinion-03.png" alt="">
+                                                    </span>
 
-                                                <div class="post--info">
-                                                    <div class="title">
-                                                        <h3 class="h4">Long established fact that a reader will be
-                                                            distracted</h3>
+                                                    <div class="post--info">
+                                                        <div class="title">
+                                                            <h3 class="h4">Long established fact that a reader will be
+                                                                distracted</h3>
+                                                        </div>
+
+                                                        <ul class="nav meta">
+                                                            <li><span>by Ninurta</span></li>
+                                                            <li><span>16 April 2017</span></li>
+                                                        </ul>
                                                     </div>
-
-                                                    <ul class="nav meta">
-                                                        <li><span>by Ninurta</span></li>
-                                                        <li><span>16 April 2017</span></li>
-                                                    </ul>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- Post Item End -->
-                                    </li>
-                                </ul>
+                                            <!-- Post Item End -->
+                                        </li>
+                                    </ul>
 
-                                <!-- Preloader Start -->
-                                <div class="preloader bg--color-0--b" data-preloader="1">
-                                    <div class="preloader--inner"></div>
+                                    <!-- Preloader Start -->
+                                    <div class="preloader bg--color-0--b" data-preloader="1">
+                                        <div class="preloader--inner"></div>
+                                    </div>
+                                    <!-- Preloader End -->
                                 </div>
-                                <!-- Preloader End -->
+                                <!-- Post Items End -->
                             </div>
-                            <!-- Post Items End -->
+                            <!-- List Widgets End -->
                         </div>
-                        <!-- List Widgets End -->
+                        <!-- Widget End -->
                     </div>
-                    <!-- Widget End -->
                 </div>
+                <!-- Main Sidebar End -->
             </div>
-            <!-- Main Sidebar End -->
         </div>
     </div>
-</div>
-<!-- Main Content Section End --></template>
+    <!-- Main Content Section End -->
+</template>
 
 <script>
+import axios from 'axios';
+
 export default {
-    name: 'CategoryPage'
+    name: 'CategoryPage',
+    data() {
+        return {
+            articles: [],
+            category: null,
+        }
+    },
+    mounted() {
+        console.log("mounted")
+        const id = this.$route.params.id;
+        axios.get(`http://localhost:8082/api/articles/category/${id}?page=0&size=13&sort=PublicationDate`)
+            .then(response => {
+                this.articles = response.data.content;
+            })
+            .catch(error => {
+                // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                this.error = 'Lỗi: ' + error.message;
+            });
+        axios.get(`http://localhost:8082/api/category/${id}`)
+            .then(response => {
+                this.category = response.data;
+            })
+            .catch(error => {
+                // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                this.error = 'Lỗi: ' + error.message;
+            });
+    },
+    beforeRouteUpdate(to, from, next) {
+        // Xử lý khi route parameters thay đổi
+        const id = to.params.id;
+        console.log('Route parameters changed.' + id);
+        axios.get(`http://localhost:8082/api/articles/category/${id}?page=0&size=13&sort=PublicationDate`)
+            .then(response => {
+                this.articles = response.data.content;
+            })
+            .catch(error => {
+                // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                this.error = 'Lỗi: ' + error.message;
+            });
+        axios.get(`http://localhost:8082/api/category/${id}`)
+            .then(response => {
+                this.category = response.data;
+            })
+            .catch(error => {
+                // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                this.error = 'Lỗi: ' + error.message;
+            });
+        // Thực hiện các hành động cần thiết, ví dụ:
+        // this.loadData(); // Gọi hàm để tải lại dữ liệu
+        next(); // Để tiếp tục chuyển tiếp đến route mới
+    },
 }
 </script>

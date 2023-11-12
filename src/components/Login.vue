@@ -83,6 +83,7 @@ export default {
                 .then(response => {
                     this.token = response.data.token;
                     localStorage.setItem('token', this.token);
+                    localStorage.setItem('username', response.data.username);
                     console.log(response)
                     this.$router.push('/home')
                 })

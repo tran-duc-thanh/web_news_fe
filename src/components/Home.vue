@@ -28,13 +28,19 @@
                                     <div class="post--info">
                                         <ul class="nav meta">
                                             <li><a href="#">Norma R. Hogan</a></li>
-                                            <li><a href="#">20 April 2017</a></li>
+                                            <li v-if="articles.length === 0"><a href="#">Không có dữ liệu</a></li>
+                                            <li v-else><a href="#">{{ articles[0].publicationDate }}</a></li>
                                         </ul>
 
-                                        <div class="title">
-                                            <h2 class="h4"><router-link to="/article/1" class="btn-link">Siriyan civil war
-                                                    getting righteous indignation and dislike men who are so beguiled and
-                                                    demoralized by the sure.</router-link></h2>
+                                        <div v-if="articles.length === 0" class="title">
+                                            <h2 class="h4">Không có dữ liệu</h2>
+                                        </div>
+
+                                        <div v-else class="title">
+                                            <router-link :to="{ name: 'detail', params: { id: articles[0].articleID } }"
+                                                class="btn-link">
+                                                <h2 class="h4">{{ articles[0].title }}</h2>
+                                            </router-link>
                                         </div>
                                     </div>
                                 </div>
@@ -56,12 +62,18 @@
                                             <div class="post--info">
                                                 <ul class="nav meta">
                                                     <li><a href="#">Corey I. Dean</a></li>
-                                                    <li><a href="#">20 April 2017</a></li>
+                                                    <li v-if="articles.length === 0"><a href="#">Không có dữ liệu</a></li>
+                                                    <li v-else><a href="#">{{ articles[1].publicationDate }}</a></li>
                                                 </ul>
-
-                                                <div class="title">
-                                                    <h2 class="h4"><a href="news-single-v1.html" class="btn-link">Lorem
-                                                            Ipsum is simply dummy text of the printing</a></h2>
+                                                <div v-if="articles.length === 0" class="title">
+                                                    <h2 class="h4">Không có dữ liệu</h2>
+                                                </div>
+                                                <div v-else class="title">
+                                                    <router-link
+                                                        :to="{ name: 'detail', params: { id: articles[1].articleID } }"
+                                                        class="btn-link">
+                                                        <h2 class="h4">{{ articles[1].title }}</h2>
+                                                    </router-link>
                                                 </div>
                                             </div>
                                         </div>
@@ -90,12 +102,19 @@
                                             <div class="post--info">
                                                 <ul class="nav meta">
                                                     <li><a href="#">Leraje</a></li>
-                                                    <li><a href="#">20 April 2017</a></li>
+                                                    <li v-if="articles.length === 0"><a href="#">Không có dữ liệu</a></li>
+                                                    <li v-else><a href="#">{{ articles[2].publicationDate }}</a></li>
                                                 </ul>
 
-                                                <div class="title">
-                                                    <h2 class="h4"><a href="news-single-v1.html" class="btn-link">Lorem
-                                                            Ipsum is simply dummy text of the printing</a></h2>
+                                                <div v-if="articles.length === 0" class="title">
+                                                    <h2 class="h4">Không có dữ liệu</h2>
+                                                </div>
+                                                <div v-else class="title">
+                                                    <router-link
+                                                        :to="{ name: 'detail', params: { id: articles[2].articleID } }"
+                                                        class="btn-link">
+                                                        <h2 class="h4">{{ articles[2].title }}</h2>
+                                                    </router-link>
                                                 </div>
                                             </div>
                                         </div>
@@ -115,13 +134,19 @@
                                             <div class="post--info">
                                                 <ul class="nav meta">
                                                     <li><a href="#">Balam</a></li>
-                                                    <li><a href="#">20 April 2017</a></li>
+                                                    <li v-if="articles.length === 0"><a href="#">Không có dữ liệu</a></li>
+                                                    <li v-else><a href="#">{{ articles[3].publicationDate }}</a></li>
                                                 </ul>
 
-                                                <div class="title">
-                                                    <h2 class="h4"><a href="news-single-v1.html" class="btn-link">On the
-                                                            other hand, we denounce with righteous indignation and dislike
-                                                            men who are so beguiled and demoralized by the sure.</a></h2>
+                                                <div v-if="articles.length === 0" class="title">
+                                                    <h2 class="h4">Không có dữ liệu</h2>
+                                                </div>
+                                                <div v-else class="title">
+                                                    <router-link
+                                                        :to="{ name: 'detail', params: { id: articles[3].articleID } }"
+                                                        class="btn-link">
+                                                        <h2 class="h4">{{ articles[3].title }}</h2>
+                                                    </router-link>
                                                 </div>
                                             </div>
                                         </div>
@@ -2169,191 +2194,192 @@
                                                             alt=""></span>
 
                                                     <div class="post--info">
-                                                    <div class="title">
-                                                        <h3 class="h4">Long established fact that a reader will be
-                                                            distracted</h3>
-                                                    </div>
+                                                        <div class="title">
+                                                            <h3 class="h4">Long established fact that a reader will be
+                                                                distracted</h3>
+                                                        </div>
 
-                                                    <ul class="nav meta">
-                                                        <li><span>by Ninurta</span></li>
-                                                        <li><span>16 April 2017</span></li>
-                                                    </ul>
+                                                        <ul class="nav meta">
+                                                            <li><span>by Ninurta</span></li>
+                                                            <li><span>16 April 2017</span></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- Post Item End -->
-                                    </li>
-                                    <li>
-                                        <!-- Post Item Start -->
-                                        <div class="post--item post--layout-3">
-                                            <div class="post--img">
-                                                <span class="thumb"><img src="img/widgets-img/readers-opinion-03.png"
-                                                        alt=""></span>
+                                            <!-- Post Item End -->
+                                        </li>
+                                        <li>
+                                            <!-- Post Item Start -->
+                                            <div class="post--item post--layout-3">
+                                                <div class="post--img">
+                                                    <span class="thumb"><img src="img/widgets-img/readers-opinion-03.png"
+                                                            alt=""></span>
 
-                                                <div class="post--info">
-                                                    <div class="title">
-                                                        <h3 class="h4">Long established fact that a reader will be
-                                                            distracted</h3>
+                                                    <div class="post--info">
+                                                        <div class="title">
+                                                            <h3 class="h4">Long established fact that a reader will be
+                                                                distracted</h3>
+                                                        </div>
+
+                                                        <ul class="nav meta">
+                                                            <li><span>by Ninurta</span></li>
+                                                            <li><span>16 April 2017</span></li>
+                                                        </ul>
                                                     </div>
-
-                                                    <ul class="nav meta">
-                                                        <li><span>by Ninurta</span></li>
-                                                        <li><span>16 April 2017</span></li>
-                                                    </ul>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- Post Item End -->
-                                    </li>
-                                </ul>
+                                            <!-- Post Item End -->
+                                        </li>
+                                    </ul>
 
-                                <!-- Preloader Start -->
-                                <div class="preloader bg--color-0--b" data-preloader="1">
-                                    <div class="preloader--inner"></div>
+                                    <!-- Preloader Start -->
+                                    <div class="preloader bg--color-0--b" data-preloader="1">
+                                        <div class="preloader--inner"></div>
+                                    </div>
+                                    <!-- Preloader End -->
                                 </div>
-                                <!-- Preloader End -->
+                                <!-- Post Items End -->
                             </div>
-                            <!-- Post Items End -->
+                            <!-- List Widgets End -->
                         </div>
-                        <!-- List Widgets End -->
-                    </div>
-                    <!-- Widget End -->
+                        <!-- Widget End -->
 
-                    <!-- Widget Start -->
-                    <div class="widget">
-                        <div class="widget--title" data-ajax="tab">
-                            <h2 class="h4">Editors Choice</h2>
+                        <!-- Widget Start -->
+                        <div class="widget">
+                            <div class="widget--title" data-ajax="tab">
+                                <h2 class="h4">Editors Choice</h2>
 
-                            <div class="nav">
-                                <a href="#" class="prev btn-link" data-ajax-action="load_prev_editors_choice_widget">
-                                    <i class="fa fa-long-arrow-left"></i>
-                                </a>
+                                <div class="nav">
+                                    <a href="#" class="prev btn-link" data-ajax-action="load_prev_editors_choice_widget">
+                                        <i class="fa fa-long-arrow-left"></i>
+                                    </a>
 
-                                <span class="divider">/</span>
+                                    <span class="divider">/</span>
 
-                                <a href="#" class="next btn-link" data-ajax-action="load_next_editors_choice_widget">
-                                    <i class="fa fa-long-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- List Widgets Start -->
-                        <div class="list--widget list--widget-1" data-ajax-content="outer">
-                            <!-- Post Items Start -->
-                            <div class="post--items post--items-3">
-                                <ul class="nav" data-ajax-content="inner">
-                                    <li>
-                                        <!-- Post Item Start -->
-                                        <div class="post--item post--layout-3">
-                                            <div class="post--img">
-                                                <a href="news-single-v1.html" class="thumb"><img
-                                                        src="img/widgets-img/editors-choice-01.jpg" alt=""></a>
-
-                                                <div class="post--info">
-                                                    <ul class="nav meta">
-                                                        <li><a href="#">Ninurta</a></li>
-                                                        <li><a href="#">16 April 2017</a></li>
-                                                    </ul>
-
-                                                    <div class="title">
-                                                        <h3 class="h4"><a href="news-single-v1.html"
-                                                                class="btn-link">Long established fact that a reader
-                                                                will be distracted</a></h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Post Item End -->
-                                    </li>
-                                    <li>
-                                        <!-- Post Item Start -->
-                                        <div class="post--item post--layout-3">
-                                            <div class="post--img">
-                                                <a href="news-single-v1.html" class="thumb"><img
-                                                        src="img/widgets-img/editors-choice-02.jpg" alt=""></a>
-
-                                                <div class="post--info">
-                                                    <ul class="nav meta">
-                                                        <li><a href="#">Orcus</a></li>
-                                                        <li><a href="#">16 April 2017</a></li>
-                                                    </ul>
-
-                                                    <div class="title">
-                                                        <h3 class="h4"><a href="news-single-v1.html"
-                                                                class="btn-link">Long established fact that a reader
-                                                                will be distracted</a></h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Post Item End -->
-                                    </li>
-                                    <li>
-                                        <!-- Post Item Start -->
-                                        <div class="post--item post--layout-3">
-                                            <div class="post--img">
-                                                <a href="news-single-v1.html" class="thumb"><img
-                                                        src="img/widgets-img/editors-choice-03.jpg" alt=""></a>
-
-                                                <div class="post--info">
-                                                    <ul class="nav meta">
-                                                        <li><a href="#">Rahab</a></li>
-                                                        <li><a href="#">16 April 2017</a></li>
-                                                    </ul>
-
-                                                    <div class="title">
-                                                        <h3 class="h4"><a href="news-single-v1.html"
-                                                                class="btn-link">Long established fact that a reader
-                                                                will be distracted</a></h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Post Item End -->
-                                    </li>
-                                    <li>
-                                        <!-- Post Item Start -->
-                                        <div class="post--item post--layout-3">
-                                            <div class="post--img">
-                                                <a href="news-single-v1.html" class="thumb"><img
-                                                        src="img/widgets-img/editors-choice-04.jpg" alt=""></a>
-
-                                                <div class="post--info">
-                                                    <ul class="nav meta">
-                                                        <li><a href="#">Tannin</a></li>
-                                                        <li><a href="#">16 April 2017</a></li>
-                                                    </ul>
-
-                                                    <div class="title">
-                                                        <h3 class="h4"><a href="news-single-v1.html"
-                                                                class="btn-link">Long established fact that a reader
-                                                                will be distracted</a></h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Post Item End -->
-                                    </li>
-                                </ul>
-
-                                <!-- Preloader Start -->
-                                <div class="preloader bg--color-0--b" data-preloader="1">
-                                    <div class="preloader--inner"></div>
+                                    <a href="#" class="next btn-link" data-ajax-action="load_next_editors_choice_widget">
+                                        <i class="fa fa-long-arrow-right"></i>
+                                    </a>
                                 </div>
-                                <!-- Preloader End -->
                             </div>
-                            <!-- Post Items End -->
+
+                            <!-- List Widgets Start -->
+                            <div class="list--widget list--widget-1" data-ajax-content="outer">
+                                <!-- Post Items Start -->
+                                <div class="post--items post--items-3">
+                                    <ul class="nav" data-ajax-content="inner">
+                                        <li>
+                                            <!-- Post Item Start -->
+                                            <div class="post--item post--layout-3">
+                                                <div class="post--img">
+                                                    <a href="news-single-v1.html" class="thumb"><img
+                                                            src="img/widgets-img/editors-choice-01.jpg" alt=""></a>
+
+                                                    <div class="post--info">
+                                                        <ul class="nav meta">
+                                                            <li><a href="#">Ninurta</a></li>
+                                                            <li><a href="#">16 April 2017</a></li>
+                                                        </ul>
+
+                                                        <div class="title">
+                                                            <h3 class="h4"><a href="news-single-v1.html"
+                                                                    class="btn-link">Long established fact that a reader
+                                                                    will be distracted</a></h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Post Item End -->
+                                        </li>
+                                        <li>
+                                            <!-- Post Item Start -->
+                                            <div class="post--item post--layout-3">
+                                                <div class="post--img">
+                                                    <a href="news-single-v1.html" class="thumb"><img
+                                                            src="img/widgets-img/editors-choice-02.jpg" alt=""></a>
+
+                                                    <div class="post--info">
+                                                        <ul class="nav meta">
+                                                            <li><a href="#">Orcus</a></li>
+                                                            <li><a href="#">16 April 2017</a></li>
+                                                        </ul>
+
+                                                        <div class="title">
+                                                            <h3 class="h4"><a href="news-single-v1.html"
+                                                                    class="btn-link">Long established fact that a reader
+                                                                    will be distracted</a></h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Post Item End -->
+                                        </li>
+                                        <li>
+                                            <!-- Post Item Start -->
+                                            <div class="post--item post--layout-3">
+                                                <div class="post--img">
+                                                    <a href="news-single-v1.html" class="thumb"><img
+                                                            src="img/widgets-img/editors-choice-03.jpg" alt=""></a>
+
+                                                    <div class="post--info">
+                                                        <ul class="nav meta">
+                                                            <li><a href="#">Rahab</a></li>
+                                                            <li><a href="#">16 April 2017</a></li>
+                                                        </ul>
+
+                                                        <div class="title">
+                                                            <h3 class="h4"><a href="news-single-v1.html"
+                                                                    class="btn-link">Long established fact that a reader
+                                                                    will be distracted</a></h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Post Item End -->
+                                        </li>
+                                        <li>
+                                            <!-- Post Item Start -->
+                                            <div class="post--item post--layout-3">
+                                                <div class="post--img">
+                                                    <a href="news-single-v1.html" class="thumb"><img
+                                                            src="img/widgets-img/editors-choice-04.jpg" alt=""></a>
+
+                                                    <div class="post--info">
+                                                        <ul class="nav meta">
+                                                            <li><a href="#">Tannin</a></li>
+                                                            <li><a href="#">16 April 2017</a></li>
+                                                        </ul>
+
+                                                        <div class="title">
+                                                            <h3 class="h4"><a href="news-single-v1.html"
+                                                                    class="btn-link">Long established fact that a reader
+                                                                    will be distracted</a></h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Post Item End -->
+                                        </li>
+                                    </ul>
+
+                                    <!-- Preloader Start -->
+                                    <div class="preloader bg--color-0--b" data-preloader="1">
+                                        <div class="preloader--inner"></div>
+                                    </div>
+                                    <!-- Preloader End -->
+                                </div>
+                                <!-- Post Items End -->
+                            </div>
+                            <!-- List Widgets End -->
                         </div>
-                        <!-- List Widgets End -->
+                        <!-- Widget End -->
                     </div>
-                    <!-- Widget End -->
                 </div>
+                <!-- Main Sidebar End -->
             </div>
-            <!-- Main Sidebar End -->
         </div>
     </div>
-</div>
-<!-- Main Content Section End --></template>
+    <!-- Main Content Section End -->
+</template>
   
 <script>
 import axios from 'axios';
@@ -2363,6 +2389,7 @@ export default {
     data() {
         return {
             categories: null,
+            articles: [],
             error: null,
         };
     },
@@ -2372,6 +2399,14 @@ export default {
             .then(response => {
                 // Gán dữ liệu từ API vào biến data
                 this.categories = response.data;
+            })
+            .catch(error => {
+                // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                this.error = 'Lỗi: ' + error.message;
+            });
+        axios.get(`http://localhost:8082/api/articles/category/1?page=0&size=4&sort=PublicationDate`)
+            .then(response => {
+                this.articles = response.data.content;
             })
             .catch(error => {
                 // Xử lý lỗi nếu có lỗi trong quá trình gọi API

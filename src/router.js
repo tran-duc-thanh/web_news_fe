@@ -64,7 +64,8 @@ const routes = [
     }
   },
   {
-    path: '/category',
+    path: '/category/:id',
+    name: 'category',
     components: {
       preloader: PreloaderPage,
       container: CategoryPage,
@@ -87,6 +88,7 @@ const routes = [
   },
   {
     path: '/article/:id',
+    name: 'detail',
     components: {
       preloader: PreloaderPage,
       container: NewsSinglePage,
