@@ -4,8 +4,10 @@
         <div class="container">
             <ul class="breadcrumb">
                 <li><router-link to="/home" class="btn-link"><i class="fa fm fa-home"></i>Home</router-link></li>
-                <li><a href="travel.html" class="btn-link">Travel</a></li>
-                <li class="active"><span>It is a long established fact that a reader will be distracted by</span></li>
+                <li v-if="category === null"><a href="travel.html" class="btn-link">Không có dữ liệu</a></li>
+                <li v-else><a href="travel.html" class="btn-link">{{ category.name }}</a></li>
+                <li v-if="article === null" class="active"><span>Không có dữ liệu</span></li>
+                <li v-else class="active"><span>{{ article.title }}</span></li>
             </ul>
         </div>
     </div>
@@ -22,7 +24,7 @@
                         <div class="post--item post--single post--title-largest pd--30-0">
                             <div class="post--img">
                                 <a href="#" class="thumb"><img src="img/news-single-img/post-img-01.jpg" alt=""></a>
-                                <a href="#" class="icon"><i class="fa fa-star-o"></i></a>
+                                <a href="#" class="icon"><i class="fa fa-pencil-square-o"></i></a>
 
                                 <div class="post--map">
                                     <p class="btn-link"><i class="fa fa-map-o"></i>Location in Google Map</p>
@@ -47,97 +49,20 @@
                             <div class="post--info">
                                 <ul class="nav meta">
                                     <li><a href="#">Norma R. Hogan</a></li>
-                                    <li><a href="#">20 April 2017</a></li>
+                                    <li v-if="article === null"><a href="#">Không có dữ liệu</a></li>
+                                    <li v-else><a href="#">{{ article.publicationDate }}</a></li>
                                     <li><span><i class="fa fm fa-eye"></i>45k</span></li>
                                     <li><a href="#"><i class="fa fm fa-comments-o"></i>02</a></li>
                                 </ul>
 
                                 <div class="title">
-                                    <h2 class="h4">It is a long established fact that a reader will be distracted by the
-                                        readable
-                                        content</h2>
+                                    <h2 v-if="article === null" class="h4">Không có dữ liệu</h2>
+                                    <h2 v-else class="h4">{{ article.title }}</h2>
                                 </div>
                             </div>
 
-                            <div class="post--content">
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                    suffered
-                                    alteration in some form, by injected humour, or randomised words which don't look even
-                                    slightly
-                                    believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there
-                                    isn't
-                                    anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on
-                                    the Internet
-                                    tend to repeat predefined chunks as necessary, making this the first true generator on
-                                    the Internet.
-                                    It uses a dictionary of over 200 Latin words, combined with a handful of model sentence
-                                    structures,
-                                    to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore
-                                    always free
-                                    from repetition words etc.</p>
-
-                                <h4>Where does it come from?</h4>
-
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                                    piece of
-                                    classical Latin literature from 45 BC, making it over 2000 years old. Richard
-                                    McClintock, a Latin
-                                    professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin
-                                    words,
-                                    consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
-                                    classical
-                                    literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32
-                                    and 1.10.33
-                                    of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in
-                                    45 BC. This
-                                    book is a treatise on the theory of ethics, very popular during the Renaissance. The
-                                    first line of
-                                    Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <ul class="list">
-                                            <li>Integer vitae libero ac risus egestas placerat.</li>
-                                            <li>Fusce lobortis lorem at ipsum semper sagittis.</li>
-                                            <li>Cras ornare tristique eros elit nulla nec ante.</li>
-                                            <li>Ut aliquam sollicitudin iaculis ultricies nulla.</li>
-                                            <li>Vivamus molestie gravida turpis lobortis lorem.</li>
-                                            <li>Nam convallis pellentesque nisl commodo nulla.</li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="col-sm-6">
-                                        <img src="img/news-single-img/post-img-02.jpg" alt="">
-                                        <p class="img-caption">Finibus Bonorum et Malorum</p>
-                                    </div>
-                                </div>
-
-                                <blockquote>
-                                    <p>It is a long established fact that a reader will be distracted by the readable
-                                        content of a page
-                                        when looking at its layout. The point of using Lorem Ipsum is that it has a
-                                        more-or-less normal
-                                        making it look like readable english many desktop.</p>
-
-                                    <footer>Semyaza, Australia</footer>
-                                </blockquote>
-
-                                <h4>Why do we use it?</h4>
-
-                                <p>It is a long established fact that a reader will be distracted by the readable content of
-                                    a page when
-                                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
-                                    normal
-                                    distribution of letters, as opposed to using 'Content here, content here', making it
-                                    look like
-                                    readable English. Many desktop publishing packages and web page editors now use Lorem
-                                    Ipsum as their
-                                    default model text, and a search for 'lorem ipsum' will uncover many web sites still in
-                                    their
-                                    infancy. Various versions have evolved over the years, sometimes by accident, sometimes
-                                    on purpose
-                                    (injected humour and the like).</p>
-                            </div>
+                            <div v-if="article === null" class="post--content">Không có dữ liệu</div>
+                            <div v-else class="post--content" v-html="article.content"></div>
                         </div>
                         <!-- Post Item End -->
 
@@ -219,170 +144,6 @@
                             </div>
                         </div>
                         <!-- Post Author Info End -->
-
-                        <!-- Post Nav Start -->
-                        <div class="post--nav">
-                            <ul class="nav row">
-                                <li class="col-xs-6 ptop--30 pbottom--30">
-                                    <!-- Post Item Start -->
-                                    <div class="post--item">
-                                        <div class="post--img">
-                                            <a href="#" class="thumb"><img src="img/news-single-img/post-nav-prev.jpg"
-                                                    alt=""></a>
-
-                                            <div class="post--info">
-                                                <ul class="nav meta">
-                                                    <li><a href="#">Astaroth</a></li>
-                                                    <li><a href="#">Yeasterday 03:52 pm</a></li>
-                                                </ul>
-
-                                                <div class="title">
-                                                    <h3 class="h4"><a href="#" class="btn-link">On the other hand, we
-                                                            denounce with
-                                                            righteous indignation and dislike demoralized</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Post Item End -->
-                                </li>
-
-                                <li class="col-xs-6 ptop--30 pbottom--30">
-                                    <!-- Post Item Start -->
-                                    <div class="post--item">
-                                        <div class="post--img">
-                                            <a href="#" class="thumb"><img src="img/news-single-img/post-nav-next.jpg"
-                                                    alt=""></a>
-
-                                            <div class="post--info">
-                                                <ul class="nav meta">
-                                                    <li><a href="#">Astaroth</a></li>
-                                                    <li><a href="#">Yeasterday 03:52 pm</a></li>
-                                                </ul>
-
-                                                <div class="title">
-                                                    <h3 class="h4"><a href="#" class="btn-link">On the other hand, we
-                                                            denounce with
-                                                            righteous indignation and dislike demoralized</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Post Item End -->
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- Post Nav End -->
-
-                        <!-- Post Related Start -->
-                        <div class="post--related ptop--30">
-                            <!-- Post Items Title Start -->
-                            <div class="post--items-title" data-ajax="tab">
-                                <h2 class="h4">You Might Also Like</h2>
-
-                                <div class="nav">
-                                    <a href="#" class="prev btn-link" data-ajax-action="load_prev_related_posts">
-                                        <i class="fa fa-long-arrow-left"></i>
-                                    </a>
-
-                                    <span class="divider">/</span>
-
-                                    <a href="#" class="next btn-link" data-ajax-action="load_next_related_posts">
-                                        <i class="fa fa-long-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- Post Items Title End -->
-
-                            <!-- Post Items Start -->
-                            <div class="post--items post--items-2" data-ajax-content="outer">
-                                <ul class="nav row" data-ajax-content="inner">
-                                    <li class="col-sm-6 pbottom--30">
-                                        <!-- Post Item Start -->
-                                        <div class="post--item post--layout-1">
-                                            <div class="post--img">
-                                                <a href="#" class="thumb"><img src="img/news-single-img/related-post-01.jpg"
-                                                        alt=""></a>
-                                                <a href="#" class="cat">Fitness</a>
-                                                <a href="#" class="icon"><i class="fa fa-flash"></i></a>
-
-                                                <div class="post--info">
-                                                    <ul class="nav meta">
-                                                        <li><a href="#">Astaroth</a></li>
-                                                        <li><a href="#">Yeasterday 03:52 pm</a></li>
-                                                    </ul>
-
-                                                    <div class="title">
-                                                        <h3 class="h4"><a href="#" class="btn-link">On the other hand, we
-                                                                denounce with
-                                                                righteous indignation and dislike demoralized</a></h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="post--content">
-                                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                                    praesentium
-                                                    voluptatum deleniti atque corrupti quos mollitia animi, id est laborum
-                                                    et dolorum
-                                                    fuga.</p>
-                                            </div>
-
-                                            <div class="post--action">
-                                                <a href="#">Continue Reading... </a>
-                                            </div>
-                                        </div>
-                                        <!-- Post Item End -->
-                                    </li>
-
-                                    <li class="col-sm-6 hidden-xs pbottom--30">
-                                        <!-- Post Item Start -->
-                                        <div class="post--item post--layout-1">
-                                            <div class="post--img">
-                                                <a href="#" class="thumb"><img src="img/news-single-img/related-post-02.jpg"
-                                                        alt=""></a>
-                                                <a href="#" class="cat">Fitness</a>
-                                                <a href="#" class="icon"><i class="fa fa-flash"></i></a>
-
-                                                <div class="post--info">
-                                                    <ul class="nav meta">
-                                                        <li><a href="#">Astaroth</a></li>
-                                                        <li><a href="#">Yeasterday 03:52 pm</a></li>
-                                                    </ul>
-
-                                                    <div class="title">
-                                                        <h3 class="h4"><a href="#" class="btn-link">On the other hand, we
-                                                                denounce with
-                                                                righteous indignation and dislike demoralized</a></h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="post--content">
-                                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                                    praesentium
-                                                    voluptatum deleniti atque corrupti quos mollitia animi, id est laborum
-                                                    et dolorum
-                                                    fuga.</p>
-                                            </div>
-
-                                            <div class="post--action">
-                                                <a href="#">Continue Reading... </a>
-                                            </div>
-                                        </div>
-                                        <!-- Post Item End -->
-                                    </li>
-                                </ul>
-
-                                <!-- Preloader Start -->
-                                <div class="preloader bg--color-0--b" data-preloader="1">
-                                    <div class="preloader--inner"></div>
-                                </div>
-                                <!-- Preloader End -->
-                            </div>
-                            <!-- Post Items End -->
-                        </div>
-                        <!-- Post Related End -->
 
                         <!-- Comment List Start -->
                         <div class="comment--list pd--30-0">
@@ -1141,51 +902,52 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        <!-- Post Item End -->
-                                    </li>
-                                    <li>
-                                        <!-- Post Item Start -->
-                                        <div class="post--item post--layout-3">
-                                            <div class="post--img">
-                                                <a href="#" class="thumb"><img
-                                                        src="img/widgets-img/editors-choice-04.jpg" alt=""></a>
+                                            <!-- Post Item End -->
+                                        </li>
+                                        <li>
+                                            <!-- Post Item Start -->
+                                            <div class="post--item post--layout-3">
+                                                <div class="post--img">
+                                                    <a href="#" class="thumb"><img
+                                                            src="img/widgets-img/editors-choice-04.jpg" alt=""></a>
 
-                                                <div class="post--info">
-                                                    <ul class="nav meta">
-                                                        <li><a href="#">Tannin</a></li>
-                                                        <li><a href="#">16 April 2017</a></li>
-                                                    </ul>
+                                                    <div class="post--info">
+                                                        <ul class="nav meta">
+                                                            <li><a href="#">Tannin</a></li>
+                                                            <li><a href="#">16 April 2017</a></li>
+                                                        </ul>
 
-                                                    <div class="title">
-                                                        <h3 class="h4"><a href="#" class="btn-link">Long established
-                                                                fact that a
-                                                                reader will be distracted</a></h3>
+                                                        <div class="title">
+                                                            <h3 class="h4"><a href="#" class="btn-link">Long established
+                                                                    fact that a
+                                                                    reader will be distracted</a></h3>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- Post Item End -->
-                                    </li>
-                                </ul>
+                                            <!-- Post Item End -->
+                                        </li>
+                                    </ul>
 
-                                <!-- Preloader Start -->
-                                <div class="preloader bg--color-0--b" data-preloader="1">
-                                    <div class="preloader--inner"></div>
+                                    <!-- Preloader Start -->
+                                    <div class="preloader bg--color-0--b" data-preloader="1">
+                                        <div class="preloader--inner"></div>
+                                    </div>
+                                    <!-- Preloader End -->
                                 </div>
-                                <!-- Preloader End -->
+                                <!-- Post Items End -->
                             </div>
-                            <!-- Post Items End -->
+                            <!-- List Widgets End -->
                         </div>
-                        <!-- List Widgets End -->
+                        <!-- Widget End -->
                     </div>
-                    <!-- Widget End -->
                 </div>
+                <!-- Main Sidebar End -->
             </div>
-            <!-- Main Sidebar End -->
         </div>
     </div>
-</div>
-<!-- Main Content Section End --></template>
+    <!-- Main Content Section End -->
+</template>
 
 <script>
 import axios from 'axios';
@@ -1194,16 +956,24 @@ export default {
     name: 'NewsSinglePage',
     data() {
         return {
-            categories: null,
-            error: null,
-        };
+            article: null,
+            category: null,
+        }
     },
     mounted() {
-        // Gọi API khi thành phần được nạp
-        axios.get(`http://localhost:8082/api/category/`)
+        const id = this.$route.params.id;
+        axios.get(`http://localhost:8082/api/articles/${id}`)
             .then(response => {
-                // Gán dữ liệu từ API vào biến data
-                this.categories = response.data;
+                this.article = response.data;
+                const categoryId = response.data.categoryID;
+                axios.get(`http://localhost:8082/api/category/${categoryId}`)
+                    .then(response => {
+                        this.category = response.data;
+                    })
+                    .catch(error => {
+                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                        this.error = 'Lỗi: ' + error.message;
+                    });
             })
             .catch(error => {
                 // Xử lý lỗi nếu có lỗi trong quá trình gọi API

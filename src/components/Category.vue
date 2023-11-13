@@ -41,19 +41,20 @@
                                                     </ul>
 
                                                     <div class="title">
-                                                        <h3 class="h4"><a href="news-single-v1.html" class="btn-link">{{
-                                                            article.title }}</a></h3>
+                                                        <h3 class="h4"><router-link
+                                                                :to="{ name: 'detail', params: { id: article.articleID } }"
+                                                                class="btn-link">{{
+                                                                    article.title }}</router-link></h3>
                                                     </div>
                                                 </div>
 
                                                 <div class="post--content">
-                                                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                                        tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-                                                        quo minus id quod maxime placeat facere possimus.</p>
+                                                    <p>{{ article.subContent }}</p>
                                                 </div>
 
                                                 <div class="post--action">
-                                                    <a href="news-single-v1.html">Continue Reading...</a>
+                                                    <router-link :to="{ name: 'detail', params: { id: article.articleID } }"
+                                                        class="btn-link">Continue Reading...</router-link>
                                                 </div>
                                             </div>
                                         </div>
@@ -94,13 +95,13 @@
                         <div class="widget">
                             <!-- Search Widget Start -->
                             <div class="search--widget">
-                                <form action="#" data-form="validate">
+                                <form onsubmit="return false;" action="#" data-form="validate">
                                     <div class="input-group">
-                                        <input type="search" name="search" placeholder="Search..." class="form-control"
+                                        <input v-model="keySearch" type="search" name="search" placeholder="Search..." class="form-control"
                                             required>
 
                                         <div class="input-group-btn">
-                                            <button type="submit" class="btn-link"><i class="fa fa-search"></i></button>
+                                            <button @click="search" type="submit" class="btn-link"><i class="fa fa-search"></i></button>
                                         </div>
                                     </div>
                                 </form>
@@ -546,8 +547,21 @@ export default {
             category: null,
         }
     },
+    methods: {
+        search() {
+            const id = this.$route.params.id;
+            const keySearch = this.keySearch;
+            axios.get(`http://localhost:8082/api/articles/search/${id}?page=0&size=13&sort=PublicationDate&keySearch=${keySearch}`)
+                .then(response => {
+                    this.articles = response.data.content;
+                })
+                .catch(error => {
+                    // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                    this.error = 'Lỗi: ' + error.message;
+                });
+        },
+    },
     mounted() {
-        console.log("mounted")
         const id = this.$route.params.id;
         axios.get(`http://localhost:8082/api/articles/category/${id}?page=0&size=13&sort=PublicationDate`)
             .then(response => {
@@ -569,7 +583,6 @@ export default {
     beforeRouteUpdate(to, from, next) {
         // Xử lý khi route parameters thay đổi
         const id = to.params.id;
-        console.log('Route parameters changed.' + id);
         axios.get(`http://localhost:8082/api/articles/category/${id}?page=0&size=13&sort=PublicationDate`)
             .then(response => {
                 this.articles = response.data.content;

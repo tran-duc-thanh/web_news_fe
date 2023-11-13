@@ -92,113 +92,15 @@
                     <!-- Header Menu Links Start -->
                     <ul class="header--menu-links nav navbar-nav" data-trigger="hoverIntent">
                         <li><router-link to="/home">Trang chủ</router-link></li>
-                        <li v-for="category in categories" :key="category.code"><router-link @click="reloadComponent(category.categoryID)" :to="{ name: 'category', params: {id: category.categoryID} }">{{ category.name
+                        <li v-for="category in categories" :key="category.categoryID"><router-link :to="{ name: 'category', params: {id: category.categoryID} }">{{ category.name
                         }}</router-link></li>
-                        <li class="dropdown megamenu">
+                        <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Thể loại<i
                                     class="fa flm fa-angle-down"></i></a>
 
                             <ul class="dropdown-menu">
-                                <li class="dropdown">
-                                    <a href="#">World’s News</a>
-
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">US & Canada</a></li>
-                                        <li><a href="#">Europe</a></li>
-                                        <li><a href="#">Africa</a></li>
-                                        <li><a href="#">Asia</a></li>
-                                        <li><a href="#">Middle East</a></li>
-                                        <li><a href="#">Asia Pacific</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="dropdown">
-                                    <a href="#">Documantation</a>
-
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Featured Documantation</a></li>
-                                        <li><a href="#">People & Power</a></li>
-                                        <li><a href="#">Rebel Education</a></li>
-                                        <li><a href="#">Rewind</a></li>
-                                        <li><a href="#">Fault Lines</a></li>
-                                        <li><a href="#">News 360 Degree World’s</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="dropdown">
-                                    <a href="#">Sports</a>
-
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Football</a></li>
-                                        <li><a href="#">Cricket</a></li>
-                                        <li><a href="#">Hocky</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="dropdown">
-                                    <a href="#">Business</a>
-
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">US Business</a></li>
-                                        <li><a href="#">Middle East Business</a></li>
-                                        <li><a href="#">Europe Business</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="dropdown">
-                                    <a href="#">Education</a>
-
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Africa Child Education</a></li>
-                                        <li><a href="#">Bangladeshi Education</a></li>
-                                        <li><a href="#">Middle East Education</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="dropdown">
-                                    <a href="#">Humanities</a>
-
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Help For Syrian Refugees</a></li>
-                                        <li><a href="#">Help For Afgan Children</a></li>
-                                        <li><a href="#">Help For African Children</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="dropdown">
-                                    <a href="#">Movies</a>
-
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Hollywood</a></li>
-                                        <li><a href="#">Dollywood</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="dropdown">
-                                    <a href="#">Weather</a>
-
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">North Pole</a></li>
-                                        <li><a href="#">South Pole</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="dropdown">
-                                    <a href="#">Health</a>
-
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Africa Poor Child Healt</a></li>
-                                        <li><a href="#">Fitness and Health</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="dropdown">
-                                    <a href="#">Animals</a>
-
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">African Animals</a></li>
-                                        <li><a href="#">Australian Animals</a></li>
-                                    </ul>
+                                <li v-for="category in categories" :key="category.categoryID" class="dropdown">
+                                    <router-link :to="{ name: 'category', params: {id: category.categoryID} }" class="dropdown-toggle" data-toggle="dropdown">{{ category.name }}</router-link>
                                 </li>
                             </ul>
                         </li>
@@ -210,6 +112,12 @@
                                 <li class="dropdown">
                                     <router-link to="/manager/news" class="dropdown-toggle" data-toggle="dropdown">Bài
                                         viết</router-link>
+                                </li>
+                                <li class="dropdown">
+                                    <router-link to="/manager/news" class="dropdown-toggle" data-toggle="dropdown">Thể loại</router-link>
+                                </li>
+                                <li class="dropdown">
+                                    <router-link to="/manager/news" class="dropdown-toggle" data-toggle="dropdown">Thẻ</router-link>
                                 </li>
                             </ul>
                         </li>
