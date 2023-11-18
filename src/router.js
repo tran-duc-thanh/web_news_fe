@@ -21,6 +21,8 @@ import TagPage from './components/TagPage.vue'
 import CategorysPage from './components/Categorys.vue'
 import HomePage from './components/Home.vue'
 import ManagerNewsPage from './components/ManagerNewsPage.vue'
+import ManagerCategoryPage from './components/ManagerCategoryPage.vue'
+import ManagerTagPage from './components/ManagerTagPage.vue'
 
 const routes = [
   {
@@ -50,6 +52,28 @@ const routes = [
     components: {
       preloader: PreloaderPage,
       container: ManagerNewsPage,
+      header: HeaderPage,
+      postsFilterBar: PostsFilterBar,
+      newsTicker: NewsTicker,
+      footer: FooterPage
+    }
+  },
+  {
+    path: '/manager/category',
+    components: {
+      preloader: PreloaderPage,
+      container: ManagerCategoryPage,
+      header: HeaderPage,
+      postsFilterBar: PostsFilterBar,
+      newsTicker: NewsTicker,
+      footer: FooterPage
+    }
+  },
+  {
+    path: '/manager/tag',
+    components: {
+      preloader: PreloaderPage,
+      container: ManagerTagPage,
       header: HeaderPage,
       postsFilterBar: PostsFilterBar,
       newsTicker: NewsTicker,

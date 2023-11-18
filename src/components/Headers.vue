@@ -114,10 +114,10 @@
                                         viết</router-link>
                                 </li>
                                 <li class="dropdown">
-                                    <router-link to="/manager/news" class="dropdown-toggle" data-toggle="dropdown">Thể loại</router-link>
+                                    <router-link to="/manager/category" class="dropdown-toggle" data-toggle="dropdown">Thể loại</router-link>
                                 </li>
                                 <li class="dropdown">
-                                    <router-link to="/manager/news" class="dropdown-toggle" data-toggle="dropdown">Thẻ</router-link>
+                                    <router-link to="/manager/tag" class="dropdown-toggle" data-toggle="dropdown">Thẻ</router-link>
                                 </li>
                             </ul>
                         </li>

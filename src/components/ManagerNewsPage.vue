@@ -4,8 +4,8 @@
         <div class="container">
             <ul class="breadcrumb">
                 <li><a href="home-1.html" class="btn-link"><i class="fa fm fa-home"></i>Home</a></li>
-                <li class="active"><span>World News</span></li>
-                <li class="active"><span>Manager news</span></li>
+                <li class="active"><span>Quản lý</span></li>
+                <li class="active"><span>Bài viết</span></li>
             </ul>
         </div>
     </div>
