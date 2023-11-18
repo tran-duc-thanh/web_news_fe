@@ -4,12 +4,12 @@
         <div class="popup-content">
             <!-- Nội dung của popup -->
             <H4>{{ popupContent }}</H4>
-            <select v-model="inCategory">
-                <option v-for="tag in tags" :key="tag.code" :value="tag.tagID">
+            <select v-model="inTag">
+                <option v-for="tag in tags" :key="tag.code" :value="tag">
                     {{ tag.name }}
                 </option>
             </select>
-            <button @click="save" style="margin-right: 10px; margin-left: 10px;">Sửa</button>
+            <button @click="sendDataToParent" style="margin-right: 10px; margin-left: 10px;">Sửa</button>
             <button @click="closePopup">Đóng</button>
         </div>
     </div>
@@ -48,7 +48,10 @@ export default {
 
         ...mapActions(['updatePopupData']),
         sendDataToParent() {
-            this.updatePopupData('Your data here');
+            this.updatePopupData(this.inTag);
+            // console.log(this.inTag)
+            // this.$store.dispatch('updatePopupStatus', false);
+            this.$emit('close');
         }
     },
     mounted() {

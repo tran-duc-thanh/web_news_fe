@@ -5,11 +5,11 @@
             <!-- Nội dung của popup -->
             <H4>{{ popupContent }}</H4>
             <select v-model="inCategory">
-                <option v-for="category in categories" :key="category.code" :value="category.categoryID">
+                <option v-for="category in categories" :key="category.code" :value="category">
                     {{ category.name }}
                 </option>
             </select>
-            <button @click="save" style="margin-right: 10px; margin-left: 10px;">Sửa</button>
+            <button @click="sendDataToParent" style="margin-right: 10px; margin-left: 10px;">Sửa</button>
             <button @click="closePopup">Đóng</button>
         </div>
     </div>
@@ -17,6 +17,7 @@
   
 <script>
 import axios from 'axios';
+import { mapActions } from 'vuex';
 
 export default {
     name: 'PopupEditCategory',
@@ -45,7 +46,13 @@ export default {
             this.$emit('close');
         },
 
-        
+        ...mapActions(['updatePopupData']),
+        sendDataToParent() {
+            this.updatePopupData(this.inCategory);
+            // console.log(this.inTag)
+            // this.$store.dispatch('updatePopupStatus', false);
+            this.$emit('close');
+        }
     },
     mounted() {
         // Gọi API khi thành phần được nạp
