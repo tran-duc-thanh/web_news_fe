@@ -129,11 +129,11 @@
                 </div>
 
                 <!-- Header Search Form Start -->
-                <form action="#" class="header--search-form float--right" data-form="validate">
-                    <input type="search" name="search" placeholder="Search..." class="header--search-control form-control"
-                        required>
+                <form onsubmit="return false;" action="#" class="header--search-form float--right" data-form="validate">
+                    <input v-model="keySearch" type="search" name="search" placeholder="Search..."
+                        class="header--search-control form-control" required>
 
-                    <button type="submit" class="header--search-btn btn"><i
+                    <button @click="search" class="header--search-btn btn"><i
                             class="header--search-icon fa fa-search"></i></button>
                 </form>
                 <!-- Header Search Form End -->
@@ -167,7 +167,18 @@ export default {
             localStorage.removeItem('user');
             window.location.reload();
         },
-
+        search() {
+            const keySearch = this.keySearch;
+            axios.get(`http://localhost:8082/api/articles/search?page=0&size=13&sort=PublicationDate&keySearch=${keySearch}`)
+                .then(response => {
+                    // const articles = response.data.content;
+                    console.log(response.data.content)
+                })
+                .catch(error => {
+                    // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                    this.error = 'Lỗi: ' + error.message;
+                });
+        },
     },
     mounted() {
         // Gọi API khi thành phần được nạp
