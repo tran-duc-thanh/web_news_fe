@@ -77,14 +77,9 @@ export default {
                 password: this.password,
             };
 
-            axios.post(`http://localhost:8082/api/login`, loginData, {
-                withCredentials: false
-            })
+            axios.post(`http://localhost:8082/api/login`, loginData)
                 .then(response => {
-                    this.token = response.data.token;
-                    localStorage.setItem('token', this.token);
-                    localStorage.setItem('username', response.data.username);
-                    console.log(response)
+                    localStorage.setItem('user', JSON.stringify(response.data));
                     this.$router.push('/home')
                 })
                 .catch(error => {

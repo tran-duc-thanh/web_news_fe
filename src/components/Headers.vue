@@ -16,22 +16,21 @@
 
                 <div class="float--right float--xs-none text-xs-center">
                     <!-- Header Topbar Action Start -->
-                    <ul class="header--topbar-action nav">
-                        <li v-if="username === null"><router-link to="/login"><i class="fa fm fa-user-o"></i>Login/Register</router-link></li>
-                        <li v-else><i class="fa fm fa-user-o"></i>{{ username }}</li>
+                    <ul v-if="user === null" class="header--topbar-action nav">
+                        <li><router-link to="/login"><i class="fa fm fa-user-o"></i>Login/Register</router-link></li>
+                        <!-- <li v-else><i class="fa fm fa-user-o"></i>{{ user.username }}</li> -->
                     </ul>
                     <!-- Header Topbar Action End -->
 
                     <!-- Header Topbar Language Start -->
-                    <ul class="header--topbar-lang nav">
+                    <ul v-else class="header--topbar-lang nav">
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                                    class="fa fm fa-language"></i>English<i class="fa flm fa-angle-down"></i></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fm fa-user-o"></i>{{
+                                user.username }}<i class="fa flm fa-angle-down"></i></a>
 
                             <ul class="dropdown-menu">
-                                <li><a href="#">English</a></li>
-                                <li><a href="#">Spanish</a></li>
-                                <li><a href="#">French</a></li>
+                                <li><a href="#">Detail</a></li>
+                                <li><router-link to="/home" @click="logout">Logout</router-link></li>
                             </ul>
                         </li>
                     </ul>
@@ -92,19 +91,21 @@
                     <!-- Header Menu Links Start -->
                     <ul class="header--menu-links nav navbar-nav" data-trigger="hoverIntent">
                         <li><router-link to="/home">Trang chủ</router-link></li>
-                        <li v-for="category in categories" :key="category.categoryID"><router-link :to="{ name: 'category', params: {id: category.categoryID} }">{{ category.name
-                        }}</router-link></li>
+                        <li v-for="category in categories" :key="category.categoryID"><router-link
+                                :to="{ name: 'category', params: { id: category.categoryID } }">{{ category.name
+                                }}</router-link></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Thể loại<i
                                     class="fa flm fa-angle-down"></i></a>
 
                             <ul class="dropdown-menu">
                                 <li v-for="category in categories" :key="category.categoryID" class="dropdown">
-                                    <router-link :to="{ name: 'category', params: {id: category.categoryID} }" class="dropdown-toggle" data-toggle="dropdown">{{ category.name }}</router-link>
+                                    <router-link :to="{ name: 'category', params: { id: category.categoryID } }"
+                                        class="dropdown-toggle" data-toggle="dropdown">{{ category.name }}</router-link>
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown">
+                        <li v-if="checkAdmin" class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quản lý<i
                                     class="fa flm fa-angle-down"></i></a>
 
@@ -114,10 +115,12 @@
                                         viết</router-link>
                                 </li>
                                 <li class="dropdown">
-                                    <router-link to="/manager/category" class="dropdown-toggle" data-toggle="dropdown">Thể loại</router-link>
+                                    <router-link to="/manager/category" class="dropdown-toggle" data-toggle="dropdown">Thể
+                                        loại</router-link>
                                 </li>
                                 <li class="dropdown">
-                                    <router-link to="/manager/tag" class="dropdown-toggle" data-toggle="dropdown">Thẻ</router-link>
+                                    <router-link to="/manager/tag" class="dropdown-toggle"
+                                        data-toggle="dropdown">Thẻ</router-link>
                                 </li>
                             </ul>
                         </li>
@@ -150,7 +153,7 @@ export default {
         return {
             categories: null,
             error: null,
-            username: null,
+            user: null,
         };
     },
     methods: {
@@ -159,7 +162,12 @@ export default {
             this.$router.push({ path: `/category/${id}` }).catch(() => { });
             this.$forceUpdate;
             console.log(`/category/${id}`)
-        }
+        },
+        logout() {
+            localStorage.removeItem('user');
+            window.location.reload();
+        },
+
     },
     mounted() {
         // Gọi API khi thành phần được nạp
@@ -172,7 +180,27 @@ export default {
                 // Xử lý lỗi nếu có lỗi trong quá trình gọi API
                 this.error = 'Lỗi: ' + error.message;
             });
-        this.username = localStorage.getItem('username');
+        const user = localStorage.getItem('user');
+        if (user) {
+            this.user = JSON.parse(user);
+        }
+        // console.log(this.user)
     },
+    computed: {
+        checkAdmin() {
+            const user = JSON.parse(localStorage.getItem('user'));
+            let check = false;
+            if (user) {
+                user.roles.forEach(role => {
+                    console.log(role)
+                    if (role.code === 'ADMIN') {
+                        console.log(role.code)
+                        check = true
+                    }
+                })
+            }
+            return check
+        }
+    }
 }
 </script>

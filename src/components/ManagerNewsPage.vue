@@ -15,7 +15,7 @@
         <div class="container">
             <div class="main--content">
                 <div style="margin-top: 20px">Tiêu đề</div>
-                <input style="width: 100%; height: 50px; margin-top: 5px;" v-model="title" placeholder="News title." />
+                <input style="width: 100%; height: 50px; margin-top: 5px;" v-model="title" placeholder="Tiêu đề" />
 
                 <div style="margin-top: 20px">Thể loại:</div>
                 <button @click="showPopupCategory" type="button" class="btn btn-success">Thêm</button>
@@ -35,6 +35,9 @@
                         {{ tag.name }}
                     </option>
                 </select>
+
+                <div style="margin-top: 20px">Tóm tắt nội dung</div>
+                <textarea style="width: 100%; height: 50px; margin-top: 5px;" rows="5" v-model="subContent" placeholder="Tóm tắt nội dung"></textarea>
 
                 <div style="margin-top: 20px">Nội dung</div>
                 <div style="margin-top: 5px">
@@ -64,7 +67,7 @@ export default {
     data() {
         return {
             editor: ClassicEditor,
-            editorData: 'News content.',
+            editorData: 'Nội dung bài viết',
             editorConfig: {
                 // The configuration of the editor.
             },
@@ -92,6 +95,7 @@ export default {
             const articles = {
                 title: this.title,
                 content: this.inContent,
+                subContent: this.subContent,
                 authorID: 1,
                 categoryID: this.inCategory,
                 publicationDate: formattedDate
