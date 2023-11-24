@@ -37,7 +37,14 @@
                 </select>
 
                 <div style="margin-top: 20px">Tóm tắt nội dung</div>
-                <textarea style="width: 100%; height: 50px; margin-top: 5px;" rows="5" v-model="subContent" placeholder="Tóm tắt nội dung"></textarea>
+                <textarea style="width: 100%; height: 50px; margin-top: 5px;" rows="5" v-model="subContent"
+                    placeholder="Tóm tắt nội dung"></textarea>
+
+                <div style="margin-top: 20px">Upload ảnh</div>
+                <div>
+                    <input type="file" @change="handleFileUpload">
+                    <img style="margin-top: 20px" v-if="imageUrl" :src="imageUrl" alt="Uploaded Image">
+                </div>
 
                 <div style="margin-top: 20px">Nội dung</div>
                 <div style="margin-top: 5px">
@@ -56,6 +63,7 @@
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import PopupAddCategory from './popup/PopAddCategory.vue';
 import PopupAddTag from './popup/PopAddTag.vue';
+// import Upload from 'vue-upload-component';
 import axios from 'axios';
 
 export default {
@@ -63,6 +71,7 @@ export default {
     components: {
         PopupAddCategory,
         PopupAddTag,
+        // Upload,
     },
     data() {
         return {
@@ -78,9 +87,22 @@ export default {
             isPopupVisibleTag: false,
             popupTextC: "Thêm mới thể loại",
             popupTextT: "Thêm mới thẻ",
+            imageUrl: '',
         };
     },
     methods: {
+        handleFileUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = () => {
+                    this.imageUrl = reader.result;
+                    console.log(this.imageUrl)
+                    // Lưu dưới dạng base64 (this.imageUrl) hoặc gửi đến server.
+                };
+                reader.readAsDataURL(file);
+            }
+        },
         save() {
 
             const today = new Date();
@@ -98,7 +120,8 @@ export default {
                 subContent: this.subContent,
                 authorID: 1,
                 categoryID: this.inCategory,
-                publicationDate: formattedDate
+                publicationDate: formattedDate,
+                imageBase64: this.imageUrl,
             };
 
             axios.post(`http://localhost:8082/api/articles/`, articles)

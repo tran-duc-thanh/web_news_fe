@@ -11,8 +11,10 @@
                             <!-- Post Item Start -->
                             <div class="post--item post--layout-1 post--title-larger">
                                 <div class="post--img">
-                                    <a href="news-single-v1.html" class="thumb"><img src="img/home-img/banner-01.jpg"
+                                    <a v-if="articles.length === 0" href="news-single-v1.html" class="thumb"><img src="img/home-img/banner-01.jpg"
                                             alt=""></a>
+                                    <router-link v-else :to="{ name: 'detail', params: { id: articles[0].articleID } }"
+                                        class="thumb"><img :src="articles[0].imageBase64" alt=""></router-link>
                                     <a href="#" class="cat">Politics</a>
                                     <a href="#" class="icon"><i class="fa fa-flash"></i></a>
 

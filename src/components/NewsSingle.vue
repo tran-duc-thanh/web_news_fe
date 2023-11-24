@@ -23,7 +23,10 @@
                         <!-- Post Item Start -->
                         <div class="post--item post--single post--title-largest pd--30-0">
                             <div class="post--img">
-                                <a href="#" class="thumb"><img src="img/news-single-img/post-img-01.jpg" alt=""></a>
+                                <a href="#" class="thumb">
+                                    <img v-if="article === null" src="img/news-single-img/post-img-01.jpg" alt="">
+                                    <img v-else v-bind:src="article.imageBase64" alt="">
+                                </a>
                                 <a href="#" class="icon"><i class="fa fa-pencil-square-o"></i></a>
 
                                 <div class="post--map">

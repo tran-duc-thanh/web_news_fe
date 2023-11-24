@@ -27,9 +27,9 @@
                                         <div class="row">
                                             <div class="col-md-4 col-sm-12 col-xs-4 col-xxs-12">
                                                 <div class="post--img">
-                                                    <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/blog-img/post-01.jpg" alt=""></a>
-                                                    <a href="#" class="cat">Kids</a>
+                                                    <router-link :to="{ name: 'detail', params: { id: article.articleID } }" class="thumb">
+                                                        <img v-if="article.imageBase64" :src="article.imageBase64" alt="Uploaded Image"></router-link>
+                                                    <router-link :to="{ name: 'detail', params: { id: article.articleID } }" class="cat">Kids</router-link>
                                                 </div>
                                             </div>
 
