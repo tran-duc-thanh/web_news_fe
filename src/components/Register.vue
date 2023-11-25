@@ -15,8 +15,8 @@
                 <!-- Login Form Start -->
                 <div class="login--form">
                     <div class="title">
-                        <h1 class="h1">Login</h1>
-                        <p>Login into account by fillup the below form</p>
+                        <h1 class="h1">Đăng ký</h1>
+                        <p>Điền thông tin đăng ký vào form dưới đây</p>
                     </div>
 
                     <form onsubmit="return false;" action="#" data-form="validate">
@@ -41,11 +41,10 @@
                             </label>
                         </div>
 
-                        <button @click="login" class="btn btn-lg btn-block btn-primary">Log in</button>
+                        <button @click="register" class="btn btn-lg btn-block btn-primary">Register</button>
 
                         <p class="help-block clearfix">
-                            <a href="#" class="btn-link pull-left">Forgot Username or Password?</a>
-                            <router-link to="/register" class="btn-link pull-right">Create An Account</router-link>
+                            <router-link to="/login" class="btn-link pull-right">Login</router-link>
                         </p>
                     </form>
                 </div>
@@ -61,7 +60,7 @@
 import axios from 'axios';
 
 export default {
-    name: 'LoginPage',
+    name: 'RegisterPage',
     data() {
         return {
             username: '',
@@ -70,20 +69,20 @@ export default {
         };
     },
     methods: {
-        login() {
+        register() {
 
-            const loginData = {
+            const registerData = {
                 username: this.username,
                 password: this.password,
             };
 
-            axios.post(`http://localhost:8082/api/login`, loginData)
+            axios.post(`http://localhost:8082/api/register`, registerData)
                 .then(response => {
                     localStorage.setItem('user', JSON.stringify(response.data));
                     this.$router.push('/home')
                 })
                 .catch(error => {
-                    console.error('Đăng nhập thất bại:', error);
+                    console.error('Đăng ký thất bại:', error);
                 });
         },
     },

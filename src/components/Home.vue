@@ -11,10 +11,10 @@
                             <!-- Post Item Start -->
                             <div class="post--item post--layout-1 post--title-larger">
                                 <div class="post--img">
-                                    <a v-if="articles.length === 0" href="news-single-v1.html" class="thumb"><img src="img/home-img/banner-01.jpg"
-                                            alt=""></a>
-                                    <router-link v-else :to="{ name: 'detail', params: { id: articles[0].articleID } }"
-                                        class="thumb"><img :src="articles[0].imageBase64" alt=""></router-link>
+                                    <a href="news-single-v1.html" class="thumb">
+                                        <img v-if="articles.length === 0" src="img/home-img/banner-01.jpg" alt="">
+                                        <img v-else :src="articles[0].imageBase64" width="562.500" height="389.062" alt="">
+                                    </a>
                                     <a href="#" class="cat">Politics</a>
                                     <a href="#" class="icon"><i class="fa fa-flash"></i></a>
 
@@ -56,8 +56,11 @@
                                     <!-- Post Item Start -->
                                     <div class="post--item post--layout-1 post--title-large">
                                         <div class="post--img">
-                                            <a href="news-single-v1.html" class="thumb"><img
-                                                    src="img/home-img/banner-02.jpg" alt=""></a>
+                                            <a href="news-single-v1.html" class="thumb">
+                                                <img v-if="articles.length === 0" src="img/home-img/banner-01.jpg" alt="">
+                                                <img v-else :src="articles[1].imageBase64" width="273.750" height="187.512"
+                                                    alt="">
+                                            </a>
                                             <a href="#" class="cat">Travel</a>
                                             <a href="#" class="icon"><i class="fa fa-flash"></i></a>
 
@@ -87,8 +90,11 @@
                                     <!-- Post Item Start -->
                                     <div class="post--item post--layout-1 post--title-large">
                                         <div class="post--img">
-                                            <a href="news-single-v1.html" class="thumb"><img
-                                                    src="img/home-img/banner-03.jpg" alt=""></a>
+                                            <a href="news-single-v1.html" class="thumb">
+                                                <img v-if="articles.length === 0" src="img/home-img/banner-01.jpg" alt="">
+                                                <img v-else :src="articles[2].imageBase64" width="273.750" height="187.512"
+                                                    alt="">
+                                            </a>
                                             <a href="#" class="cat">Education</a>
                                             <a href="#" class="icon"><i class="fa fa-flash"></i></a>
 
@@ -128,8 +134,11 @@
                                     <!-- Post Item Start -->
                                     <div class="post--item post--layout-1 post--title-larger">
                                         <div class="post--img">
-                                            <a href="news-single-v1.html" class="thumb"><img
-                                                    src="img/home-img/banner-04.jpg" alt=""></a>
+                                            <a href="news-single-v1.html" class="thumb">
+                                                <img v-if="articles.length === 0" src="img/home-img/banner-01.jpg" alt="">
+                                                <img v-else :src="articles[3].imageBase64" width="562.500" height="186.325"
+                                                    alt="">
+                                            </a>
                                             <a href="#" class="cat">Politics</a>
                                             <a href="#" class="icon"><i class="fa fa-fire"></i></a>
 
@@ -195,8 +204,12 @@
                                             <!-- Post Item Start -->
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
-                                                    <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/world-news-01.jpg" alt=""></a>
+                                                    <a href="news-single-v1.html" class="thumb">
+                                                        <img v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="360"
+                                                            height="175.200" alt="">
+                                                    </a>
                                                     <a href="#" class="cat">War</a>
                                                     <a href="#" class="icon"><i class="fa fa-flash"></i></a>
 
@@ -225,8 +238,12 @@
                                             <!-- Post Item Start -->
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
-                                                    <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/world-news-02.jpg" alt=""></a>
+                                                    <a href="news-single-v1.html" class="thumb">
+                                                        <img v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                            height="95.825" alt="">
+                                                    </a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -249,7 +266,10 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/world-news-03.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                            height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -277,7 +297,10 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/world-news-04.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                            height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -300,7 +323,10 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/world-news-05.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                            height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -358,7 +384,10 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/technology-01.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="360" height="175"
+                                                            alt=""></a>
                                                     <a href="#" class="cat">Computer</a>
                                                     <a href="#" class="icon"><i class="fa fa-heart-o"></i></a>
 
@@ -383,7 +412,10 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/technology-02.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                            alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -406,7 +438,10 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/technology-03.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                            alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -429,7 +464,10 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/technology-04.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                            alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -452,7 +490,10 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/technology-05.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                            alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -522,7 +563,10 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/finance-01.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="360"
+                                                            height="243.350" alt=""></a>
                                                     <a href="#" class="cat">Business</a>
                                                     <a href="#" class="icon"><i class="fa fa-star-o"></i></a>
 
@@ -557,7 +601,10 @@
                                                     <div class="post--item post--layout-2">
                                                         <div class="post--img">
                                                             <a href="news-single-v1.html" class="thumb"><img
-                                                                    src="img/home-img/finance-02.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="165"
+                                                            height="97.162" alt=""></a>
 
                                                             <div class="post--info">
                                                                 <ul class="nav meta">
@@ -581,7 +628,10 @@
                                                     <div class="post--item post--layout-2">
                                                         <div class="post--img">
                                                             <a href="news-single-v1.html" class="thumb"><img
-                                                                    src="img/home-img/finance-03.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="165"
+                                                            height="97.162" alt=""></a>
 
                                                             <div class="post--info">
                                                                 <ul class="nav meta">
@@ -611,7 +661,10 @@
                                                     <div class="post--item post--layout-2">
                                                         <div class="post--img">
                                                             <a href="news-single-v1.html" class="thumb"><img
-                                                                    src="img/home-img/finance-04.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="165"
+                                                            height="97.162" alt=""></a>
 
                                                             <div class="post--info">
                                                                 <ul class="nav meta">
@@ -635,7 +688,10 @@
                                                     <div class="post--item post--layout-2">
                                                         <div class="post--img">
                                                             <a href="news-single-v1.html" class="thumb"><img
-                                                                    src="img/home-img/finance-05.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="165"
+                                                            height="97.162" alt=""></a>
 
                                                             <div class="post--info">
                                                                 <ul class="nav meta">
@@ -695,7 +751,10 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/politics-01.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="360"
+                                                            height="175.200" alt=""></a>
                                                     <a href="#" class="cat">Election</a>
                                                     <a href="#" class="icon"><i class="fa fa-fire"></i></a>
 
@@ -725,7 +784,10 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/politics-02.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                            height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -748,7 +810,10 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/politics-03.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                            height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -776,7 +841,10 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/politics-04.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                            height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -799,7 +867,10 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/politics-05.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                            height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -857,7 +928,10 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/sports-01.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="360"
+                                                            height="175.200" alt=""></a>
                                                     <a href="#" class="cat">Basketball</a>
                                                     <a href="#" class="icon"><i class="fa fa-eye"></i></a>
 
@@ -882,7 +956,10 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/sports-02.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="100"
+                                                            height="70" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -905,7 +982,10 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/sports-03.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="100"
+                                                            height="70" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -928,7 +1008,10 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/sports-04.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="100"
+                                                            height="70" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -951,7 +1034,10 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/sports-05.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="100"
+                                                            height="70" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -1246,168 +1332,6 @@
                 <!-- Main Sidebar End -->
             </div>
 
-            <!-- Main Content Start -->
-            <div class="main--content pd--30-0">
-                <!-- Post Items Title Start -->
-                <div class="post--items-title" data-ajax="tab">
-                    <h2 class="h4">Audio &amp; Videos</h2>
-
-                    <div class="nav">
-                        <a href="#" class="prev btn-link" data-ajax-action="load_prev_audio_video_posts">
-                            <i class="fa fa-long-arrow-left"></i>
-                        </a>
-
-                        <span class="divider">/</span>
-
-                        <a href="#" class="next btn-link" data-ajax-action="load_next_audio_video_posts">
-                            <i class="fa fa-long-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <!-- Post Items Title End -->
-
-                <!-- Post Items Start -->
-                <div class="post--items post--items-4" data-ajax-content="outer">
-                    <ul class="nav row" data-ajax-content="inner">
-                        <li class="col-md-8">
-                            <!-- Post Item Start -->
-                            <div class="post--item post--layout-1 post--type-video post--title-large">
-                                <div class="post--img">
-                                    <a href="news-single-v1.html" class="thumb"><img src="img/home-img/audio-video-01.jpg"
-                                            alt=""></a>
-                                    <a href="#" class="cat">Wave</a>
-                                    <a href="#" class="icon"><i class="fa fa-eye"></i></a>
-
-                                    <div class="post--info">
-                                        <ul class="nav meta">
-                                            <li><a href="#">Succubus</a></li>
-                                            <li><a href="#">Today 03:52 pm</a></li>
-                                        </ul>
-
-                                        <div class="title">
-                                            <h2 class="h4"><a href="news-single-v1.html" class="btn-link">Standard chunk of
-                                                    Lorem Ipsum used since the 1500s is reproduced below for those
-                                                    interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum</a>
-                                            </h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Post Item End -->
-
-                            <!-- Divider Start -->
-                            <hr class="divider hidden-md hidden-lg">
-                            <!-- Divider End -->
-                        </li>
-
-                        <li class="col-md-4">
-                            <ul class="nav">
-                                <li>
-                                    <!-- Post Item Start -->
-                                    <div class="post--item post--type-audio post--layout-3">
-                                        <div class="post--img">
-                                            <a href="news-single-v1.html" class="thumb"><img
-                                                    src="img/home-img/audio-video-02.jpg" alt=""></a>
-
-                                            <div class="post--info">
-                                                <ul class="nav meta">
-                                                    <li><a href="#">Maclaan John</a></li>
-                                                    <li><a href="#">16 April 2017</a></li>
-                                                </ul>
-
-                                                <div class="title">
-                                                    <h3 class="h4"><a href="news-single-v1.html" class="btn-link">Long
-                                                            established fact that a reader will be distracted by the
-                                                            readable</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Post Item End -->
-                                </li>
-                                <li>
-                                    <!-- Post Item Start -->
-                                    <div class="post--item post--type-video post--layout-3">
-                                        <div class="post--img">
-                                            <a href="news-single-v1.html" class="thumb"><img
-                                                    src="img/home-img/audio-video-03.jpg" alt=""></a>
-
-                                            <div class="post--info">
-                                                <ul class="nav meta">
-                                                    <li><a href="#">Maclaan John</a></li>
-                                                    <li><a href="#">16 April 2017</a></li>
-                                                </ul>
-
-                                                <div class="title">
-                                                    <h3 class="h4"><a href="news-single-v1.html" class="btn-link">Long
-                                                            established fact that a reader will be distracted by the
-                                                            readable</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Post Item End -->
-                                </li>
-                                <li>
-                                    <!-- Post Item Start -->
-                                    <div class="post--item post--type-video post--layout-3">
-                                        <div class="post--img">
-                                            <a href="news-single-v1.html" class="thumb"><img
-                                                    src="img/home-img/audio-video-04.jpg" alt=""></a>
-
-                                            <div class="post--info">
-                                                <ul class="nav meta">
-                                                    <li><a href="#">Maclaan John</a></li>
-                                                    <li><a href="#">16 April 2017</a></li>
-                                                </ul>
-
-                                                <div class="title">
-                                                    <h3 class="h4"><a href="news-single-v1.html" class="btn-link">Long
-                                                            established fact that a reader will be distracted by the
-                                                            readable</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Post Item End -->
-                                </li>
-                                <li>
-                                    <!-- Post Item Start -->
-                                    <div class="post--item post--type-audio post--layout-3">
-                                        <div class="post--img">
-                                            <a href="news-single-v1.html" class="thumb"><img
-                                                    src="img/home-img/audio-video-05.jpg" alt=""></a>
-
-                                            <div class="post--info">
-                                                <ul class="nav meta">
-                                                    <li><a href="#">Maclaan John</a></li>
-                                                    <li><a href="#">16 April 2017</a></li>
-                                                </ul>
-
-                                                <div class="title">
-                                                    <h3 class="h4"><a href="news-single-v1.html" class="btn-link">Long
-                                                            established fact that a reader will be distracted by the
-                                                            readable</a></h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Post Item End -->
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    <!-- Preloader Start -->
-                    <div class="preloader bg--color-0--b" data-preloader="1">
-                        <div class="preloader--inner"></div>
-                    </div>
-                    <!-- Preloader End -->
-                </div>
-                <!-- Post Items End -->
-            </div>
-            <!-- Main Content End -->
-
             <!-- Advertisement Start -->
             <div class="ad--space pd--30-0">
                 <a href="#">
@@ -1449,7 +1373,10 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/health-and-fitness-01.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="360"
+                                                            height="175" alt=""></a>
                                                     <a href="#" class="cat">Business</a>
                                                     <a href="#" class="icon"><i class="fa fa-star-o"></i></a>
 
@@ -1474,7 +1401,10 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/health-and-fitness-02.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="100"
+                                                            height="70" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -1497,7 +1427,10 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/health-and-fitness-03.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="100"
+                                                            height="70" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -1520,7 +1453,10 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/health-and-fitness-04.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="100"
+                                                            height="70" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -1543,7 +1479,10 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/health-and-fitness-05.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="100"
+                                                            height="70" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -1601,7 +1540,10 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/lifestyle-01.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="360"
+                                                            height="175" alt=""></a>
                                                     <a href="#" class="cat">Fashion</a>
                                                     <a href="#" class="icon"><i class="fa fa-heart-o"></i></a>
 
@@ -1631,7 +1573,10 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/lifestyle-02.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                            height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -1654,7 +1599,10 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/lifestyle-03.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                            height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -1682,7 +1630,10 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/lifestyle-04.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                            height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -1705,7 +1656,10 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/lifestyle-05.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                            height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -1763,7 +1717,10 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/food-and-resturent-01.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="239.988"
+                                                            height="194.512" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -1791,7 +1748,10 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/food-and-resturent-02.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="239.988"
+                                                            height="194.512" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -1814,7 +1774,10 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/food-and-resturent-03.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="239.988"
+                                                            height="194.512" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -1872,7 +1835,10 @@
                                             <div class="post--item post--layout-1 post--title-large">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/photo-gallery-01.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="750"
+                                                            height="292.300" alt=""></a>
                                                     <a href="#" class="cat">Serfer</a>
                                                     <a href="#" class="icon"><i class="fa fa-eye"></i></a>
 
@@ -1899,7 +1865,10 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/photo-gallery-02.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="239.988"
+                                                            height="194.575" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -1922,7 +1891,10 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/photo-gallery-03.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="239.988"
+                                                            height="194.575" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -1945,7 +1917,10 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            src="img/home-img/photo-gallery-04.jpg" alt=""></a>
+                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            alt="">
+                                                        <img v-else :src="articles[0].imageBase64" width="239.988"
+                                                            height="194.575" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">

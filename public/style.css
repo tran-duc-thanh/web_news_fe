@@ -163,11 +163,11 @@ ul:last-child {
     margin-bottom: 0;
 }
 
-img,
-.nav > li > a > img { /* RESPONSIVE IMAGES */
+/* img,
+.nav > li > a > img {
     max-width: 100%;
     height: auto;
-}
+} */
 
 ::-moz-selection {
     color: #fff;

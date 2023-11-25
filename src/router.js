@@ -23,6 +23,7 @@ import HomePage from './components/Home.vue'
 import ManagerNewsPage from './components/ManagerNewsPage.vue'
 import ManagerCategoryPage from './components/ManagerCategoryPage.vue'
 import ManagerTagPage from './components/ManagerTagPage.vue'
+import RegisterPage from './components/Register.vue'
 
 const routes = [
   {
@@ -85,6 +86,13 @@ const routes = [
     components: {
       preloader: PreloaderPage,
       login: LoginPage
+    }
+  },
+  {
+    path: '/register',
+    components: {
+      preloader: PreloaderPage,
+      login: RegisterPage
     }
   },
   {

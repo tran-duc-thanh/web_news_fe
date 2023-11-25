@@ -965,7 +965,8 @@ export default {
     },
     mounted() {
         const id = this.$route.params.id;
-        axios.get(`http://localhost:8082/api/articles/${id}`)
+        const user = JSON.parse(localStorage.getItem('user'));
+        axios.get(`http://localhost:8082/api/articles/${id}?username=${user.username}`)
             .then(response => {
                 this.article = response.data;
                 const categoryId = response.data.categoryID;
