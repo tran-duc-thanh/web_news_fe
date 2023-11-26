@@ -137,12 +137,17 @@ export default {
                         mapTagsArticle.push(item)
                     }
                     axios.post(`http://localhost:8082/api/tag/save/tagsArticle`, mapTagsArticle);
+                    this.title = ''
+                    this.inContent = ''
+                    this.subContent = ''
+                    this.imageUrl = ''
+                    this.$router.push(`/article/${response.data.articleID}`);
                 })
                 .catch(error => {
                     // Xử lý lỗi nếu có lỗi trong quá trình gọi API
                     this.error = 'Lỗi: ' + error.message;
                 });
-
+            
         },
         showPopupCategory() {
             this.isPopupVisibleCategory = true;

@@ -201,14 +201,25 @@ export default {
                     // Gán dữ liệu từ API vào biến data
                     if (response.data.length > 0) {
                         this.categories = response.data;
+                        if (this.categories.length < 8) {
+                            this.categories1.forEach(category1 => {
+                                let check = true
+                                this.categories.forEach(category => {
+                                    if (category1.categoryID === category.categoryID) {
+                                        check = false
+                                    }
+                                })
+                                if (check && this.categories.length < 8) {
+                                    this.categories.push(category1)
+                                }
+                            })
+                        }
                     }
                 })
                 .catch(error => {
                     // Xử lý lỗi nếu có lỗi trong quá trình gọi API
                     this.error = 'Lỗi: ' + error.message;
                 });
-            console.log(this.categories1)
-            console.log(this.user.username)
         }
     },
     computed: {

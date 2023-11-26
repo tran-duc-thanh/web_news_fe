@@ -27,9 +27,13 @@
                                         <div class="row">
                                             <div class="col-md-4 col-sm-12 col-xs-4 col-xxs-12">
                                                 <div class="post--img">
-                                                    <router-link :to="{ name: 'detail', params: { id: article.articleID } }" class="thumb">
-                                                        <img v-if="article.imageBase64" :src="article.imageBase64" alt="Uploaded Image"></router-link>
-                                                    <router-link :to="{ name: 'detail', params: { id: article.articleID } }" class="cat">Kids</router-link>
+                                                    <router-link :to="{ name: 'detail', params: { id: article.articleID } }"
+                                                        class="thumb">
+                                                        <img v-if="article.imageBase64" :src="article.imageBase64"
+                                                            alt="Uploaded Image" width="229.988"
+                                                            height="153.325"></router-link>
+                                                    <router-link :to="{ name: 'detail', params: { id: article.articleID } }"
+                                                        class="cat">Kids</router-link>
                                                 </div>
                                             </div>
 
@@ -49,7 +53,7 @@
                                                 </div>
 
                                                 <div class="post--content">
-                                                    <p>{{ article.subContent }}</p>
+                                                    <p>{{ getTruncatedString(article.subContent) }}</p>
                                                 </div>
 
                                                 <div class="post--action">
@@ -97,11 +101,12 @@
                             <div class="search--widget">
                                 <form onsubmit="return false;" action="#" data-form="validate">
                                     <div class="input-group">
-                                        <input v-model="keySearch" type="search" name="search" placeholder="Search..." class="form-control"
-                                            required>
+                                        <input v-model="keySearch" type="search" name="search" placeholder="Search..."
+                                            class="form-control" required>
 
                                         <div class="input-group-btn">
-                                            <button @click="search" type="submit" class="btn-link"><i class="fa fa-search"></i></button>
+                                            <button @click="search" type="submit" class="btn-link"><i
+                                                    class="fa fa-search"></i></button>
                                         </div>
                                     </div>
                                 </form>
@@ -543,7 +548,7 @@ export default {
     name: 'CategoryPage',
     data() {
         return {
-            articles: [],
+            articles: null,
             category: null,
         }
     },
@@ -551,7 +556,7 @@ export default {
         search() {
             const id = this.$route.params.id;
             const keySearch = this.keySearch;
-            axios.get(`http://localhost:8082/api/articles/search/${id}?page=0&size=13&sort=PublicationDate&keySearch=${keySearch}`)
+            axios.get(`http://localhost:8082/api/articles/search/${id}?page=0&size=16&sort=PublicationDate&keySearch=${keySearch}`)
                 .then(response => {
                     this.articles = response.data.content;
                 })
@@ -560,10 +565,13 @@ export default {
                     this.error = 'Lỗi: ' + error.message;
                 });
         },
+        getTruncatedString(str) {
+            return str.substring(0, 120) + "...";
+        }
     },
     mounted() {
         const id = this.$route.params.id;
-        axios.get(`http://localhost:8082/api/articles/category/${id}?page=0&size=13&sort=PublicationDate`)
+        axios.get(`http://localhost:8082/api/articles/category/${id}?page=0&size=16&sort=PublicationDate`)
             .then(response => {
                 this.articles = response.data.content;
             })
@@ -583,7 +591,7 @@ export default {
     beforeRouteUpdate(to, from, next) {
         // Xử lý khi route parameters thay đổi
         const id = to.params.id;
-        axios.get(`http://localhost:8082/api/articles/category/${id}?page=0&size=13&sort=PublicationDate`)
+        axios.get(`http://localhost:8082/api/articles/category/${id}?page=0&size=16&sort=PublicationDate`)
             .then(response => {
                 this.articles = response.data.content;
             })

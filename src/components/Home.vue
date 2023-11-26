@@ -181,7 +181,7 @@
                             <div class="col-md-6 ptop--30 pbottom--30">
                                 <!-- Post Items Title Start -->
                                 <div class="post--items-title" data-ajax="tab">
-                                    <h2 class="h4">Worlds News</h2>
+                                    <h2 v-if="categories.length > 0" class="h4">{{ categories[1].name }}</h2>
 
                                     <div class="nav">
                                         <a href="#" class="prev btn-link" data-ajax-action="load_prev_world_news_posts">
@@ -207,7 +207,7 @@
                                                     <a href="news-single-v1.html" class="thumb">
                                                         <img v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="360"
+                                                        <img v-else :src="articles[4].imageBase64" width="360"
                                                             height="175.200" alt="">
                                                     </a>
                                                     <a href="#" class="cat">War</a>
@@ -216,13 +216,21 @@
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Astaroth</a></li>
-                                                            <li><a href="#">Yeasterday 03:52 pm</a></li>
+                                                            <li v-if="articles.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles[4].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html"
-                                                                    class="btn-link">Siriya attaced by a long established
-                                                                    fact that a reader will be distracted by</a></h3>
+                                                        <div v-if="articles.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles[4].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles[4].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -601,10 +609,10 @@
                                                     <div class="post--item post--layout-2">
                                                         <div class="post--img">
                                                             <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
-                                                            alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="165"
-                                                            height="97.162" alt=""></a>
+                                                                    v-if="articles.length === 0"
+                                                                    src="img/home-img/banner-01.jpg" alt="">
+                                                                <img v-else :src="articles[0].imageBase64" width="165"
+                                                                    height="97.162" alt=""></a>
 
                                                             <div class="post--info">
                                                                 <ul class="nav meta">
@@ -628,10 +636,10 @@
                                                     <div class="post--item post--layout-2">
                                                         <div class="post--img">
                                                             <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
-                                                            alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="165"
-                                                            height="97.162" alt=""></a>
+                                                                    v-if="articles.length === 0"
+                                                                    src="img/home-img/banner-01.jpg" alt="">
+                                                                <img v-else :src="articles[0].imageBase64" width="165"
+                                                                    height="97.162" alt=""></a>
 
                                                             <div class="post--info">
                                                                 <ul class="nav meta">
@@ -661,10 +669,10 @@
                                                     <div class="post--item post--layout-2">
                                                         <div class="post--img">
                                                             <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
-                                                            alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="165"
-                                                            height="97.162" alt=""></a>
+                                                                    v-if="articles.length === 0"
+                                                                    src="img/home-img/banner-01.jpg" alt="">
+                                                                <img v-else :src="articles[0].imageBase64" width="165"
+                                                                    height="97.162" alt=""></a>
 
                                                             <div class="post--info">
                                                                 <ul class="nav meta">
@@ -688,10 +696,10 @@
                                                     <div class="post--item post--layout-2">
                                                         <div class="post--img">
                                                             <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
-                                                            alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="165"
-                                                            height="97.162" alt=""></a>
+                                                                    v-if="articles.length === 0"
+                                                                    src="img/home-img/banner-01.jpg" alt="">
+                                                                <img v-else :src="articles[0].imageBase64" width="165"
+                                                                    height="97.162" alt=""></a>
 
                                                             <div class="post--info">
                                                                 <ul class="nav meta">
@@ -958,8 +966,8 @@
                                                     <a href="news-single-v1.html" class="thumb"><img
                                                             v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="100"
-                                                            height="70" alt=""></a>
+                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                            alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -984,8 +992,8 @@
                                                     <a href="news-single-v1.html" class="thumb"><img
                                                             v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="100"
-                                                            height="70" alt=""></a>
+                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                            alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -1010,8 +1018,8 @@
                                                     <a href="news-single-v1.html" class="thumb"><img
                                                             v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="100"
-                                                            height="70" alt=""></a>
+                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                            alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -1036,8 +1044,8 @@
                                                     <a href="news-single-v1.html" class="thumb"><img
                                                             v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="100"
-                                                            height="70" alt=""></a>
+                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                            alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -1375,8 +1383,8 @@
                                                     <a href="news-single-v1.html" class="thumb"><img
                                                             v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="360"
-                                                            height="175" alt=""></a>
+                                                        <img v-else :src="articles[0].imageBase64" width="360" height="175"
+                                                            alt=""></a>
                                                     <a href="#" class="cat">Business</a>
                                                     <a href="#" class="icon"><i class="fa fa-star-o"></i></a>
 
@@ -1403,8 +1411,8 @@
                                                     <a href="news-single-v1.html" class="thumb"><img
                                                             v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="100"
-                                                            height="70" alt=""></a>
+                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                            alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -1429,8 +1437,8 @@
                                                     <a href="news-single-v1.html" class="thumb"><img
                                                             v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="100"
-                                                            height="70" alt=""></a>
+                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                            alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -1455,8 +1463,8 @@
                                                     <a href="news-single-v1.html" class="thumb"><img
                                                             v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="100"
-                                                            height="70" alt=""></a>
+                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                            alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -1481,8 +1489,8 @@
                                                     <a href="news-single-v1.html" class="thumb"><img
                                                             v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="100"
-                                                            height="70" alt=""></a>
+                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                            alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
@@ -1542,8 +1550,8 @@
                                                     <a href="news-single-v1.html" class="thumb"><img
                                                             v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="360"
-                                                            height="175" alt=""></a>
+                                                        <img v-else :src="articles[0].imageBase64" width="360" height="175"
+                                                            alt=""></a>
                                                     <a href="#" class="cat">Fashion</a>
                                                     <a href="#" class="icon"><i class="fa fa-heart-o"></i></a>
 
@@ -2365,30 +2373,82 @@ export default {
     name: 'HomePage',
     data() {
         return {
-            categories: null,
+            categories: [],
+            categories1: [],
             articles: [],
             error: null,
         };
+    },
+    methods: {
+        check() {
+            const user = localStorage.getItem('user');
+            if (user) {
+                return true
+            } else return false
+        }
     },
     mounted() {
         // Gọi API khi thành phần được nạp
         axios.get(`http://localhost:8082/api/category/`)
             .then(response => {
                 // Gán dữ liệu từ API vào biến data
-                this.categories = response.data;
+                this.categories.push(...response.data);
+                this.categories.forEach(c => {
+                    axios.get(`http://localhost:8082/api/articles/category/${c.categoryID}?page=0&size=5&sort=PublicationDate`)
+                        .then(response => {
+                            this.articles.push(...response.data.content);
+                        })
+                        .catch(error => {
+                            // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                            this.error = 'Lỗi: ' + error.message;
+                        });
+                })
+                console.log(this.articles)
             })
             .catch(error => {
                 // Xử lý lỗi nếu có lỗi trong quá trình gọi API
                 this.error = 'Lỗi: ' + error.message;
             });
-        axios.get(`http://localhost:8082/api/articles/category/1?page=0&size=4&sort=PublicationDate`)
-            .then(response => {
-                this.articles = response.data.content;
-            })
-            .catch(error => {
-                // Xử lý lỗi nếu có lỗi trong quá trình gọi API
-                this.error = 'Lỗi: ' + error.message;
-            });
+
+        const user = localStorage.getItem('user');
+        if (user) {
+            this.user = JSON.parse(user);
+            axios.get(`http://localhost:8082/api/category/favorite-genre?username=${this.user.username}`)
+                .then(response => {
+                    // Gán dữ liệu từ API vào biến data
+                    if (response.data.length > 0) {
+                        this.categories1.push(...response.data);
+                    } else {
+                        this.categories1 = this.categories
+                    }
+                    if (this.categories1.length < 11) {
+                        this.categories.forEach(category => {
+                            this.categories1.forEach(category1 => {
+                                if (category.categoryID !== category1.categoryID && this.categories1.length < 11) {
+                                    this.categories1.push(category)
+                                }
+                            })
+                        })
+                    }
+                    this.categories = this.categories1
+                    this.articles = []
+                    for (let i = 0; i < this.categories1.length; i++) {
+                        axios.get(`http://localhost:8082/api/articles/category/${this.categories1[1].categoryID}?page=0&size=5&sort=PublicationDate`)
+                            .then(response => {
+                                this.articles.push(...response.data.content);
+                            })
+                            .catch(error => {
+                                // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                                this.error = 'Lỗi: ' + error.message;
+                            });
+                    }
+                })
+                .catch(error => {
+                    // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                    this.error = 'Lỗi: ' + error.message;
+                });
+
+        }
     },
 }
 </script>
