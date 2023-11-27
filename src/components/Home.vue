@@ -205,9 +205,9 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb">
-                                                        <img v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                        <img v-if="articles1.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[4].imageBase64" width="360"
+                                                        <img v-else :src="articles1[0].imageBase64" width="360"
                                                             height="175.200" alt="">
                                                     </a>
                                                     <a href="#" class="cat">War</a>
@@ -216,20 +216,20 @@
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Astaroth</a></li>
-                                                            <li v-if="articles.length === 0"><a href="#">Không có dữ
+                                                            <li v-if="articles1.length === 0"><a href="#">Không có dữ
                                                                     liệu</a></li>
-                                                            <li v-else><a href="#">{{ articles[4].publicationDate }}</a>
+                                                            <li v-else><a href="#">{{ articles1[0].publicationDate }}</a>
                                                             </li>
                                                         </ul>
 
-                                                        <div v-if="articles.length === 0" class="title">
+                                                        <div v-if="articles1.length === 0" class="title">
                                                             <h2 class="h4">Không có dữ liệu</h2>
                                                         </div>
                                                         <div v-else class="title">
                                                             <router-link
-                                                                :to="{ name: 'detail', params: { id: articles[4].articleID } }"
+                                                                :to="{ name: 'detail', params: { id: articles1[0].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles[4].title }}</h2>
+                                                                <h2 class="h4">{{ articles1[0].title }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -247,22 +247,30 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb">
-                                                        <img v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                        <img v-if="articles1.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                        <img v-else :src="articles1[1].imageBase64" width="172.500"
                                                             height="95.825" alt="">
                                                     </a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Hantu Raya</a></li>
-                                                            <li><a href="#">17 April 2017</a></li>
+                                                            <li v-if="articles1.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles1[1].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will done</a>
-                                                            </h3>
+                                                        <div v-if="articles1.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles1[1].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles1[1].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -274,21 +282,29 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles1.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                        <img v-else :src="articles1[2].imageBase64" width="172.500"
                                                             height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Astaroth</a></li>
-                                                            <li><a href="#">17 April 2017</a></li>
+                                                            <li v-if="articles1.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles1[2].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will done</a>
-                                                            </h3>
+                                                        <div v-if="articles1.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles1[2].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles1[2].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -305,21 +321,29 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles1.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                        <img v-else :src="articles1[3].imageBase64" width="172.500"
                                                             height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Astaroth</a></li>
-                                                            <li><a href="#">17 April 2017</a></li>
+                                                            <li v-if="articles1.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles1[3].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will done</a>
-                                                            </h3>
+                                                        <div v-if="articles1.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles1[3].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles1[3].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -331,21 +355,29 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles1.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                        <img v-else :src="articles1[4].imageBase64" width="172.500"
                                                             height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Hantu Raya</a></li>
-                                                            <li><a href="#">17 April 2017</a></li>
+                                                            <li v-if="articles1.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles1[4].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will done</a>
-                                                            </h3>
+                                                        <div v-if="articles1.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles1[4].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles1[4].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -368,7 +400,7 @@
                             <div class="col-md-6 ptop--30 pbottom--30">
                                 <!-- Post Items Title Start -->
                                 <div class="post--items-title" data-ajax="tab">
-                                    <h2 class="h4">Technology</h2>
+                                    <h2 v-if="categories.length > 0" class="h4">{{ categories[2].name }}</h2>
 
                                     <div class="nav">
                                         <a href="#" class="prev btn-link" data-ajax-action="load_prev_technology_posts">
@@ -392,9 +424,9 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles2.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="360" height="175"
+                                                        <img v-else :src="articles2[0].imageBase64" width="360" height="175"
                                                             alt=""></a>
                                                     <a href="#" class="cat">Computer</a>
                                                     <a href="#" class="icon"><i class="fa fa-heart-o"></i></a>
@@ -402,13 +434,21 @@
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Bathin</a></li>
-                                                            <li><a href="#">Yeasterday 03:52 pm</a></li>
+                                                            <li v-if="articles2.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles2[0].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will be
-                                                                    distracted by</a></h3>
+                                                        <div v-if="articles2.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles2[0].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles2[0].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -420,21 +460,29 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles2.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                        <img v-else :src="articles2[1].imageBase64" width="100" height="70"
                                                             alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Bune</a></li>
-                                                            <li><a href="#">16 April 2017</a></li>
+                                                            <li v-if="articles2.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles2[1].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html"
-                                                                    class="btn-link">Long established fact that a reader
-                                                                    will be distracted by the readable</a></h3>
+                                                        <div v-if="articles2.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles2[1].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles2[1].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -446,21 +494,29 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles2.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                        <img v-else :src="articles2[2].imageBase64" width="100" height="70"
                                                             alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Bune</a></li>
-                                                            <li><a href="#">16 April 2017</a></li>
+                                                            <li v-if="articles2.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles2[2].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html"
-                                                                    class="btn-link">Long established fact that a reader
-                                                                    will be distracted by the readable</a></h3>
+                                                        <div v-if="articles2.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles2[2].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles2[2].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -472,21 +528,29 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles2.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                        <img v-else :src="articles2[3].imageBase64" width="100" height="70"
                                                             alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Bune</a></li>
-                                                            <li><a href="#">16 April 2017</a></li>
+                                                            <li v-if="articles2.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles2[3].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html"
-                                                                    class="btn-link">Long established fact that a reader
-                                                                    will be distracted by the readable</a></h3>
+                                                        <div v-if="articles2.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles2[3].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles2[3].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -498,21 +562,29 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles2.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                        <img v-else :src="articles2[4].imageBase64" width="100" height="70"
                                                             alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Bune</a></li>
-                                                            <li><a href="#">16 April 2017</a></li>
+                                                            <li v-if="articles2.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles2[4].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html"
-                                                                    class="btn-link">Long established fact that a reader
-                                                                    will be distracted by the readable</a></h3>
+                                                        <div v-if="articles2.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles2[4].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles2[4].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -547,7 +619,7 @@
                             <div class="col-md-12 ptop--30 pbottom--30">
                                 <!-- Post Items Title Start -->
                                 <div class="post--items-title" data-ajax="tab">
-                                    <h2 class="h4">Finance</h2>
+                                    <h2 v-if="categories.length > 0" class="h4">{{ categories[3].name }}</h2>
 
                                     <div class="nav">
                                         <a href="#" class="prev btn-link" data-ajax-action="load_prev_finance_posts">
@@ -571,9 +643,9 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles3.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="360"
+                                                        <img v-else :src="articles3[0].imageBase64" width="360"
                                                             height="243.350" alt=""></a>
                                                     <a href="#" class="cat">Business</a>
                                                     <a href="#" class="icon"><i class="fa fa-star-o"></i></a>
@@ -581,14 +653,21 @@
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Vassago</a></li>
-                                                            <li><a href="#">Today 03:30 am</a></li>
+                                                            <li v-if="articles3.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles3[0].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html" class="btn-link">At
-                                                                    vero eos et accusamus et iusto odio dignissimos ducimus
-                                                                    qui blanditiis praesentium voluptatum deleniti atque
-                                                                    corrupti quos dolores et quas.</a></h3>
+                                                        <div v-if="articles3.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles3[0].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles3[0].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -609,21 +688,30 @@
                                                     <div class="post--item post--layout-2">
                                                         <div class="post--img">
                                                             <a href="news-single-v1.html" class="thumb"><img
-                                                                    v-if="articles.length === 0"
+                                                                    v-if="articles3.length === 0"
                                                                     src="img/home-img/banner-01.jpg" alt="">
-                                                                <img v-else :src="articles[0].imageBase64" width="165"
+                                                                <img v-else :src="articles3[1].imageBase64" width="165"
                                                                     height="97.162" alt=""></a>
 
                                                             <div class="post--info">
                                                                 <ul class="nav meta">
                                                                     <li><a href="#">Zepar</a></li>
-                                                                    <li><a href="#">Today 03:52 pm</a></li>
+                                                                    <li v-if="articles3.length === 0"><a href="#">Không có
+                                                                            dữ
+                                                                            liệu</a></li>
+                                                                    <li v-else><a href="#">{{ articles3[1].publicationDate
+                                                                    }}</a></li>
                                                                 </ul>
 
-                                                                <div class="title">
-                                                                    <h3 class="h4"><a href="news-single-v1.html"
-                                                                            class="btn-link">It is a long established fact
-                                                                            that a reader will be</a></h3>
+                                                                <div v-if="articles3.length === 0" class="title">
+                                                                    <h2 class="h4">Không có dữ liệu</h2>
+                                                                </div>
+                                                                <div v-else class="title">
+                                                                    <router-link
+                                                                        :to="{ name: 'detail', params: { id: articles3[1].articleID } }"
+                                                                        class="btn-link">
+                                                                        <h2 class="h4">{{ articles3[1].title }}</h2>
+                                                                    </router-link>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -636,21 +724,30 @@
                                                     <div class="post--item post--layout-2">
                                                         <div class="post--img">
                                                             <a href="news-single-v1.html" class="thumb"><img
-                                                                    v-if="articles.length === 0"
+                                                                    v-if="articles3.length === 0"
                                                                     src="img/home-img/banner-01.jpg" alt="">
-                                                                <img v-else :src="articles[0].imageBase64" width="165"
+                                                                <img v-else :src="articles3[2].imageBase64" width="165"
                                                                     height="97.162" alt=""></a>
 
                                                             <div class="post--info">
                                                                 <ul class="nav meta">
                                                                     <li><a href="#">Demiurge</a></li>
-                                                                    <li><a href="#">Today 03:02 pm</a></li>
+                                                                    <li v-if="articles3.length === 0"><a href="#">Không có
+                                                                            dữ
+                                                                            liệu</a></li>
+                                                                    <li v-else><a href="#">{{ articles3[2].publicationDate
+                                                                    }}</a></li>
                                                                 </ul>
 
-                                                                <div class="title">
-                                                                    <h3 class="h4"><a href="news-single-v1.html"
-                                                                            class="btn-link">It is a long established fact
-                                                                            that a reader will be</a></h3>
+                                                                <div v-if="articles3.length === 0" class="title">
+                                                                    <h2 class="h4">Không có dữ liệu</h2>
+                                                                </div>
+                                                                <div v-else class="title">
+                                                                    <router-link
+                                                                        :to="{ name: 'detail', params: { id: articles3[2].articleID } }"
+                                                                        class="btn-link">
+                                                                        <h2 class="h4">{{ articles3[2].title }}</h2>
+                                                                    </router-link>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -669,21 +766,30 @@
                                                     <div class="post--item post--layout-2">
                                                         <div class="post--img">
                                                             <a href="news-single-v1.html" class="thumb"><img
-                                                                    v-if="articles.length === 0"
+                                                                    v-if="articles3.length === 0"
                                                                     src="img/home-img/banner-01.jpg" alt="">
-                                                                <img v-else :src="articles[0].imageBase64" width="165"
+                                                                <img v-else :src="articles3[3].imageBase64" width="165"
                                                                     height="97.162" alt=""></a>
 
                                                             <div class="post--info">
                                                                 <ul class="nav meta">
                                                                     <li><a href="#">Demiurge</a></li>
-                                                                    <li><a href="#">Today 02:05 am</a></li>
+                                                                    <li v-if="articles3.length === 0"><a href="#">Không có
+                                                                            dữ
+                                                                            liệu</a></li>
+                                                                    <li v-else><a href="#">{{ articles3[3].publicationDate
+                                                                    }}</a></li>
                                                                 </ul>
 
-                                                                <div class="title">
-                                                                    <h3 class="h4"><a href="news-single-v1.html"
-                                                                            class="btn-link">It is a long established fact
-                                                                            that a reader will be</a></h3>
+                                                                <div v-if="articles3.length === 0" class="title">
+                                                                    <h2 class="h4">Không có dữ liệu</h2>
+                                                                </div>
+                                                                <div v-else class="title">
+                                                                    <router-link
+                                                                        :to="{ name: 'detail', params: { id: articles3[3].articleID } }"
+                                                                        class="btn-link">
+                                                                        <h2 class="h4">{{ articles3[3].title }}</h2>
+                                                                    </router-link>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -696,21 +802,30 @@
                                                     <div class="post--item post--layout-2">
                                                         <div class="post--img">
                                                             <a href="news-single-v1.html" class="thumb"><img
-                                                                    v-if="articles.length === 0"
+                                                                    v-if="articles3.length === 0"
                                                                     src="img/home-img/banner-01.jpg" alt="">
-                                                                <img v-else :src="articles[0].imageBase64" width="165"
+                                                                <img v-else :src="articles3[4].imageBase64" width="165"
                                                                     height="97.162" alt=""></a>
 
                                                             <div class="post--info">
                                                                 <ul class="nav meta">
                                                                     <li><a href="#">Zepar</a></li>
-                                                                    <li><a href="#">Today 12:35 am</a></li>
+                                                                    <li v-if="articles3.length === 0"><a href="#">Không có
+                                                                            dữ
+                                                                            liệu</a></li>
+                                                                    <li v-else><a href="#">{{ articles3[4].publicationDate
+                                                                    }}</a></li>
                                                                 </ul>
 
-                                                                <div class="title">
-                                                                    <h3 class="h4"><a href="news-single-v1.html"
-                                                                            class="btn-link">It is a long established fact
-                                                                            that a reader will be</a></h3>
+                                                                <div v-if="articles3.length === 0" class="title">
+                                                                    <h2 class="h4">Không có dữ liệu</h2>
+                                                                </div>
+                                                                <div v-else class="title">
+                                                                    <router-link
+                                                                        :to="{ name: 'detail', params: { id: articles3[4].articleID } }"
+                                                                        class="btn-link">
+                                                                        <h2 class="h4">{{ articles3[4].title }}</h2>
+                                                                    </router-link>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -735,7 +850,7 @@
                             <div class="col-md-6 ptop--30 pbottom--30">
                                 <!-- Post Items Title Start -->
                                 <div class="post--items-title" data-ajax="tab">
-                                    <h2 class="h4">Politics</h2>
+                                    <h2 v-if="categories.length > 0" class="h4">{{ categories[4].name }}</h2>
 
                                     <div class="nav">
                                         <a href="#" class="prev btn-link" data-ajax-action="load_prev_politics_posts">
@@ -759,9 +874,9 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles4.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="360"
+                                                        <img v-else :src="articles4[0].imageBase64" width="360"
                                                             height="175.200" alt=""></a>
                                                     <a href="#" class="cat">Election</a>
                                                     <a href="#" class="icon"><i class="fa fa-fire"></i></a>
@@ -769,13 +884,21 @@
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Astaroth</a></li>
-                                                            <li><a href="#">Yeasterday 03:52 pm</a></li>
+                                                            <li v-if="articles4.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles4[0].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will be
-                                                                    distracted by</a></h3>
+                                                        <div v-if="articles4.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles4[0].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles4[0].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -792,21 +915,29 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles4.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                        <img v-else :src="articles4[1].imageBase64" width="172.500"
                                                             height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Hantu Raya</a></li>
-                                                            <li><a href="#">17 April 2017</a></li>
+                                                            <li v-if="articles4.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles4[1].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will done</a>
-                                                            </h3>
+                                                        <div v-if="articles4.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles4[1].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles4[1].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -818,21 +949,29 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles4.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                        <img v-else :src="articles4[2].imageBase64" width="172.500"
                                                             height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Astaroth</a></li>
-                                                            <li><a href="#">17 April 2017</a></li>
+                                                            <li v-if="articles4.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles4[2].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will done</a>
-                                                            </h3>
+                                                        <div v-if="articles4.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles4[2].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles4[2].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -849,21 +988,29 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles4.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                        <img v-else :src="articles4[3].imageBase64" width="172.500"
                                                             height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Astaroth</a></li>
-                                                            <li><a href="#">17 April 2017</a></li>
+                                                            <li v-if="articles4.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles4[3].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will done</a>
-                                                            </h3>
+                                                        <div v-if="articles4.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles4[3].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles4[3].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -875,21 +1022,29 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles4.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                        <img v-else :src="articles4[4].imageBase64" width="172.500"
                                                             height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Hantu Raya</a></li>
-                                                            <li><a href="#">17 April 2017</a></li>
+                                                            <li v-if="articles4.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles4[4].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will done</a>
-                                                            </h3>
+                                                        <div v-if="articles4.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles4[4].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles4[4].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -912,7 +1067,7 @@
                             <div class="col-md-6 ptop--30 pbottom--30">
                                 <!-- Post Items Title Start -->
                                 <div class="post--items-title" data-ajax="tab">
-                                    <h2 class="h4">Sports</h2>
+                                    <h2 v-if="categories.length > 0" class="h4">{{ categories[5].name }}</h2>
 
                                     <div class="nav">
                                         <a href="#" class="prev btn-link" data-ajax-action="load_prev_sports_posts">
@@ -936,9 +1091,9 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles5.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="360"
+                                                        <img v-else :src="articles5[0].imageBase64" width="360"
                                                             height="175.200" alt=""></a>
                                                     <a href="#" class="cat">Basketball</a>
                                                     <a href="#" class="icon"><i class="fa fa-eye"></i></a>
@@ -946,13 +1101,21 @@
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Bathin</a></li>
-                                                            <li><a href="#">Yeasterday 03:52 pm</a></li>
+                                                            <li v-if="articles5.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles5[0].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will be
-                                                                    distracted by</a></h3>
+                                                        <div v-if="articles5.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles5[0].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles5[0].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -964,21 +1127,29 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles5.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                        <img v-else :src="articles5[1].imageBase64" width="100" height="70"
                                                             alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Bune</a></li>
-                                                            <li><a href="#">16 April 2017</a></li>
+                                                            <li v-if="articles5.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles5[1].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html"
-                                                                    class="btn-link">Long established fact that a reader
-                                                                    will be distracted by the readable</a></h3>
+                                                        <div v-if="articles5.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles5[1].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles5[1].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -990,21 +1161,29 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles5.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                        <img v-else :src="articles5[2].imageBase64" width="100" height="70"
                                                             alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Bune</a></li>
-                                                            <li><a href="#">16 April 2017</a></li>
+                                                            <li v-if="articles5.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles5[2].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html"
-                                                                    class="btn-link">Long established fact that a reader
-                                                                    will be distracted by the readable</a></h3>
+                                                        <div v-if="articles5.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles5[2].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles5[2].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1016,21 +1195,29 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles5.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                        <img v-else :src="articles5[3].imageBase64" width="100" height="70"
                                                             alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Bune</a></li>
-                                                            <li><a href="#">16 April 2017</a></li>
+                                                            <li v-if="articles5.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles5[3].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html"
-                                                                    class="btn-link">Long established fact that a reader
-                                                                    will be distracted by the readable</a></h3>
+                                                        <div v-if="articles5.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles5[3].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles5[3].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1042,21 +1229,29 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles5.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                        <img v-else :src="articles5[4].imageBase64" width="100" height="70"
                                                             alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Bune</a></li>
-                                                            <li><a href="#">16 April 2017</a></li>
+                                                            <li v-if="articles5.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles5[4].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html"
-                                                                    class="btn-link">Long established fact that a reader
-                                                                    will be distracted by the readable</a></h3>
+                                                        <div v-if="articles5.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles5[4].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles5[4].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1357,7 +1552,7 @@
                             <div class="col-md-6 ptop--30 pbottom--30">
                                 <!-- Post Items Title Start -->
                                 <div class="post--items-title" data-ajax="tab">
-                                    <h2 class="h4">Health &amp; fitness</h2>
+                                    <h2 v-if="categories.length > 0" class="h4">{{ categories[6].name }}</h2>
 
                                     <div class="nav">
                                         <a href="#" class="prev btn-link" data-ajax-action="load_prev_health_fitness_posts">
@@ -1381,9 +1576,9 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles6.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="360" height="175"
+                                                        <img v-else :src="articles6[0].imageBase64" width="360" height="175"
                                                             alt=""></a>
                                                     <a href="#" class="cat">Business</a>
                                                     <a href="#" class="icon"><i class="fa fa-star-o"></i></a>
@@ -1391,13 +1586,21 @@
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Bathin</a></li>
-                                                            <li><a href="#">Yeasterday 03:52 pm</a></li>
+                                                            <li v-if="articles6.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles6[0].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will be
-                                                                    distracted by</a></h3>
+                                                        <div v-if="articles6.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles6[0].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles6[0].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1409,21 +1612,29 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles6.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                        <img v-else :src="articles6[1].imageBase64" width="100" height="70"
                                                             alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Maclaan John</a></li>
-                                                            <li><a href="#">16 April 2017</a></li>
+                                                            <li v-if="articles6.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles6[1].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html"
-                                                                    class="btn-link">Established fact that a reader will be
-                                                                    distracted by the readable content</a></h3>
+                                                        <div v-if="articles6.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles6[1].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles6[1].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1435,21 +1646,29 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles6.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                        <img v-else :src="articles6[2].imageBase64" width="100" height="70"
                                                             alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Ziminiar</a></li>
-                                                            <li><a href="#">16 April 2017</a></li>
+                                                            <li v-if="articles6.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles6[2].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html"
-                                                                    class="btn-link">Long established fact that a reader
-                                                                    will be distracted by the readable</a></h3>
+                                                        <div v-if="articles6.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles6[2].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles6[2].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1461,21 +1680,29 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles6.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                        <img v-else :src="articles6[3].imageBase64" width="100" height="70"
                                                             alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Vanth</a></li>
-                                                            <li><a href="#">16 April 2017</a></li>
+                                                            <li v-if="articles6.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles6[3].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html"
-                                                                    class="btn-link">Long established fact that a reader
-                                                                    will be distracted by the readable</a></h3>
+                                                        <div v-if="articles6.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles6[3].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles6[3].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1487,21 +1714,29 @@
                                             <div class="post--item post--layout-3">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles6.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="100" height="70"
+                                                        <img v-else :src="articles6[4].imageBase64" width="100" height="70"
                                                             alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Vanth</a></li>
-                                                            <li><a href="#">16 April 2017</a></li>
+                                                            <li v-if="articles6.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles6[4].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html"
-                                                                    class="btn-link">Long established fact that a reader
-                                                                    will be distracted by the readable</a></h3>
+                                                        <div v-if="articles6.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles6[4].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles6[4].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1524,7 +1759,7 @@
                             <div class="col-md-6 ptop--30 pbottom--30">
                                 <!-- Post Items Title Start -->
                                 <div class="post--items-title" data-ajax="tab">
-                                    <h2 class="h4">Lifestyle</h2>
+                                    <h2 v-if="categories.length > 0" class="h4">{{ categories[7].name }}</h2>
 
                                     <div class="nav">
                                         <a href="#" class="prev btn-link" data-ajax-action="load_prev_lifestyle_posts">
@@ -1548,9 +1783,9 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles7.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="360" height="175"
+                                                        <img v-else :src="articles7[0].imageBase64" width="360" height="175"
                                                             alt=""></a>
                                                     <a href="#" class="cat">Fashion</a>
                                                     <a href="#" class="icon"><i class="fa fa-heart-o"></i></a>
@@ -1558,13 +1793,21 @@
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Astaroth</a></li>
-                                                            <li><a href="#">Yeasterday 03:52 pm</a></li>
+                                                            <li v-if="articles7.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles7[0].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html"
-                                                                    class="btn-link">Siriya attaced by a long established
-                                                                    fact that a reader will be distracted by</a></h3>
+                                                        <div v-if="articles7.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles7[0].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles7[0].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1581,21 +1824,29 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles7.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                        <img v-else :src="articles7[1].imageBase64" width="172.500"
                                                             height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Astaroth</a></li>
-                                                            <li><a href="#">17 April 2017</a></li>
+                                                            <li v-if="articles7.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles7[1].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will done</a>
-                                                            </h3>
+                                                        <div v-if="articles7.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles7[1].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles7[1].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1607,21 +1858,29 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles7.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                        <img v-else :src="articles7[2].imageBase64" width="172.500"
                                                             height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Astaroth</a></li>
-                                                            <li><a href="#">17 April 2017</a></li>
+                                                            <li v-if="articles7.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles7[2].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will done</a>
-                                                            </h3>
+                                                        <div v-if="articles7.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles7[2].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles7[2].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1638,21 +1897,29 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles7.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                        <img v-else :src="articles7[3].imageBase64" width="172.500"
                                                             height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Astaroth</a></li>
-                                                            <li><a href="#">17 April 2017</a></li>
+                                                            <li v-if="articles7.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles7[3].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will done</a>
-                                                            </h3>
+                                                        <div v-if="articles7.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles7[3].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles7[3].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1664,21 +1931,29 @@
                                             <div class="post--item post--layout-2">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles7.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="172.500"
+                                                        <img v-else :src="articles7[4].imageBase64" width="172.500"
                                                             height="95.825" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Astaroth</a></li>
-                                                            <li><a href="#">17 April 2017</a></li>
+                                                            <li v-if="articles7.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles7[4].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will done</a>
-                                                            </h3>
+                                                        <div v-if="articles7.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles7[4].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles7[4].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1701,7 +1976,7 @@
                             <div class="col-md-12 ptop--30 pbottom--30">
                                 <!-- Post Items Title Start -->
                                 <div class="post--items-title" data-ajax="tab">
-                                    <h2 class="h4">Foods &amp; Recipes</h2>
+                                    <h2 v-if="categories.length > 0" class="h4">{{ categories[8].name }}</h2>
 
                                     <div class="nav">
                                         <a href="#" class="prev btn-link" data-ajax-action="load_prev_food_resturent_posts">
@@ -1725,21 +2000,29 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles8.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="239.988"
+                                                        <img v-else :src="articles8[0].imageBase64" width="239.988"
                                                             height="194.512" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Astaroth</a></li>
-                                                            <li><a href="#">Yeasterday 03:52 pm</a></li>
+                                                            <li v-if="articles8.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles8[0].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will be
-                                                                    distracted by</a></h3>
+                                                        <div v-if="articles8.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles8[0].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles8[0].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1756,21 +2039,29 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles8.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="239.988"
+                                                        <img v-else :src="articles8[1].imageBase64" width="239.988"
                                                             height="194.512" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Astaroth</a></li>
-                                                            <li><a href="#">Yeasterday 03:52 pm</a></li>
+                                                            <li v-if="articles8.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles8[1].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will be
-                                                                    distracted by</a></h3>
+                                                        <div v-if="articles8.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles8[1].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles8[1].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1782,21 +2073,29 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles8.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="239.988"
+                                                        <img v-else :src="articles8[2].imageBase64" width="239.988"
                                                             height="194.512" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Astaroth</a></li>
-                                                            <li><a href="#">Yeasterday 03:52 pm</a></li>
+                                                            <li v-if="articles8.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles8[2].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h3 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will be
-                                                                    distracted by</a></h3>
+                                                        <div v-if="articles8.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles8[2].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles8[2].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1819,7 +2118,7 @@
                             <div class="col-md-12 ptop--30 pbottom--30">
                                 <!-- Post Items Title Start -->
                                 <div class="post--items-title" data-ajax="tab">
-                                    <h2 class="h4">Photo Gallery</h2>
+                                    <h2 v-if="categories.length > 0" class="h4">{{ categories[9].name }}</h2>
 
                                     <div class="nav">
                                         <a href="#" class="prev btn-link" data-ajax-action="load_prev_photo_gallery_posts">
@@ -1843,9 +2142,9 @@
                                             <div class="post--item post--layout-1 post--title-large">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles9.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="750"
+                                                        <img v-else :src="articles9[0].imageBase64" width="750"
                                                             height="292.300" alt=""></a>
                                                     <a href="#" class="cat">Serfer</a>
                                                     <a href="#" class="icon"><i class="fa fa-eye"></i></a>
@@ -1853,15 +2152,21 @@
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Astaroth</a></li>
-                                                            <li><a href="#">Today 05:52 pm</a></li>
+                                                            <li v-if="articles9.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles9[0].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title text-xxs-ellipsis">
-                                                            <h2 class="h4"><a href="news-single-v1.html"
-                                                                    class="btn-link">Standard chunk of Lorem Ipsum used
-                                                                    since the 1500s is reproduced below for those
-                                                                    interested. Sections 1.10.32 and 1.10.33 from "de
-                                                                    Finibus Bonorum</a></h2>
+                                                        <div v-if="articles9.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles9[0].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles9[0].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1873,21 +2178,29 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles9.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="239.988"
+                                                        <img v-else :src="articles9[1].imageBase64" width="239.988"
                                                             height="194.575" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Astaroth</a></li>
-                                                            <li><a href="#">Today 03:52 pm</a></li>
+                                                            <li v-if="articles9.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles9[1].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h2 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will be
-                                                                    distracted by</a></h2>
+                                                        <div v-if="articles9.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles9[1].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles9[1].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1899,21 +2212,29 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles9.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="239.988"
+                                                        <img v-else :src="articles9[2].imageBase64" width="239.988"
                                                             height="194.575" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Astaroth</a></li>
-                                                            <li><a href="#">Today 03:52 pm</a></li>
+                                                            <li v-if="articles9.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles9[2].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h2 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will be
-                                                                    distracted by</a></h2>
+                                                        <div v-if="articles9.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles9[2].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles9[2].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1925,21 +2246,29 @@
                                             <div class="post--item post--layout-1">
                                                 <div class="post--img">
                                                     <a href="news-single-v1.html" class="thumb"><img
-                                                            v-if="articles.length === 0" src="img/home-img/banner-01.jpg"
+                                                            v-if="articles9.length === 0" src="img/home-img/banner-01.jpg"
                                                             alt="">
-                                                        <img v-else :src="articles[0].imageBase64" width="239.988"
+                                                        <img v-else :src="articles9[3].imageBase64" width="239.988"
                                                             height="194.575" alt=""></a>
 
                                                     <div class="post--info">
                                                         <ul class="nav meta">
                                                             <li><a href="#">Astaroth</a></li>
-                                                            <li><a href="#">Today 03:52 pm</a></li>
+                                                            <li v-if="articles9.length === 0"><a href="#">Không có dữ
+                                                                    liệu</a></li>
+                                                            <li v-else><a href="#">{{ articles9[3].publicationDate }}</a>
+                                                            </li>
                                                         </ul>
 
-                                                        <div class="title">
-                                                            <h2 class="h4"><a href="news-single-v1.html" class="btn-link">It
-                                                                    is a long established fact that a reader will be
-                                                                    distracted by</a></h2>
+                                                        <div v-if="articles9.length === 0" class="title">
+                                                            <h2 class="h4">Không có dữ liệu</h2>
+                                                        </div>
+                                                        <div v-else class="title">
+                                                            <router-link
+                                                                :to="{ name: 'detail', params: { id: articles9[3].articleID } }"
+                                                                class="btn-link">
+                                                                <h2 class="h4">{{ articles9[3].title }}</h2>
+                                                            </router-link>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2376,6 +2705,16 @@ export default {
             categories: [],
             categories1: [],
             articles: [],
+            articles1: [],
+            articles2: [],
+            articles3: [],
+            articles4: [],
+            articles5: [],
+            articles6: [],
+            articles7: [],
+            articles8: [],
+            articles9: [],
+            articles10: [],
             error: null,
         };
     },
@@ -2393,22 +2732,101 @@ export default {
             .then(response => {
                 // Gán dữ liệu từ API vào biến data
                 this.categories.push(...response.data);
-                this.categories.forEach(c => {
-                    axios.get(`http://localhost:8082/api/articles/category/${c.categoryID}?page=0&size=5&sort=PublicationDate`)
-                        .then(response => {
-                            this.articles.push(...response.data.content);
-                        })
-                        .catch(error => {
-                            // Xử lý lỗi nếu có lỗi trong quá trình gọi API
-                            this.error = 'Lỗi: ' + error.message;
-                        });
-                })
-                console.log(this.articles)
+                axios.get(`http://localhost:8082/api/articles/category/${this.categories[0].categoryID}?page=0&size=4&sort=PublicationDate`)
+                    .then(res => {
+                        this.articles.push(...res.data.content);
+                    })
+                    .catch(error => {
+                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                        this.error = 'Lỗi: ' + error.message;
+                    });
+                axios.get(`http://localhost:8082/api/articles/category/${this.categories[1].categoryID}?page=0&size=5&sort=PublicationDate`)
+                    .then(res => {
+                        this.articles1.push(...res.data.content);
+                    })
+                    .catch(error => {
+                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                        this.error = 'Lỗi: ' + error.message;
+                    });
+                axios.get(`http://localhost:8082/api/articles/category/${this.categories[2].categoryID}?page=0&size=5&sort=PublicationDate`)
+                    .then(res => {
+                        this.articles2.push(...res.data.content);
+                    })
+                    .catch(error => {
+                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                        this.error = 'Lỗi: ' + error.message;
+                    });
+                axios.get(`http://localhost:8082/api/articles/category/${this.categories[3].categoryID}?page=0&size=5&sort=PublicationDate`)
+                    .then(res => {
+                        this.articles3.push(...res.data.content);
+                    })
+                    .catch(error => {
+                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                        this.error = 'Lỗi: ' + error.message;
+                    });
+                axios.get(`http://localhost:8082/api/articles/category/${this.categories[4].categoryID}?page=0&size=5&sort=PublicationDate`)
+                    .then(res => {
+                        this.articles4.push(...res.data.content);
+                    })
+                    .catch(error => {
+                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                        this.error = 'Lỗi: ' + error.message;
+                    });
+                axios.get(`http://localhost:8082/api/articles/category/${this.categories[5].categoryID}?page=0&size=5&sort=PublicationDate`)
+                    .then(res => {
+                        this.articles5.push(...res.data.content);
+                    })
+                    .catch(error => {
+                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                        this.error = 'Lỗi: ' + error.message;
+                    });
+                axios.get(`http://localhost:8082/api/articles/category/${this.categories[6].categoryID}?page=0&size=5&sort=PublicationDate`)
+                    .then(res => {
+                        this.articles6.push(...res.data.content);
+                    })
+                    .catch(error => {
+                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                        this.error = 'Lỗi: ' + error.message;
+                    });
+                axios.get(`http://localhost:8082/api/articles/category/${this.categories[7].categoryID}?page=0&size=5&sort=PublicationDate`)
+                    .then(res => {
+                        this.articles7.push(...res.data.content);
+                    })
+                    .catch(error => {
+                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                        this.error = 'Lỗi: ' + error.message;
+                    });
+                axios.get(`http://localhost:8082/api/articles/category/${this.categories[8].categoryID}?page=0&size=5&sort=PublicationDate`)
+                    .then(res => {
+                        this.articles8.push(...res.data.content);
+                    })
+                    .catch(error => {
+                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                        this.error = 'Lỗi: ' + error.message;
+                    });
+                axios.get(`http://localhost:8082/api/articles/category/${this.categories[9].categoryID}?page=0&size=5&sort=PublicationDate`)
+                    .then(res => {
+                        this.articles9.push(...res.data.content);
+                    })
+                    .catch(error => {
+                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                        this.error = 'Lỗi: ' + error.message;
+                    });
+                axios.get(`http://localhost:8082/api/articles/category/${this.categories[10].categoryID}?page=0&size=5&sort=PublicationDate`)
+                    .then(res => {
+                        this.articles10.push(...res.data.content);
+                    })
+                    .catch(error => {
+                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                        this.error = 'Lỗi: ' + error.message;
+                    });
             })
             .catch(error => {
                 // Xử lý lỗi nếu có lỗi trong quá trình gọi API
                 this.error = 'Lỗi: ' + error.message;
             });
+
+
 
         const user = localStorage.getItem('user');
         if (user) {
@@ -2432,22 +2850,99 @@ export default {
                     }
                     this.categories = this.categories1
                     this.articles = []
-                    for (let i = 0; i < this.categories1.length; i++) {
-                        axios.get(`http://localhost:8082/api/articles/category/${this.categories1[1].categoryID}?page=0&size=5&sort=PublicationDate`)
-                            .then(response => {
-                                this.articles.push(...response.data.content);
-                            })
-                            .catch(error => {
-                                // Xử lý lỗi nếu có lỗi trong quá trình gọi API
-                                this.error = 'Lỗi: ' + error.message;
-                            });
-                    }
+                    axios.get(`http://localhost:8082/api/articles/category/${this.categories[0].categoryID}?page=0&size=4&sort=PublicationDate`)
+                        .then(res => {
+                            this.articles.push(...res.data.content);
+                        })
+                        .catch(error => {
+                            // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                            this.error = 'Lỗi: ' + error.message;
+                        });
+                    axios.get(`http://localhost:8082/api/articles/category/${this.categories[1].categoryID}?page=0&size=5&sort=PublicationDate`)
+                        .then(res => {
+                            this.articles1.push(...res.data.content);
+                        })
+                        .catch(error => {
+                            // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                            this.error = 'Lỗi: ' + error.message;
+                        });
+                    axios.get(`http://localhost:8082/api/articles/category/${this.categories[2].categoryID}?page=0&size=5&sort=PublicationDate`)
+                        .then(res => {
+                            this.articles2.push(...res.data.content);
+                        })
+                        .catch(error => {
+                            // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                            this.error = 'Lỗi: ' + error.message;
+                        });
+                    axios.get(`http://localhost:8082/api/articles/category/${this.categories[3].categoryID}?page=0&size=5&sort=PublicationDate`)
+                        .then(res => {
+                            this.articles3.push(...res.data.content);
+                        })
+                        .catch(error => {
+                            // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                            this.error = 'Lỗi: ' + error.message;
+                        });
+                    axios.get(`http://localhost:8082/api/articles/category/${this.categories[4].categoryID}?page=0&size=5&sort=PublicationDate`)
+                        .then(res => {
+                            this.articles4.push(...res.data.content);
+                        })
+                        .catch(error => {
+                            // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                            this.error = 'Lỗi: ' + error.message;
+                        });
+                    axios.get(`http://localhost:8082/api/articles/category/${this.categories[5].categoryID}?page=0&size=5&sort=PublicationDate`)
+                        .then(res => {
+                            this.articles5.push(...res.data.content);
+                        })
+                        .catch(error => {
+                            // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                            this.error = 'Lỗi: ' + error.message;
+                        });
+                    axios.get(`http://localhost:8082/api/articles/category/${this.categories[6].categoryID}?page=0&size=5&sort=PublicationDate`)
+                        .then(res => {
+                            this.articles6.push(...res.data.content);
+                        })
+                        .catch(error => {
+                            // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                            this.error = 'Lỗi: ' + error.message;
+                        });
+                    axios.get(`http://localhost:8082/api/articles/category/${this.categories[7].categoryID}?page=0&size=5&sort=PublicationDate`)
+                        .then(res => {
+                            this.articles7.push(...res.data.content);
+                        })
+                        .catch(error => {
+                            // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                            this.error = 'Lỗi: ' + error.message;
+                        });
+                    axios.get(`http://localhost:8082/api/articles/category/${this.categories[8].categoryID}?page=0&size=5&sort=PublicationDate`)
+                        .then(res => {
+                            this.articles8.push(...res.data.content);
+                        })
+                        .catch(error => {
+                            // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                            this.error = 'Lỗi: ' + error.message;
+                        });
+                    axios.get(`http://localhost:8082/api/articles/category/${this.categories[9].categoryID}?page=0&size=5&sort=PublicationDate`)
+                        .then(res => {
+                            this.articles9.push(...res.data.content);
+                        })
+                        .catch(error => {
+                            // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                            this.error = 'Lỗi: ' + error.message;
+                        });
+                    axios.get(`http://localhost:8082/api/articles/category/${this.categories[10].categoryID}?page=0&size=5&sort=PublicationDate`)
+                        .then(res => {
+                            this.articles10.push(...res.data.content);
+                        })
+                        .catch(error => {
+                            // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                            this.error = 'Lỗi: ' + error.message;
+                        });
                 })
                 .catch(error => {
                     // Xử lý lỗi nếu có lỗi trong quá trình gọi API
                     this.error = 'Lỗi: ' + error.message;
                 });
-
         }
     },
 }
