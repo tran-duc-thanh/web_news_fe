@@ -57,7 +57,8 @@
                 <div class="header--logo float--left float--sm-none text-sm-center">
                     <h1 class="h1">
                         <router-link to="/home" class="btn-link">
-                            <span class="hidden">USNews Logo</span>
+                            <img src="img/ptit.png" style="height: 90px;" alt="USNews Logo" data-rjs="2">
+                            <span class="hidden">Ptit Logo</span>
                         </router-link>
                     </h1>
                 </div>
