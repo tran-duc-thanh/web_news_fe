@@ -92,7 +92,7 @@
                     <!-- Header Menu Links Start -->
                     <ul class="header--menu-links nav navbar-nav" data-trigger="hoverIntent">
                         <li><router-link to="/home">Trang chủ</router-link></li>
-                        <li v-for="category in categories" :key="category.categoryID"><router-link
+                        <li v-for="(category, index) in categories" :key="index"><router-link v-if="index < 8"
                                 :to="{ name: 'category', params: { id: category.categoryID } }">{{ category.name
                                 }}</router-link></li>
                         <li class="dropdown">
@@ -100,7 +100,7 @@
                                     class="fa flm fa-angle-down"></i></a>
 
                             <ul class="dropdown-menu">
-                                <li v-for="category in categories" :key="category.categoryID" class="dropdown">
+                                <li v-for="category in categories1" :key="category.categoryID" class="dropdown">
                                     <router-link :to="{ name: 'category', params: { id: category.categoryID } }"
                                         class="dropdown-toggle" data-toggle="dropdown">{{ category.name }}</router-link>
                                 </li>
@@ -153,6 +153,7 @@ export default {
     data() {
         return {
             categories: null,
+            categories1: null,
             error: null,
             user: null,
         };
@@ -187,6 +188,7 @@ export default {
             .then(response => {
                 // Gán dữ liệu từ API vào biến data
                 this.categories = response.data;
+                this.categories1 = response.data;
             })
             .catch(error => {
                 // Xử lý lỗi nếu có lỗi trong quá trình gọi API
@@ -195,8 +197,31 @@ export default {
         const user = localStorage.getItem('user');
         if (user) {
             this.user = JSON.parse(user);
+            axios.get(`http://localhost:8082/api/category/favorite-genre?username=${this.user.username}`)
+                .then(response => {
+                    // Gán dữ liệu từ API vào biến data
+                    if (response.data.length > 0) {
+                        this.categories = response.data;
+                        if (this.categories.length < 8) {
+                            this.categories1.forEach(category1 => {
+                                let check = true
+                                this.categories.forEach(category => {
+                                    if (category1.categoryID === category.categoryID) {
+                                        check = false
+                                    }
+                                })
+                                if (check && this.categories.length < 8) {
+                                    this.categories.push(category1)
+                                }
+                            })
+                        }
+                    }
+                })
+                .catch(error => {
+                    // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                    this.error = 'Lỗi: ' + error.message;
+                });
         }
-        // console.log(this.user)
     },
     computed: {
         checkAdmin() {
