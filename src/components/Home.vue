@@ -41,7 +41,7 @@
                                         <div v-else class="title">
                                             <router-link :to="{ name: 'detail', params: { id: articles[0].articleID } }"
                                                 class="btn-link">
-                                                <h2 class="h4">{{ articles[0].title }}</h2>
+                                                <h2 class="h4">{{ getTruncatedString(articles[0].title) }}</h2>
                                             </router-link>
                                         </div>
                                     </div>
@@ -77,7 +77,7 @@
                                                     <router-link
                                                         :to="{ name: 'detail', params: { id: articles[1].articleID } }"
                                                         class="btn-link">
-                                                        <h2 class="h4">{{ articles[1].title }}</h2>
+                                                        <h2 class="h4">{{ getTruncatedString(articles[1].title) }}</h2>
                                                     </router-link>
                                                 </div>
                                             </div>
@@ -121,7 +121,7 @@
                                                     <router-link
                                                         :to="{ name: 'detail', params: { id: articles[2].articleID } }"
                                                         class="btn-link">
-                                                        <h2 class="h4">{{ articles[2].title }}</h2>
+                                                        <h2 class="h4">{{ getTruncatedString(articles[2].title) }}</h2>
                                                     </router-link>
                                                 </div>
                                             </div>
@@ -156,7 +156,7 @@
                                                     <router-link
                                                         :to="{ name: 'detail', params: { id: articles[3].articleID } }"
                                                         class="btn-link">
-                                                        <h2 class="h4">{{ articles[3].title }}</h2>
+                                                        <h2 class="h4">{{ getTruncatedString(articles[3].title) }}</h2>
                                                     </router-link>
                                                 </div>
                                             </div>
@@ -229,7 +229,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles1[0].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles1[0].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles1[0].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -269,7 +269,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles1[1].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles1[1].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles1[1].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -303,7 +303,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles1[2].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles1[2].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles1[2].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -342,7 +342,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles1[3].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles1[3].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles1[3].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -376,7 +376,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles1[4].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles1[4].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles1[4].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -447,7 +447,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles2[0].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles2[0].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles2[0].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -481,7 +481,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles2[1].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles2[1].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles2[1].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -515,7 +515,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles2[2].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles2[2].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles2[2].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -549,7 +549,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles2[3].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles2[3].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles2[3].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -583,7 +583,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles2[4].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles2[4].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles2[4].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -666,7 +666,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles3[0].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles3[0].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles3[0].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -710,7 +710,7 @@
                                                                     <router-link
                                                                         :to="{ name: 'detail', params: { id: articles3[1].articleID } }"
                                                                         class="btn-link">
-                                                                        <h2 class="h4">{{ articles3[1].title }}</h2>
+                                                                        <h2 class="h4">{{ getTruncatedString(articles3[1].title) }}</h2>
                                                                     </router-link>
                                                                 </div>
                                                             </div>
@@ -746,7 +746,7 @@
                                                                     <router-link
                                                                         :to="{ name: 'detail', params: { id: articles3[2].articleID } }"
                                                                         class="btn-link">
-                                                                        <h2 class="h4">{{ articles3[2].title }}</h2>
+                                                                        <h2 class="h4">{{ getTruncatedString(articles3[2].title) }}</h2>
                                                                     </router-link>
                                                                 </div>
                                                             </div>
@@ -788,7 +788,7 @@
                                                                     <router-link
                                                                         :to="{ name: 'detail', params: { id: articles3[3].articleID } }"
                                                                         class="btn-link">
-                                                                        <h2 class="h4">{{ articles3[3].title }}</h2>
+                                                                        <h2 class="h4">{{ getTruncatedString(articles3[3].title) }}</h2>
                                                                     </router-link>
                                                                 </div>
                                                             </div>
@@ -824,7 +824,7 @@
                                                                     <router-link
                                                                         :to="{ name: 'detail', params: { id: articles3[4].articleID } }"
                                                                         class="btn-link">
-                                                                        <h2 class="h4">{{ articles3[4].title }}</h2>
+                                                                        <h2 class="h4">{{ getTruncatedString(articles3[4].title) }}</h2>
                                                                     </router-link>
                                                                 </div>
                                                             </div>
@@ -897,7 +897,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles4[0].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles4[0].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles4[0].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -936,7 +936,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles4[1].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles4[1].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles4[1].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -970,7 +970,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles4[2].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles4[2].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles4[2].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1009,7 +1009,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles4[3].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles4[3].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles4[3].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1043,7 +1043,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles4[4].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles4[4].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles4[4].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1114,7 +1114,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles5[0].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles5[0].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles5[0].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1148,7 +1148,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles5[1].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles5[1].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles5[1].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1182,7 +1182,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles5[2].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles5[2].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles5[2].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1216,7 +1216,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles5[3].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles5[3].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles5[3].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1250,7 +1250,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles5[4].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles5[4].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles5[4].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1633,7 +1633,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles6[1].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles6[1].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles6[1].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1667,7 +1667,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles6[2].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles6[2].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles6[2].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1701,7 +1701,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles6[3].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles6[3].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles6[3].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1735,7 +1735,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles6[4].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles6[4].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles6[4].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1845,7 +1845,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles7[1].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles7[1].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles7[1].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1879,7 +1879,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles7[2].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles7[2].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles7[2].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1918,7 +1918,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles7[3].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles7[3].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles7[3].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1952,7 +1952,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles7[4].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles7[4].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles7[4].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -2060,7 +2060,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles8[1].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles8[1].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles8[1].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -2094,7 +2094,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles8[2].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles8[2].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles8[2].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -2199,7 +2199,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles9[1].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles9[1].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles9[1].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -2233,7 +2233,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles9[2].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles9[2].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles9[2].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -2267,7 +2267,7 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles9[3].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ articles9[3].title }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles9[3].title) }}</h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -2724,6 +2724,9 @@ export default {
             if (user) {
                 return true
             } else return false
+        },
+        getTruncatedString(str) {
+            return str.substring(0, 50) + "...";
         }
     },
     mounted() {
@@ -2848,6 +2851,7 @@ export default {
                             })
                         })
                     }
+                    this.categories = []
                     this.categories = this.categories1
                     this.articles = []
                     axios.get(`http://localhost:8082/api/articles/category/${this.categories[0].categoryID}?page=0&size=4&sort=PublicationDate`)
