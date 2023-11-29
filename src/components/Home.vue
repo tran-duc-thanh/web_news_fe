@@ -229,7 +229,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles1[0].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles1[0].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles1[0].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -269,7 +270,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles1[1].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles1[1].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles1[1].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -303,7 +305,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles1[2].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles1[2].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles1[2].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -342,7 +345,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles1[3].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles1[3].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles1[3].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -376,7 +380,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles1[4].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles1[4].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles1[4].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -447,7 +452,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles2[0].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles2[0].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles2[0].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -481,7 +487,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles2[1].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles2[1].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles2[1].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -515,7 +522,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles2[2].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles2[2].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles2[2].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -549,7 +557,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles2[3].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles2[3].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles2[3].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -583,7 +592,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles2[4].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles2[4].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles2[4].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -666,7 +676,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles3[0].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles3[0].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles3[0].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -710,7 +721,8 @@
                                                                     <router-link
                                                                         :to="{ name: 'detail', params: { id: articles3[1].articleID } }"
                                                                         class="btn-link">
-                                                                        <h2 class="h4">{{ getTruncatedString(articles3[1].title) }}</h2>
+                                                                        <h2 class="h4">{{
+                                                                            getTruncatedString(articles3[1].title) }}</h2>
                                                                     </router-link>
                                                                 </div>
                                                             </div>
@@ -746,7 +758,8 @@
                                                                     <router-link
                                                                         :to="{ name: 'detail', params: { id: articles3[2].articleID } }"
                                                                         class="btn-link">
-                                                                        <h2 class="h4">{{ getTruncatedString(articles3[2].title) }}</h2>
+                                                                        <h2 class="h4">{{
+                                                                            getTruncatedString(articles3[2].title) }}</h2>
                                                                     </router-link>
                                                                 </div>
                                                             </div>
@@ -788,7 +801,8 @@
                                                                     <router-link
                                                                         :to="{ name: 'detail', params: { id: articles3[3].articleID } }"
                                                                         class="btn-link">
-                                                                        <h2 class="h4">{{ getTruncatedString(articles3[3].title) }}</h2>
+                                                                        <h2 class="h4">{{
+                                                                            getTruncatedString(articles3[3].title) }}</h2>
                                                                     </router-link>
                                                                 </div>
                                                             </div>
@@ -824,7 +838,8 @@
                                                                     <router-link
                                                                         :to="{ name: 'detail', params: { id: articles3[4].articleID } }"
                                                                         class="btn-link">
-                                                                        <h2 class="h4">{{ getTruncatedString(articles3[4].title) }}</h2>
+                                                                        <h2 class="h4">{{
+                                                                            getTruncatedString(articles3[4].title) }}</h2>
                                                                     </router-link>
                                                                 </div>
                                                             </div>
@@ -897,7 +912,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles4[0].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles4[0].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles4[0].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -936,7 +952,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles4[1].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles4[1].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles4[1].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -970,7 +987,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles4[2].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles4[2].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles4[2].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1009,7 +1027,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles4[3].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles4[3].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles4[3].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1043,7 +1062,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles4[4].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles4[4].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles4[4].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1114,7 +1134,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles5[0].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles5[0].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles5[0].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1148,7 +1169,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles5[1].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles5[1].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles5[1].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1182,7 +1204,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles5[2].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles5[2].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles5[2].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1216,7 +1239,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles5[3].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles5[3].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles5[3].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1250,7 +1274,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles5[4].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles5[4].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles5[4].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1633,7 +1658,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles6[1].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles6[1].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles6[1].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1667,7 +1693,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles6[2].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles6[2].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles6[2].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1701,7 +1728,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles6[3].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles6[3].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles6[3].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1735,7 +1763,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles6[4].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles6[4].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles6[4].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1845,7 +1874,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles7[1].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles7[1].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles7[1].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1879,7 +1909,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles7[2].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles7[2].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles7[2].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1918,7 +1949,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles7[3].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles7[3].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles7[3].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -1952,7 +1984,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles7[4].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles7[4].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles7[4].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -2060,7 +2093,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles8[1].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles8[1].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles8[1].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -2094,7 +2128,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles8[2].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles8[2].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles8[2].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -2199,7 +2234,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles9[1].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles9[1].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles9[1].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -2233,7 +2269,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles9[2].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles9[2].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles9[2].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -2267,7 +2304,8 @@
                                                             <router-link
                                                                 :to="{ name: 'detail', params: { id: articles9[3].articleID } }"
                                                                 class="btn-link">
-                                                                <h2 class="h4">{{ getTruncatedString(articles9[3].title) }}</h2>
+                                                                <h2 class="h4">{{ getTruncatedString(articles9[3].title) }}
+                                                                </h2>
                                                             </router-link>
                                                         </div>
                                                     </div>
@@ -2735,125 +2773,144 @@ export default {
             .then(response => {
                 // Gán dữ liệu từ API vào biến data
                 this.categories.push(...response.data);
-                axios.get(`http://localhost:8082/api/articles/category/${this.categories[0].categoryID}?page=0&size=4&sort=PublicationDate`)
-                    .then(res => {
-                        this.articles.push(...res.data.content);
-                    })
-                    .catch(error => {
-                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
-                        this.error = 'Lỗi: ' + error.message;
-                    });
-                axios.get(`http://localhost:8082/api/articles/category/${this.categories[1].categoryID}?page=0&size=5&sort=PublicationDate`)
-                    .then(res => {
-                        this.articles1.push(...res.data.content);
-                    })
-                    .catch(error => {
-                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
-                        this.error = 'Lỗi: ' + error.message;
-                    });
-                axios.get(`http://localhost:8082/api/articles/category/${this.categories[2].categoryID}?page=0&size=5&sort=PublicationDate`)
-                    .then(res => {
-                        this.articles2.push(...res.data.content);
-                    })
-                    .catch(error => {
-                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
-                        this.error = 'Lỗi: ' + error.message;
-                    });
-                axios.get(`http://localhost:8082/api/articles/category/${this.categories[3].categoryID}?page=0&size=5&sort=PublicationDate`)
-                    .then(res => {
-                        this.articles3.push(...res.data.content);
-                    })
-                    .catch(error => {
-                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
-                        this.error = 'Lỗi: ' + error.message;
-                    });
-                axios.get(`http://localhost:8082/api/articles/category/${this.categories[4].categoryID}?page=0&size=5&sort=PublicationDate`)
-                    .then(res => {
-                        this.articles4.push(...res.data.content);
-                    })
-                    .catch(error => {
-                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
-                        this.error = 'Lỗi: ' + error.message;
-                    });
-                axios.get(`http://localhost:8082/api/articles/category/${this.categories[5].categoryID}?page=0&size=5&sort=PublicationDate`)
-                    .then(res => {
-                        this.articles5.push(...res.data.content);
-                    })
-                    .catch(error => {
-                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
-                        this.error = 'Lỗi: ' + error.message;
-                    });
-                axios.get(`http://localhost:8082/api/articles/category/${this.categories[6].categoryID}?page=0&size=5&sort=PublicationDate`)
-                    .then(res => {
-                        this.articles6.push(...res.data.content);
-                    })
-                    .catch(error => {
-                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
-                        this.error = 'Lỗi: ' + error.message;
-                    });
-                axios.get(`http://localhost:8082/api/articles/category/${this.categories[7].categoryID}?page=0&size=5&sort=PublicationDate`)
-                    .then(res => {
-                        this.articles7.push(...res.data.content);
-                    })
-                    .catch(error => {
-                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
-                        this.error = 'Lỗi: ' + error.message;
-                    });
-                axios.get(`http://localhost:8082/api/articles/category/${this.categories[8].categoryID}?page=0&size=5&sort=PublicationDate`)
-                    .then(res => {
-                        this.articles8.push(...res.data.content);
-                    })
-                    .catch(error => {
-                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
-                        this.error = 'Lỗi: ' + error.message;
-                    });
-                axios.get(`http://localhost:8082/api/articles/category/${this.categories[9].categoryID}?page=0&size=5&sort=PublicationDate`)
-                    .then(res => {
-                        this.articles9.push(...res.data.content);
-                    })
-                    .catch(error => {
-                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
-                        this.error = 'Lỗi: ' + error.message;
-                    });
-                axios.get(`http://localhost:8082/api/articles/category/${this.categories[10].categoryID}?page=0&size=5&sort=PublicationDate`)
-                    .then(res => {
-                        this.articles10.push(...res.data.content);
-                    })
-                    .catch(error => {
-                        // Xử lý lỗi nếu có lỗi trong quá trình gọi API
-                        this.error = 'Lỗi: ' + error.message;
-                    });
-            })
-            .catch(error => {
-                // Xử lý lỗi nếu có lỗi trong quá trình gọi API
-                this.error = 'Lỗi: ' + error.message;
-            });
-
-
-
-        const user = localStorage.getItem('user');
-        if (user) {
-            this.user = JSON.parse(user);
-            axios.get(`http://localhost:8082/api/category/favorite-genre?username=${this.user.username}`)
-                .then(response => {
-                    // Gán dữ liệu từ API vào biến data
-                    if (response.data.length > 0) {
-                        this.categories1.push(...response.data);
-                    } else {
-                        this.categories1 = this.categories
-                    }
-                    if (this.categories1.length < 11) {
-                        this.categories.forEach(category => {
-                            this.categories1.forEach(category1 => {
-                                if (category.categoryID !== category1.categoryID && this.categories1.length < 11) {
-                                    this.categories1.push(category)
-                                }
-                            })
+                const user = localStorage.getItem('user');
+                if (user) {
+                    this.user = JSON.parse(user);
+                    axios.get(`http://localhost:8082/api/category/favorite-genre?username=${this.user.username}`)
+                        .then(response => {
+                            // Gán dữ liệu từ API vào biến data
+                            if (response.data.length > 0) {
+                                this.categories1.push(...response.data);
+                            } else {
+                                this.categories1 = this.categories
+                            }
+                            if (this.categories1.length < 11) {
+                                this.categories.forEach(category => {
+                                    this.categories1.forEach(category1 => {
+                                        if (category.categoryID !== category1.categoryID && this.categories1.length < 11) {
+                                            this.categories1.push(category)
+                                        }
+                                    })
+                                })
+                            }
+                            this.categories = []
+                            this.categories = this.categories1
+                            this.articles = []
+                            this.articles1 = []
+                            this.articles2 = []
+                            this.articles3 = []
+                            this.articles4 = []
+                            this.articles5 = []
+                            this.articles6 = []
+                            this.articles7 = []
+                            this.articles8 = []
+                            this.articles9 = []
+                            this.articles10 = []
+                            axios.get(`http://localhost:8082/api/articles/category/${this.categories[0].categoryID}?page=0&size=4&sort=PublicationDate`)
+                                .then(res => {
+                                    this.articles.push(...res.data.content);
+                                })
+                                .catch(error => {
+                                    // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                                    this.error = 'Lỗi: ' + error.message;
+                                });
+                            axios.get(`http://localhost:8082/api/articles/category/${this.categories[1].categoryID}?page=0&size=5&sort=PublicationDate`)
+                                .then(res => {
+                                    this.articles1.push(...res.data.content);
+                                })
+                                .catch(error => {
+                                    // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                                    this.error = 'Lỗi: ' + error.message;
+                                });
+                            axios.get(`http://localhost:8082/api/articles/category/${this.categories[2].categoryID}?page=0&size=5&sort=PublicationDate`)
+                                .then(res => {
+                                    this.articles2.push(...res.data.content);
+                                })
+                                .catch(error => {
+                                    // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                                    this.error = 'Lỗi: ' + error.message;
+                                });
+                            axios.get(`http://localhost:8082/api/articles/category/${this.categories[3].categoryID}?page=0&size=5&sort=PublicationDate`)
+                                .then(res => {
+                                    this.articles3.push(...res.data.content);
+                                })
+                                .catch(error => {
+                                    // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                                    this.error = 'Lỗi: ' + error.message;
+                                });
+                            axios.get(`http://localhost:8082/api/articles/category/${this.categories[4].categoryID}?page=0&size=5&sort=PublicationDate`)
+                                .then(res => {
+                                    this.articles4.push(...res.data.content);
+                                })
+                                .catch(error => {
+                                    // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                                    this.error = 'Lỗi: ' + error.message;
+                                });
+                            axios.get(`http://localhost:8082/api/articles/category/${this.categories[5].categoryID}?page=0&size=5&sort=PublicationDate`)
+                                .then(res => {
+                                    this.articles5.push(...res.data.content);
+                                })
+                                .catch(error => {
+                                    // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                                    this.error = 'Lỗi: ' + error.message;
+                                });
+                            axios.get(`http://localhost:8082/api/articles/category/${this.categories[6].categoryID}?page=0&size=5&sort=PublicationDate`)
+                                .then(res => {
+                                    this.articles6.push(...res.data.content);
+                                })
+                                .catch(error => {
+                                    // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                                    this.error = 'Lỗi: ' + error.message;
+                                });
+                            axios.get(`http://localhost:8082/api/articles/category/${this.categories[7].categoryID}?page=0&size=5&sort=PublicationDate`)
+                                .then(res => {
+                                    this.articles7.push(...res.data.content);
+                                })
+                                .catch(error => {
+                                    // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                                    this.error = 'Lỗi: ' + error.message;
+                                });
+                            axios.get(`http://localhost:8082/api/articles/category/${this.categories[8].categoryID}?page=0&size=5&sort=PublicationDate`)
+                                .then(res => {
+                                    this.articles8.push(...res.data.content);
+                                })
+                                .catch(error => {
+                                    // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                                    this.error = 'Lỗi: ' + error.message;
+                                });
+                            axios.get(`http://localhost:8082/api/articles/category/${this.categories[9].categoryID}?page=0&size=5&sort=PublicationDate`)
+                                .then(res => {
+                                    this.articles9.push(...res.data.content);
+                                })
+                                .catch(error => {
+                                    // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                                    this.error = 'Lỗi: ' + error.message;
+                                });
+                            axios.get(`http://localhost:8082/api/articles/category/${this.categories[10].categoryID}?page=0&size=5&sort=PublicationDate`)
+                                .then(res => {
+                                    this.articles10.push(...res.data.content);
+                                })
+                                .catch(error => {
+                                    // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                                    this.error = 'Lỗi: ' + error.message;
+                                });
                         })
-                    }
-                    this.categories = []
-                    this.categories = this.categories1
+                        .catch(error => {
+                            // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                            this.error = 'Lỗi: ' + error.message;
+                        });
+                } else {
                     this.articles = []
+                    this.articles1 = []
+                    this.articles2 = []
+                    this.articles3 = []
+                    this.articles4 = []
+                    this.articles5 = []
+                    this.articles6 = []
+                    this.articles7 = []
+                    this.articles8 = []
+                    this.articles9 = []
+                    this.articles10 = []
                     axios.get(`http://localhost:8082/api/articles/category/${this.categories[0].categoryID}?page=0&size=4&sort=PublicationDate`)
                         .then(res => {
                             this.articles.push(...res.data.content);
@@ -2942,12 +2999,16 @@ export default {
                             // Xử lý lỗi nếu có lỗi trong quá trình gọi API
                             this.error = 'Lỗi: ' + error.message;
                         });
-                })
-                .catch(error => {
-                    // Xử lý lỗi nếu có lỗi trong quá trình gọi API
-                    this.error = 'Lỗi: ' + error.message;
-                });
-        }
+                }
+            })
+            .catch(error => {
+                // Xử lý lỗi nếu có lỗi trong quá trình gọi API
+                this.error = 'Lỗi: ' + error.message;
+            });
+
+
+
+
     },
 }
 </script>
